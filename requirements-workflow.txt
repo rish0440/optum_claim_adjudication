@@ -1,0 +1,4 @@
+# Phase 8: install on your Windows laptop. No CUDA, PyTorch or GPU is needed.
+-r requirements.txt
+langgraph>=1.0,<2.0
+# Milvus RAG is optional at graph execution; use requirements-rag.txt separately.

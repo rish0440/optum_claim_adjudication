@@ -1,0 +1,102 @@
+{
+  "status": "finalized",
+  "input_mode": "invoice_json",
+  "extraction_source": "verified_structured_json",
+  "rag_status": "milvus_live",
+  "metadata": {},
+  "trace": [
+    "invoice_extraction",
+    "csv_validation",
+    "policy_retrieval",
+    "rule_resolution",
+    "adjudication",
+    "response_builder"
+  ],
+  "warnings": [
+    "Ground-truth JSON used for component testing; not a VLM prediction"
+  ],
+  "errors": [],
+  "error_stage": null,
+  "claim": {
+    "invoice_id": "invoice_01_standard",
+    "policy_id": "POL-CLM-001",
+    "currency": "INR",
+    "claim_status": "finalized",
+    "decisions": [
+      {
+        "item": "Room Charges",
+        "quantity": 2,
+        "billed_amount": "7000.00",
+        "approved_amount": "6000.00",
+        "disallowed_amount": "1000.00",
+        "pending_review_amount": "0.00",
+        "status": "partial",
+        "rule_id": "COV-001",
+        "category": "Room Charges",
+        "limit_type": "per_day",
+        "cap_amount": "3000",
+        "rule_source": "data/policy.json",
+        "explanation": "COV-001 (Room Charges): Maximum reimbursement is INR 3,000 per billed day. Applied INR 3000.00 per_day × 2; eligible INR 6000.00 of INR 7000.00.",
+        "review_note": null
+      },
+      {
+        "item": "Consultation",
+        "quantity": 1,
+        "billed_amount": "1500.00",
+        "approved_amount": "1500.00",
+        "disallowed_amount": "0.00",
+        "pending_review_amount": "0.00",
+        "status": "approved",
+        "rule_id": "COV-003",
+        "category": "Consultation",
+        "limit_type": "per_visit",
+        "cap_amount": "1500",
+        "rule_source": "data/policy.json",
+        "explanation": "COV-003 (Consultation): Maximum reimbursement is INR 1,500 per consultation visit. Applied INR 1500.00 per_visit × 1; eligible INR 1500.00 of INR 1500.00.",
+        "review_note": null
+      },
+      {
+        "item": "Medicines",
+        "quantity": 5,
+        "billed_amount": "1200.00",
+        "approved_amount": "1200.00",
+        "disallowed_amount": "0.00",
+        "pending_review_amount": "0.00",
+        "status": "approved",
+        "rule_id": "COV-005",
+        "category": "Medicines",
+        "limit_type": "actuals",
+        "cap_amount": null,
+        "rule_source": "data/policy.json",
+        "explanation": "COV-005 (Medicines): Covered at billed amount when medically related and not excluded. Applied actual billed amount; eligible INR 1200.00 of INR 1200.00.",
+        "review_note": null
+      },
+      {
+        "item": "Blood Test",
+        "quantity": 1,
+        "billed_amount": "800.00",
+        "approved_amount": "800.00",
+        "disallowed_amount": "0.00",
+        "pending_review_amount": "0.00",
+        "status": "approved",
+        "rule_id": "COV-010",
+        "category": "Blood Tests",
+        "limit_type": "actuals",
+        "cap_amount": null,
+        "rule_source": "data/policy.json",
+        "explanation": "COV-010 (Blood Tests): Blood tests are covered at billed amount. Applied actual billed amount; eligible INR 800.00 of INR 800.00.",
+        "review_note": null
+      }
+    ],
+    "billed_total": "10500.00",
+    "eligible_total": "9500.00",
+    "disallowed_total": "1000.00",
+    "pending_review_total": "0.00",
+    "copay_rate_percent": "10",
+    "copay_amount": "950.00",
+    "final_reimbursement": "8550.00",
+    "notes": [
+      "Per-claim limits are shared across invoice rows and assigned in row order."
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {"item": "Hospital room charges", "expected_rule_id": "COV-001"},
+  {"item": "Intensive care unit charges", "expected_rule_id": "COV-002"},
+  {"item": "Physician consultation", "expected_rule_id": "COV-003"},
+  {"item": "Specialist consultation", "expected_rule_id": "COV-004"},
+  {"item": "Medication", "expected_rule_id": "COV-005"},
+  {"item": "Diagnostic test", "expected_rule_id": "COV-006"},
+  {"item": "Magnetic resonance imaging", "expected_rule_id": "COV-007"},
+  {"item": "Computed tomography", "expected_rule_id": "COV-008"},
+  {"item": "X ray", "expected_rule_id": "COV-009"},
+  {"item": "Complete blood count", "expected_rule_id": "COV-010"},
+  {"item": "Ultrasound", "expected_rule_id": "COV-011"},
+  {"item": "Electrocardiogram", "expected_rule_id": "COV-012"},
+  {"item": "Ambulance", "expected_rule_id": "COV-014"},
+  {"item": "Medical consumables", "expected_rule_id": "COV-019"},
+  {"item": "Personal care kit", "expected_rule_id": "EXC-001"},
+  {"item": "Nutrition supplement", "expected_rule_id": "EXC-004"},
+  {"item": "Special diet meals", "expected_rule_id": "EXC-006"},
+  {"item": "TV charges", "expected_rule_id": "EXC-007"},
+  {"item": "Wifi charges", "expected_rule_id": "EXC-009"},
+  {"item": "Registration fee", "expected_rule_id": "EXC-012"}
+]

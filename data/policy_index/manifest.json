@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "policy_id": "POL-CLM-001",
+  "policy_sha256": "51a590cffdec1f74a6f759deccc33a495c20f52d0d9c71cf86c972bc2ded2927",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "collection": "policy_rules",
+  "db_path": "C:\\Users\\Lenovo\\Documents\\optum\\optum_claim_adjudication_scaffold\\optum_claim_adjudication\\data\\policy_index\\policy.db",
+  "dimension": 384,
+  "rule_count": 45,
+  "coverage_count": 25,
+  "exclusion_count": 20,
+  "built_at_utc": "2026-10-09T05:01:16.026713+00:00"
+}

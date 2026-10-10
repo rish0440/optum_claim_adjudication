@@ -1,0 +1,8 @@
+# CPU-friendly Phase 1–2 setup; no PyTorch/CUDA required.
+fastapi>=0.115,<1.0
+uvicorn>=0.30,<1.0
+pydantic>=2.7,<3.0
+PyYAML>=6.0,<7.0
+Pillow>=10.0,<13.0
+httpx>=0.27,<1.0  # Phase 5 CPU-only authenticated remote VLM client
+python-multipart>=0.0.9,<1.0  # Phase 9: browser multipart invoice uploads

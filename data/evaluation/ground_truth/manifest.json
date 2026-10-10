@@ -1,0 +1,42 @@
+[
+  {
+    "invoice_id": "invoice_01_standard",
+    "image": "data/invoices/invoice_01_standard.jpg",
+    "csv": "data/evaluation/ground_truth/invoice_01_standard.csv",
+    "json": "data/evaluation/ground_truth/invoice_01_standard.json",
+    "rows": 4,
+    "split": "final_evaluation_only"
+  },
+  {
+    "invoice_id": "invoice_02_exclusions",
+    "image": "data/invoices/invoice_02_exclusions.jpg",
+    "csv": "data/evaluation/ground_truth/invoice_02_exclusions.csv",
+    "json": "data/evaluation/ground_truth/invoice_02_exclusions.json",
+    "rows": 5,
+    "split": "final_evaluation_only"
+  },
+  {
+    "invoice_id": "invoice_03_icu_mixed",
+    "image": "data/invoices/invoice_03_icu_mixed.jpg",
+    "csv": "data/evaluation/ground_truth/invoice_03_icu_mixed.csv",
+    "json": "data/evaluation/ground_truth/invoice_03_icu_mixed.json",
+    "rows": 5,
+    "split": "final_evaluation_only"
+  },
+  {
+    "invoice_id": "invoice_04_diagnostics",
+    "image": "data/invoices/invoice_04_diagnostics.jpg",
+    "csv": "data/evaluation/ground_truth/invoice_04_diagnostics.csv",
+    "json": "data/evaluation/ground_truth/invoice_04_diagnostics.json",
+    "rows": 6,
+    "split": "final_evaluation_only"
+  },
+  {
+    "invoice_id": "invoice_05_nonmedical",
+    "image": "data/invoices/invoice_05_nonmedical.jpg",
+    "csv": "data/evaluation/ground_truth/invoice_05_nonmedical.csv",
+    "json": "data/evaluation/ground_truth/invoice_05_nonmedical.json",
+    "rows": 6,
+    "split": "final_evaluation_only"
+  }
+]

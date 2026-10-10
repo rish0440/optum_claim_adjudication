@@ -1,0 +1,38 @@
+# Python environments
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.py[cod]
+
+# Test and tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+
+# Model checkpoints and weights
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.gguf
+/models/qwen25-vl-invoice-lora/
+
+# Local databases, logs, and outputs
+*.sqlite
+*.sqlite3
+*.db
+*.log
+/outputs/
+/runs/

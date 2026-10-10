@@ -1,0 +1,21 @@
+{
+  "source": "synthetic_hospital_invoice_generator",
+  "seed": 42,
+  "total": 10,
+  "train": 8,
+  "validation": 2,
+  "layouts": {
+    "bordered": 4,
+    "semi_bordered": 3,
+    "borderless": 3
+  },
+  "missing_rate_column_images": 2,
+  "csv_columns": [
+    "Item",
+    "Quantity",
+    "Rate",
+    "Amount"
+  ],
+  "eval_set_excluded": true,
+  "cord_included": false
+}

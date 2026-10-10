@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Policy-grounded claim adjudication prototype with LangGraph and FastAPI" />
+  <title>Claim Adjudication | Optum Take-home Prototype</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Application navigation">
+      <div class="brand"><span class="brand-mark">CA</span><span><strong>Claim Adjudication</strong><small>AI engineering prototype</small></span></div>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="nav">
+        <a href="#new-claim" class="nav-item active"><span class="nav-icon">▣</span> New claim</a>
+        <a href="#processing-flow" class="nav-item"><span class="nav-icon">◇</span> Processing flow</a>
+        <a href="#results" class="nav-item"><span class="nav-icon">▤</span> Claim results</a>
+      </nav>
+      <div class="sidebar-note"><span class="dot"></span><span>LangGraph connected<br/><small>GPU image inference is optional</small></span></div>
+      <div class="sidebar-footer">Technical take-home prototype · For demonstration only</div>
+    </aside>
+    <main class="content">
+      <header class="topbar"><div class="crumb">Workspace <span>/</span> Claim adjudication</div><span class="top-status"><span class="dot"></span> Local FastAPI</span></header>
+      <div class="page" id="new-claim">
+        <div class="eyebrow">CLAIMS WORKSPACE <span class="eyebrow-dot">•</span> PHASE 9</div>
+        <div class="heading-row"><div><h1>New claim adjudication</h1><p class="intro">Upload an invoice extraction, connect the real VLM to process images, or run a clearly labeled reference example. Decisions use the supplied policy and deterministic calculations.</p></div><span class="draft-badge">LANGGRAPH READY</span></div>
+
+        <section class="panel upload-panel" aria-labelledby="upload-label">
+          <div class="panel-head"><div><h2 id="upload-label">Choose an input</h2><p>Start with a CSV for a fully local run. Image inference requires a running GPU model API.</p></div><span class="step-tag">STEP 01</span></div>
+          <div class="mode-switch" role="group" aria-label="Input type">
+            <button type="button" class="mode-btn active" data-mode="csv" aria-pressed="true">CSV / JSON upload</button>
+            <button type="button" class="mode-btn" data-mode="image" aria-pressed="false">Invoice image</button>
+            <button type="button" class="mode-btn" data-mode="demo" aria-pressed="false">Reference demo</button>
+          </div>
+          <form id="claim-form">
+            <div id="file-mode">
+              <div id="dropzone" class="dropzone" role="button" tabindex="0" aria-label="Choose a file or drop it here">
+                <input id="invoice-file" type="file" accept=".csv,.json,text/csv,application/json" hidden />
+                <span class="upload-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0L7 9m5-5 5 5M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></span>
+                <strong>Drop a CSV/JSON here, or <span>browse files</span></strong>
+                <p id="drop-hint">Expected columns: Item, Quantity, Rate, Amount · Maximum 8 MB</p>
+              </div>
+              <div id="selected-file" class="file-card hidden" aria-live="polite">
+                <img id="preview" alt="Invoice preview" class="hidden" />
+                <div class="file-details"><strong id="file-name"></strong><span id="file-meta"></span></div>
+                <button id="remove-file" class="icon-btn" type="button" aria-label="Remove selected file">✕</button>
+              </div>
+            </div>
+            <div id="demo-mode" class="hidden">
+              <label class="field-label" for="reference-id">Reference invoice</label>
+              <select id="reference-id" class="field-control"><option value="">Select a reference example</option></select>
+              <p class="reference-note">Demonstration uses manually transcribed test labels, not a VLM prediction. It must not be counted as image-extraction accuracy.</p>
+            </div>
+            <div class="form-settings">
+              <div id="date-box"><label class="field-label" for="invoice-date">Invoice date</label><input id="invoice-date" class="field-control" type="date" value="2024-04-18" required/><small>Required for CSV and image files; JSON includes its own date.</small></div>
+              <label class="check-row"><input id="use-milvus" type="checkbox" /> Use Milvus policy RAG <small>(unchecked = exact policy matching; fallback reported if unavailable)</small></label>
+            </div>
+            <div id="message" class="message hidden" role="status" aria-live="polite"></div>
+            <div class="upload-actions"><span class="hint" id="mode-help">CSV adjudication runs locally without an LLM or GPU.</span><button type="submit" class="primary-btn" id="submit-btn" disabled>Run adjudication <span>→</span></button></div>
+          </form>
+        </section>
+
+        <section class="flow-section" id="processing-flow"><div class="section-head"><div><h2>LangGraph processing pipeline</h2><p>Actual graph nodes; unavailable services are not simulated</p></div><span class="planned-pill">CONNECTED</span></div>
+          <div class="pipeline"><div class="pipeline-step"><span class="mini-icon">01</span><strong>Invoice extraction</strong><small>CSV input or real VLM</small></div><div class="pipeline-step"><span class="mini-icon">02</span><strong>Policy retrieval</strong><small>Milvus or policy-only</small></div><div class="pipeline-step"><span class="mini-icon">03</span><strong>Rule resolution</strong><small>Coverage and exclusions</small></div><div class="pipeline-step"><span class="mini-icon">04</span><strong>Adjudication</strong><small>Caps, co-pay, reasons</small></div></div>
+        </section>
+
+        <section class="panel result-panel" id="results" aria-labelledby="result-label"><div class="panel-head"><div><h2 id="result-label">Claim results</h2><p id="results-help">Policy rule IDs, line-item decisions, and eligible reimbursement appear here.</p></div><span class="step-tag">STEP 02</span></div>
+          <div id="empty-state" class="empty-state"><div class="empty-illustration" aria-hidden="true">▤</div><strong>No claim processed yet</strong><p>Choose a CSV/JSON file or a reference example to run the full local graph.</p></div>
+          <div id="result-content" class="hidden">
+            <div id="status-line" class="result-status"></div>
+            <div id="result-warning" class="result-warning hidden"></div>
+            <div class="metric-grid"><div class="metric"><span>Billed</span><strong id="metric-billed">—</strong></div><div class="metric"><span>Eligible before co-pay</span><strong id="metric-eligible">—</strong></div><div class="metric"><span>Co-pay</span><strong id="metric-copay">—</strong></div><div class="metric featured"><span>Final reimbursement</span><strong id="metric-final">—</strong></div></div>
+            <div class="result-meta"><span id="meta-input"></span><span id="meta-rag"></span><span id="meta-policy"></span></div>
+            <h3>Item-level policy decisions</h3>
+            <div class="table-wrap"><table id="decision-table"><thead><tr><th>Item</th><th>Qty</th><th>Billed</th><th>Approved</th><th>Status</th><th>Rule</th><th>Explanation</th></tr></thead><tbody id="decision-rows"></tbody></table></div>
+            <div class="csv-header"><h3>Extracted / provided CSV</h3><button id="copy-csv" class="secondary-btn" type="button">Copy CSV</button></div>
+            <pre id="csv-preview" class="csv-preview"></pre>
+            <details class="details"><summary>Execution details and warnings</summary><div id="result-details"></div></details>
+            <div class="result-actions"><button type="button" id="download-json" class="primary-btn">Download decision JSON ↓</button><button type="button" id="download-csv" class="secondary-btn">Download CSV ↓</button></div>
+          </div>
+        </section>
+        <footer class="page-footer">For technical assessment only · Manual review needed for ambiguous items · Not a production insurance decision system</footer>
+      </div>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

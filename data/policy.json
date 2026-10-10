@@ -1,0 +1,412 @@
+{
+  "policy_id": "POL-CLM-001",
+  "policy_name": "Standard Health Reimbursement Plan",
+  "version": "1.0",
+  "effective_from": "2024-01-01",
+  "effective_to": "2024-12-31",
+  "currency": "INR",
+  "policy_sections": [
+    {
+      "section_id": "SEC-001",
+      "section_type": "policy_overview",
+      "title": "Policy Overview",
+      "content": "This policy reimburses eligible medical expenses incurred for covered treatment and services, subject to item-level limits, exclusions, and the applicable co-pay. The policy is intended for routine claim reimbursement where the claimant submits an itemized provider invoice."
+    },
+    {
+      "section_id": "SEC-002",
+      "section_type": "claim_context",
+      "title": "Claim Context and General Conditions",
+      "content": "Claims are evaluated against the policy terms in force on the relevant claim date. Reimbursement is based on eligible line items present on the submitted invoice. Amounts that fall outside a covered category or are listed as excluded are not reimbursable. The policy currency is INR."
+    },
+    {
+      "section_id": "SEC-003",
+      "section_type": "coverage",
+      "title": "Covered Expenses and Reimbursement Limits",
+      "content": "The following categories are covered, subject to the stated reimbursement basis and limits. A more specific category rule overrides a broader category rule when both could apply."
+    },
+    {
+      "section_id": "SEC-004",
+      "section_type": "exclusions",
+      "title": "Excluded Expenses",
+      "content": "The following items and expense types are excluded and are not reimbursable under this policy, even when they appear on an otherwise valid medical invoice."
+    },
+    {
+      "section_id": "SEC-005",
+      "section_type": "reimbursement",
+      "title": "Reimbursement Calculation Rules",
+      "content": "For each covered line item, reimbursement equals the lower of the billed amount and the applicable policy limit when a limit exists. Actuals means the billed amount is reimbursable when the category is covered and no other exclusion applies. After item-level reimbursement limits are applied, a 10 percent co-pay is deducted from the total eligible amount. Excluded items contribute zero to the eligible amount."
+    },
+    {
+      "section_id": "SEC-006",
+      "section_type": "definitions",
+      "title": "Definitions",
+      "content": "Per day means the stated maximum applies for each billed day. Per visit means the maximum applies to each consultation or visit. Per session means the limit applies to each physiotherapy session. Per service means the limit applies to each instance of the named service. Per claim means the limit is applied once across that category for the claim. Actuals means the billed line amount is eligible when the category is covered and no exclusion applies."
+    },
+    {
+      "section_id": "SEC-007",
+      "section_type": "administrative",
+      "title": "Administrative Information",
+      "content": "This is a synthetic policy created for the claim adjudication exercise. Administrative details such as policy name, version, currency, and effective period are provided as reference information and do not themselves determine line-item eligibility."
+    }
+  ],
+  "coverage_rules": [
+    {
+      "rule_id": "COV-001",
+      "category": "Room Charges",
+      "covered": true,
+      "limit_type": "per_day",
+      "maximum_reimbursement": 3000,
+      "unit": "day",
+      "conditions": "Maximum reimbursement is INR 3,000 per billed day."
+    },
+    {
+      "rule_id": "COV-002",
+      "category": "ICU Charges",
+      "covered": true,
+      "limit_type": "per_day",
+      "maximum_reimbursement": 6000,
+      "unit": "day",
+      "conditions": "Maximum reimbursement is INR 6,000 per billed ICU day."
+    },
+    {
+      "rule_id": "COV-003",
+      "category": "Consultation",
+      "covered": true,
+      "limit_type": "per_visit",
+      "maximum_reimbursement": 1500,
+      "unit": "visit",
+      "conditions": "Maximum reimbursement is INR 1,500 per consultation visit."
+    },
+    {
+      "rule_id": "COV-004",
+      "category": "Specialist Consultation",
+      "covered": true,
+      "limit_type": "per_visit",
+      "maximum_reimbursement": 2000,
+      "unit": "visit",
+      "conditions": "Maximum reimbursement is INR 2,000 per specialist consultation visit."
+    },
+    {
+      "rule_id": "COV-005",
+      "category": "Medicines",
+      "covered": true,
+      "limit_type": "actuals",
+      "maximum_reimbursement": null,
+      "unit": "line",
+      "conditions": "Covered at billed amount when medically related and not excluded."
+    },
+    {
+      "rule_id": "COV-006",
+      "category": "Diagnostic Tests",
+      "covered": true,
+      "limit_type": "actuals",
+      "maximum_reimbursement": null,
+      "unit": "line",
+      "conditions": "Generic diagnostic tests are covered at billed amount unless a more specific rule applies."
+    },
+    {
+      "rule_id": "COV-007",
+      "category": "MRI Scan",
+      "covered": true,
+      "limit_type": "per_service",
+      "maximum_reimbursement": 8000,
+      "unit": "scan",
+      "conditions": "Maximum reimbursement is INR 8,000 per MRI scan."
+    },
+    {
+      "rule_id": "COV-008",
+      "category": "CT Scan",
+      "covered": true,
+      "limit_type": "per_service",
+      "maximum_reimbursement": 5000,
+      "unit": "scan",
+      "conditions": "Maximum reimbursement is INR 5,000 per CT scan."
+    },
+    {
+      "rule_id": "COV-009",
+      "category": "X-Ray",
+      "covered": true,
+      "limit_type": "per_service",
+      "maximum_reimbursement": 1000,
+      "unit": "scan",
+      "conditions": "Maximum reimbursement is INR 1,000 per X-Ray."
+    },
+    {
+      "rule_id": "COV-010",
+      "category": "Blood Tests",
+      "covered": true,
+      "limit_type": "actuals",
+      "maximum_reimbursement": null,
+      "unit": "line",
+      "conditions": "Blood tests are covered at billed amount."
+    },
+    {
+      "rule_id": "COV-011",
+      "category": "Ultrasound",
+      "covered": true,
+      "limit_type": "per_service",
+      "maximum_reimbursement": 2500,
+      "unit": "scan",
+      "conditions": "Maximum reimbursement is INR 2,500 per ultrasound."
+    },
+    {
+      "rule_id": "COV-012",
+      "category": "ECG",
+      "covered": true,
+      "limit_type": "per_service",
+      "maximum_reimbursement": 1000,
+      "unit": "service",
+      "conditions": "Maximum reimbursement is INR 1,000 per ECG."
+    },
+    {
+      "rule_id": "COV-013",
+      "category": "Physiotherapy",
+      "covered": true,
+      "limit_type": "per_session",
+      "maximum_reimbursement": 1200,
+      "unit": "session",
+      "conditions": "Maximum reimbursement is INR 1,200 per physiotherapy session."
+    },
+    {
+      "rule_id": "COV-014",
+      "category": "Ambulance",
+      "covered": true,
+      "limit_type": "per_claim",
+      "maximum_reimbursement": 1500,
+      "unit": "claim",
+      "conditions": "Maximum reimbursement is INR 1,500 for ambulance charges across the claim."
+    },
+    {
+      "rule_id": "COV-015",
+      "category": "Surgery Charges",
+      "covered": true,
+      "limit_type": "per_procedure",
+      "maximum_reimbursement": 50000,
+      "unit": "procedure",
+      "conditions": "Maximum reimbursement is INR 50,000 per covered surgical procedure."
+    },
+    {
+      "rule_id": "COV-016",
+      "category": "Surgeon Fee",
+      "covered": true,
+      "limit_type": "per_procedure",
+      "maximum_reimbursement": 15000,
+      "unit": "procedure",
+      "conditions": "Maximum reimbursement is INR 15,000 per covered procedure."
+    },
+    {
+      "rule_id": "COV-017",
+      "category": "Anesthesia Charges",
+      "covered": true,
+      "limit_type": "per_procedure",
+      "maximum_reimbursement": 8000,
+      "unit": "procedure",
+      "conditions": "Maximum reimbursement is INR 8,000 per covered procedure."
+    },
+    {
+      "rule_id": "COV-018",
+      "category": "Nursing Charges",
+      "covered": true,
+      "limit_type": "per_day",
+      "maximum_reimbursement": 1000,
+      "unit": "day",
+      "conditions": "Maximum reimbursement is INR 1,000 per billed day."
+    },
+    {
+      "rule_id": "COV-019",
+      "category": "Medical Consumables",
+      "covered": true,
+      "limit_type": "per_claim",
+      "maximum_reimbursement": 3000,
+      "unit": "claim",
+      "conditions": "Maximum reimbursement for medical consumables is INR 3,000 across the claim."
+    },
+    {
+      "rule_id": "COV-020",
+      "category": "Oxygen Charges",
+      "covered": true,
+      "limit_type": "actuals",
+      "maximum_reimbursement": null,
+      "unit": "line",
+      "conditions": "Oxygen charges are covered at billed amount."
+    },
+    {
+      "rule_id": "COV-021",
+      "category": "Emergency Charges",
+      "covered": true,
+      "limit_type": "per_claim",
+      "maximum_reimbursement": 3000,
+      "unit": "claim",
+      "conditions": "Maximum reimbursement for emergency service charges is INR 3,000 across the claim."
+    },
+    {
+      "rule_id": "COV-022",
+      "category": "Dialysis",
+      "covered": true,
+      "limit_type": "per_session",
+      "maximum_reimbursement": 4000,
+      "unit": "session",
+      "conditions": "Maximum reimbursement is INR 4,000 per dialysis session."
+    },
+    {
+      "rule_id": "COV-023",
+      "category": "Day Care Procedure",
+      "covered": true,
+      "limit_type": "per_procedure",
+      "maximum_reimbursement": 15000,
+      "unit": "procedure",
+      "conditions": "Maximum reimbursement is INR 15,000 per covered day care procedure."
+    },
+    {
+      "rule_id": "COV-024",
+      "category": "Hospital Nursing Supplies",
+      "covered": true,
+      "limit_type": "actuals",
+      "maximum_reimbursement": null,
+      "unit": "line",
+      "conditions": "Covered at billed amount when directly related to inpatient treatment."
+    },
+    {
+      "rule_id": "COV-025",
+      "category": "Medical Equipment Rental",
+      "covered": true,
+      "limit_type": "per_claim",
+      "maximum_reimbursement": 5000,
+      "unit": "claim",
+      "conditions": "Maximum reimbursement is INR 5,000 across the claim for medically necessary equipment rental."
+    }
+  ],
+  "exclusion_rules": [
+    {
+      "rule_id": "EXC-001",
+      "category": "Personal Care Items",
+      "excluded": true,
+      "conditions": "Personal care kits, toiletries, grooming items and similar personal-use products are excluded."
+    },
+    {
+      "rule_id": "EXC-002",
+      "category": "Cosmetics",
+      "excluded": true,
+      "conditions": "Cosmetic products and cosmetic procedures are excluded."
+    },
+    {
+      "rule_id": "EXC-003",
+      "category": "Wellness Programs",
+      "excluded": true,
+      "conditions": "Wellness, spa and lifestyle improvement programs are excluded."
+    },
+    {
+      "rule_id": "EXC-004",
+      "category": "Health Supplements",
+      "excluded": true,
+      "conditions": "Health supplements, nutritional supplements and similar non-treatment products are excluded."
+    },
+    {
+      "rule_id": "EXC-005",
+      "category": "Fitness Membership",
+      "excluded": true,
+      "conditions": "Gym, fitness club and membership fees are excluded."
+    },
+    {
+      "rule_id": "EXC-006",
+      "category": "Diet Meals",
+      "excluded": true,
+      "conditions": "Special diet meals, meal plans and non-medical food charges are excluded."
+    },
+    {
+      "rule_id": "EXC-007",
+      "category": "Television Charges",
+      "excluded": true,
+      "conditions": "Television, entertainment and room entertainment charges are excluded."
+    },
+    {
+      "rule_id": "EXC-008",
+      "category": "Telephone Charges",
+      "excluded": true,
+      "conditions": "Telephone and personal communication charges are excluded."
+    },
+    {
+      "rule_id": "EXC-009",
+      "category": "Internet and Wi-Fi",
+      "excluded": true,
+      "conditions": "Internet, Wi-Fi and personal connectivity charges are excluded."
+    },
+    {
+      "rule_id": "EXC-010",
+      "category": "Laundry Charges",
+      "excluded": true,
+      "conditions": "Laundry, clothing cleaning and personal housekeeping charges are excluded."
+    },
+    {
+      "rule_id": "EXC-011",
+      "category": "Administrative Fees",
+      "excluded": true,
+      "conditions": "Administrative, processing, file handling and similar non-medical fees are excluded."
+    },
+    {
+      "rule_id": "EXC-012",
+      "category": "Registration Fees",
+      "excluded": true,
+      "conditions": "Registration, admission processing and similar administrative entry fees are excluded."
+    },
+    {
+      "rule_id": "EXC-013",
+      "category": "Attendant Meals",
+      "excluded": true,
+      "conditions": "Meals or food charges for attendants are excluded."
+    },
+    {
+      "rule_id": "EXC-014",
+      "category": "Non-medical Convenience Items",
+      "excluded": true,
+      "conditions": "Convenience goods that are not required for medical treatment are excluded."
+    },
+    {
+      "rule_id": "EXC-015",
+      "category": "Fitness Programs",
+      "excluded": true,
+      "conditions": "Fitness training, personal training and fitness coaching programs are excluded."
+    },
+    {
+      "rule_id": "EXC-016",
+      "category": "Membership Fees",
+      "excluded": true,
+      "conditions": "Club, service, subscription and other membership fees are excluded."
+    },
+    {
+      "rule_id": "EXC-017",
+      "category": "Beauty Services",
+      "excluded": true,
+      "conditions": "Beauty, grooming and salon services are excluded."
+    },
+    {
+      "rule_id": "EXC-018",
+      "category": "Elective Lifestyle Services",
+      "excluded": true,
+      "conditions": "Elective services primarily intended for lifestyle or appearance rather than medical treatment are excluded."
+    },
+    {
+      "rule_id": "EXC-019",
+      "category": "Personal Electronics",
+      "excluded": true,
+      "conditions": "Chargers, headphones, personal electronics and similar personal goods are excluded."
+    },
+    {
+      "rule_id": "EXC-020",
+      "category": "Non-medical Miscellaneous",
+      "excluded": true,
+      "conditions": "Other miscellaneous goods or services without a direct medical treatment purpose are excluded."
+    }
+  ],
+  "reimbursement_rules": {
+    "rule_precedence": "A specific named coverage rule overrides a broader generic coverage category when both apply.",
+    "line_item_calculation": "For a covered line with a limit, eligible amount is the lower of the billed amount and the applicable limit multiplied by the relevant quantity or duration. For actuals, eligible amount equals the billed line amount.",
+    "excluded_item_calculation": "Excluded items have an eligible amount of zero.",
+    "copay": {
+      "applicable": true,
+      "rate_percent": 10,
+      "calculation_basis": "Total eligible amount after applying item-level coverage limits and exclusions."
+    },
+    "final_reimbursement": "Total eligible amount minus the applicable 10 percent co-pay."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "invoice_id": "invoice_03_icu_mixed",
+  "image_file": "data/invoices/invoice_03_icu_mixed.jpg",
+  "invoice_date": "2024-03-05",
+  "lines": [
+    {
+      "item": "ICU Charges",
+      "quantity": 2,
+      "rate": "7500",
+      "amount": "15000"
+    },
+    {
+      "item": "Room Charges",
+      "quantity": 1,
+      "rate": "3200",
+      "amount": "3200"
+    },
+    {
+      "item": "Consultation",
+      "quantity": 2,
+      "rate": "1500",
+      "amount": "3000"
+    },
+    {
+      "item": "Medicines",
+      "quantity": 8,
+      "rate": "300",
+      "amount": "2400"
+    },
+    {
+      "item": "CT Scan",
+      "quantity": 1,
+      "rate": "4500",
+      "amount": "4500"
+    }
+  ],
+  "billed_total": "28100",
+  "rate_column_visible": true,
+  "notes": ""
+}

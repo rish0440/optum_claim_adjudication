@@ -1,0 +1,29 @@
+# Simple local configuration; paths are relative to the repository root.
+# Never put API keys or passwords in this file.
+app:
+  name: optum-claim-adjudication
+  environment: local
+  currency: INR
+
+paths:
+  policy: data/policy.json
+  optum_invoices: data/invoices
+  evaluation_ground_truth: data/evaluation/ground_truth
+  synthetic_dataset: data/synthetic
+  cord: data/cord
+
+synthetic:
+  initial_count: 10
+  train_ratio: 0.8
+  seed: 42
+  min_rows: 3
+  max_rows: 9
+  missing_rate_fraction: 0.2
+
+# Phase 6: local, CPU-only policy RAG; db/index files are generated.
+rag:
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  collection: policy_rules
+  db_path: data/policy_index/policy.db
+  manifest_path: data/policy_index/manifest.json
+  top_k: 5

@@ -1,0 +1,40 @@
+{
+  "invoice_id": "invoice_02_exclusions",
+  "image_file": "data/invoices/invoice_02_exclusions.jpg",
+  "invoice_date": "2024-02-10",
+  "lines": [
+    {
+      "item": "Room Charges",
+      "quantity": 1,
+      "rate": "2800",
+      "amount": "2800"
+    },
+    {
+      "item": "Consultation",
+      "quantity": 1,
+      "rate": "1200",
+      "amount": "1200"
+    },
+    {
+      "item": "Medicines",
+      "quantity": 3,
+      "rate": "350",
+      "amount": "1050"
+    },
+    {
+      "item": "Personal Care Kit",
+      "quantity": 1,
+      "rate": "800",
+      "amount": "800"
+    },
+    {
+      "item": "Health Supplement",
+      "quantity": 2,
+      "rate": "450",
+      "amount": "900"
+    }
+  ],
+  "billed_total": "6750",
+  "rate_column_visible": true,
+  "notes": ""
+}
