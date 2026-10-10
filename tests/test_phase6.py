@@ -12,12 +12,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.policy import load_policy
+from src.adjudication.policy import load_policy
 from src.rag.indexer import build_policy_index, source_documents
 from src.rag.resolver import PolicyRuleResolver
 from src.rag.retriever import PolicyRetriever
 from scripts.test_policy_rag import evaluate
-from src.settings import ROOT
+from src.config.settings import ROOT
 
 
 class FakeEmbeddings:

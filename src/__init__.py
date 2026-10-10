@@ -1,1 +1,1 @@
-"""Application package: FastAPI entry point and claim-adjudication modules."""
+"""Claim processing, training and inference; the HTTP application lives in app."""

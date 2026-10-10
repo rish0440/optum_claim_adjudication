@@ -9,7 +9,7 @@ from datetime import date
 from decimal import Decimal
 from pathlib import Path
 
-from src.policy import load_policy
+from src.adjudication.policy import load_policy
 from src.rag.resolver import PolicyRuleResolver
 from src.schemas import InvoiceGroundTruth, InvoiceLine
 

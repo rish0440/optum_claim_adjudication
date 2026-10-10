@@ -14,10 +14,10 @@ import json
 from pathlib import Path
 
 from src.adjudication import adjudicate_invoice, parse_invoice_csv
-from src.policy import load_policy
+from src.adjudication.policy import load_policy
 from src.rag.resolver import PolicyRuleResolver
 from src.schemas import InvoiceGroundTruth
-from src.settings import get_settings
+from src.config.settings import get_settings
 
 
 def reference_evaluation(policy, resolver, retriever=None) -> dict:

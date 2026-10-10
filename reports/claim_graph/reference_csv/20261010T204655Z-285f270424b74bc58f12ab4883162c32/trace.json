@@ -1,0 +1,32 @@
+[
+  {
+    "node": "orchestrator",
+    "request_id": "285f270424b74bc58f12ab4883162c32",
+    "outcome": "ok",
+    "elapsed_ms": 0
+  },
+  {
+    "node": "csv_validation",
+    "request_id": "285f270424b74bc58f12ab4883162c32",
+    "outcome": "ok",
+    "elapsed_ms": 1
+  },
+  {
+    "node": "policy_retrieval",
+    "request_id": "285f270424b74bc58f12ab4883162c32",
+    "outcome": "ok",
+    "elapsed_ms": 11622
+  },
+  {
+    "node": "policy_adjudication_agent",
+    "request_id": "285f270424b74bc58f12ab4883162c32",
+    "outcome": "rejected",
+    "elapsed_ms": 46560
+  },
+  {
+    "node": "final_response",
+    "request_id": "285f270424b74bc58f12ab4883162c32",
+    "outcome": "FAILED",
+    "elapsed_ms": 0
+  }
+]

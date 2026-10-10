@@ -1,0 +1,83 @@
+{
+  "invoice_id": "invoice_01_standard",
+  "policy_id": "POL-CLM-001",
+  "currency": "INR",
+  "claim_status": "manual_review",
+  "decisions": [
+    {
+      "item": "Room Charges",
+      "quantity": 2,
+      "billed_amount": "7000.00",
+      "approved_amount": "0.00",
+      "disallowed_amount": "0.00",
+      "pending_review_amount": "7000.00",
+      "status": "manual_review",
+      "rule_id": null,
+      "category": null,
+      "limit_type": null,
+      "cap_amount": null,
+      "rule_source": null,
+      "explanation": "Review required: Treatment context requires manual review..",
+      "review_note": "Treatment context requires manual review."
+    },
+    {
+      "item": "Consultation",
+      "quantity": 1,
+      "billed_amount": "1500.00",
+      "approved_amount": "0.00",
+      "disallowed_amount": "0.00",
+      "pending_review_amount": "1500.00",
+      "status": "manual_review",
+      "rule_id": null,
+      "category": null,
+      "limit_type": null,
+      "cap_amount": null,
+      "rule_source": null,
+      "explanation": "Review required: Treatment context requires manual review..",
+      "review_note": "Treatment context requires manual review."
+    },
+    {
+      "item": "Medicines",
+      "quantity": 5,
+      "billed_amount": "1200.00",
+      "approved_amount": "0.00",
+      "disallowed_amount": "0.00",
+      "pending_review_amount": "1200.00",
+      "status": "manual_review",
+      "rule_id": null,
+      "category": null,
+      "limit_type": null,
+      "cap_amount": null,
+      "rule_source": null,
+      "explanation": "Review required: Treatment context requires manual review..",
+      "review_note": "Treatment context requires manual review."
+    },
+    {
+      "item": "Blood Test",
+      "quantity": 1,
+      "billed_amount": "800.00",
+      "approved_amount": "0.00",
+      "disallowed_amount": "0.00",
+      "pending_review_amount": "800.00",
+      "status": "manual_review",
+      "rule_id": null,
+      "category": null,
+      "limit_type": null,
+      "cap_amount": null,
+      "rule_source": null,
+      "explanation": "Review required: Treatment context requires manual review..",
+      "review_note": "Treatment context requires manual review."
+    }
+  ],
+  "billed_total": "10500.00",
+  "eligible_total": "0.00",
+  "disallowed_total": "0.00",
+  "pending_review_total": "10500.00",
+  "copay_rate_percent": "10",
+  "copay_amount": "0.00",
+  "final_reimbursement": null,
+  "notes": [
+    "Per-claim limits are shared across invoice rows and assigned in row order.",
+    "Reimbursement not finalized while item/date review is pending; eligible and co-pay totals are provisional."
+  ]
+}

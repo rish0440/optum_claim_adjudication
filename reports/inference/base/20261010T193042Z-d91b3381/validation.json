@@ -1,0 +1,11 @@
+{
+  "status": "FAIL",
+  "mode": "base",
+  "requested_model": "qwen-base",
+  "server_model": {
+    "id": "qwen-base",
+    "root": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "parent": null
+  },
+  "error": "CSV header must be exactly Item,Quantity,Rate,Amount"
+}

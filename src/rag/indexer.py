@@ -9,9 +9,9 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from src.policy import load_policy
+from src.adjudication.policy import load_policy
 from src.rag.embeddings import embed_texts, get_embedder
-from src.settings import ROOT, get_settings
+from src.config.settings import ROOT, get_settings
 
 SCHEMA_VERSION = 1
 

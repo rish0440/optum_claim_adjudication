@@ -28,6 +28,7 @@ service-account*.json
 *.pt
 *.gguf
 /models/qwen25-vl-invoice-lora/
+/models/qwen25_vl_sft/
 
 # Local databases, logs, and outputs
 *.sqlite
@@ -36,3 +37,4 @@ service-account*.json
 *.log
 /outputs/
 /runs/
+/reports/claims/

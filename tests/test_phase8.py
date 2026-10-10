@@ -10,14 +10,14 @@ from datetime import date
 from decimal import Decimal
 from pathlib import Path
 
-from src.agentic_workflow.nodes.adjudication.node import calculate_claim
-from src.agentic_workflow.nodes.csv_validation.node import validate_csv
-from src.agentic_workflow.nodes.invoice_extraction.node import extract_invoice
-from src.agentic_workflow.nodes.policy_retrieval.node import retrieve_policy
-from src.agentic_workflow.nodes.response_builder.node import build_response
-from src.agentic_workflow.nodes.rule_resolution.node import resolve_policy_rules
-from src.policy import load_policy
-from src.settings import get_settings
+from src.orchestration.nodes.adjudication.node import calculate_claim
+from src.orchestration.nodes.csv_validation.node import validate_csv
+from src.orchestration.nodes.invoice_extraction.node import extract_invoice
+from src.orchestration.nodes.policy_retrieval.node import retrieve_policy
+from src.orchestration.nodes.response_builder.node import build_response
+from src.orchestration.nodes.rule_resolution.node import resolve_policy_rules
+from src.adjudication.policy import load_policy
+from src.config.settings import get_settings
 
 
 class FakeRetriever:
@@ -156,7 +156,7 @@ class Phase8NodeTests(unittest.TestCase):
         self.assertEqual(result["error_stage"], "invoice_extraction")
 
     def test_remote_vlm_fake_client_extracts_csv(self):
-        from src.agentic_workflow.nodes.invoice_extraction.node import extract_invoice
+        from src.orchestration.nodes.invoice_extraction.node import extract_invoice
         from types import SimpleNamespace
         class FakeVLM:
             def extract(self, path):
@@ -176,14 +176,14 @@ class Phase8NodeTests(unittest.TestCase):
 if importlib.util.find_spec("langgraph") is not None:
     class Phase8CompiledGraphTests(unittest.TestCase):
         def test_compiled_langgraph_executes(self):
-            from src.agentic_workflow.workflow import run_claim_workflow
+            from src.orchestration.workflow import run_claim_workflow
             folder = get_settings().paths.evaluation_ground_truth
             path = folder / "invoice_01_standard.json"
             result = run_claim_workflow(invoice_json=path)
             self.assertEqual(Decimal(result["claim"]["final_reimbursement"]), Decimal("8550"))
 
         def test_compiled_graph_short_circuits_bad_csv(self):
-            from src.agentic_workflow.workflow import run_claim_workflow
+            from src.orchestration.workflow import run_claim_workflow
             result = run_claim_workflow(csv_text="Broken,csv", invoice_date="2024-04-18")
             self.assertEqual(result["error_stage"], "csv_validation")
             self.assertEqual(result["trace"], ["invoice_extraction", "csv_validation", "response_builder"])

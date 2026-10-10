@@ -14,10 +14,10 @@ from pydantic import ValidationError
 
 from scripts.run_adjudication import reference_evaluation
 from src.adjudication import adjudicate_invoice, parse_invoice_csv
-from src.policy import load_policy
+from src.adjudication.policy import load_policy
 from src.rag.resolver import PolicyRuleResolver
 from src.schemas import InvoiceGroundTruth, InvoiceLine
-from src.settings import get_settings
+from src.config.settings import get_settings
 
 
 class Phase7Tests(unittest.TestCase):

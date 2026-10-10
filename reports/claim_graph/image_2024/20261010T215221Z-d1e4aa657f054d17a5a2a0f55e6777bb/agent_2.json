@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "item_index": 0,
+      "status": "partial",
+      "policy_ids": [
+        "COV-001"
+      ],
+      "approved_amount": "6000.00",
+      "disallowed_amount": "1000.00",
+      "pending_review_amount": "0.00",
+      "explanation": "COV-001 (Room Charges): Maximum reimbursement is INR 3,000 per billed day. Applied INR 3000.00 per_day × 2; eligible INR 6000.00 of INR 7000.00.",
+      "needs_review": false
+    },
+    {
+      "item_index": 1,
+      "status": "approved",
+      "policy_ids": [
+        "COV-003"
+      ],
+      "approved_amount": "1500.00",
+      "disallowed_amount": "0.00",
+      "pending_review_amount": "0.00",
+      "explanation": "COV-003 (Consultation): Maximum reimbursement is INR 1,500 per consultation visit. Applied INR 1500.00 per_visit × 1; eligible INR 1500.00 of INR 1500.00.",
+      "needs_review": false
+    },
+    {
+      "item_index": 2,
+      "status": "manual_review",
+      "policy_ids": [],
+      "approved_amount": "0.00",
+      "disallowed_amount": "0.00",
+      "pending_review_amount": "1200.00",
+      "explanation": "Review required: Treatment context requires manual review.. Policy context COV-005: Covered at billed amount when medically related and not excluded. Agent 1 advice contradicted verified evidence; the canonical decision is retained.",
+      "needs_review": true
+    },
+    {
+      "item_index": 3,
+      "status": "approved",
+      "policy_ids": [
+        "COV-010"
+      ],
+      "approved_amount": "800.00",
+      "disallowed_amount": "0.00",
+      "pending_review_amount": "0.00",
+      "explanation": "COV-010 (Blood Tests): Blood tests are covered at billed amount. Applied actual billed amount; eligible INR 800.00 of INR 800.00.",
+      "needs_review": false
+    }
+  ],
+  "totals": {
+    "eligible_total": "8300.00",
+    "copay_amount": "830.00",
+    "final_reimbursement": null
+  }
+}

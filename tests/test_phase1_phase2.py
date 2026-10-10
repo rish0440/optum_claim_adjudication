@@ -11,10 +11,10 @@ from pathlib import Path
 
 from PIL import Image
 
-from src.policy import load_policy, summarize_policy
+from src.adjudication.policy import load_policy, summarize_policy
 from src.schemas import InvoiceGroundTruth, InvoiceLine
-from src.settings import get_settings
-from src.vlm.dataset import (
+from src.config.settings import get_settings
+from src.trainer.sft.dataset import (
     STYLES, lines_as_csv, make_lines, render_invoice, verify_dataset,
 )
 

@@ -11,7 +11,7 @@ import argparse
 import json
 from pathlib import Path
 
-from src.agentic_workflow.workflow import run_claim_workflow
+from src.orchestration.workflow import run_claim_workflow
 
 
 def main():

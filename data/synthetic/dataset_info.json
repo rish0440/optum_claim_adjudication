@@ -17,5 +17,98 @@
     "Amount"
   ],
   "eval_set_excluded": true,
-  "cord_included": false
+  "cord_included": false,
+  "pillow_version": "12.3.0",
+  "rendering": [
+    {
+      "invoice_id": "invoice_00001",
+      "width": 1040,
+      "height": 824,
+      "row_height": 43,
+      "table_top": 289,
+      "font_family": "DejaVu Serif",
+      "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+    },
+    {
+      "invoice_id": "invoice_00002",
+      "width": 900,
+      "height": 793,
+      "row_height": 53,
+      "table_top": 294,
+      "font_family": "DejaVu Sans Mono",
+      "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+    },
+    {
+      "invoice_id": "invoice_00003",
+      "width": 980,
+      "height": 918,
+      "row_height": 43,
+      "table_top": 297,
+      "font_family": "DejaVu Sans",
+      "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+    },
+    {
+      "invoice_id": "invoice_00004",
+      "width": 980,
+      "height": 667,
+      "row_height": 43,
+      "table_top": 304,
+      "font_family": "DejaVu Serif",
+      "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+    },
+    {
+      "invoice_id": "invoice_00005",
+      "width": 1080,
+      "height": 853,
+      "row_height": 53,
+      "table_top": 301,
+      "font_family": "DejaVu Sans Mono",
+      "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+    },
+    {
+      "invoice_id": "invoice_00006",
+      "width": 1080,
+      "height": 911,
+      "row_height": 43,
+      "table_top": 290,
+      "font_family": "DejaVu Sans",
+      "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+    },
+    {
+      "invoice_id": "invoice_00007",
+      "width": 1080,
+      "height": 738,
+      "row_height": 53,
+      "table_top": 292,
+      "font_family": "DejaVu Serif",
+      "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+    },
+    {
+      "invoice_id": "invoice_00008",
+      "width": 900,
+      "height": 1005,
+      "row_height": 53,
+      "table_top": 294,
+      "font_family": "DejaVu Sans Mono",
+      "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+    },
+    {
+      "invoice_id": "invoice_00009",
+      "width": 1040,
+      "height": 726,
+      "row_height": 48,
+      "table_top": 300,
+      "font_family": "DejaVu Sans",
+      "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+    },
+    {
+      "invoice_id": "invoice_00010",
+      "width": 900,
+      "height": 870,
+      "row_height": 43,
+      "table_top": 292,
+      "font_family": "DejaVu Serif",
+      "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+    }
+  ]
 }

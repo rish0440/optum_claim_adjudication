@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "mode": "adapter",
+  "requested_model": "invoice-extractor",
+  "server_model": {
+    "id": "invoice-extractor",
+    "root": "/home/rishabh_mishra0440/optum_claim_adjudication/optum_claim_adjudication/models/qwen25_vl_sft/runs/20261010T174916Z-0b733db4/adapter",
+    "parent": "qwen-base"
+  },
+  "returned_model": "invoice-extractor",
+  "rows": 3,
+  "latency_ms": 22440,
+  "usage": {
+    "prompt_tokens": 342,
+    "total_tokens": 387,
+    "completion_tokens": 45,
+    "prompt_tokens_details": null
+  }
+}

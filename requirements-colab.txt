@@ -8,3 +8,6 @@ datasets==4.3.0
 bitsandbytes==0.48.1
 qwen-vl-utils==0.0.14
 Pillow>=10,<13
+# The shared trainer now reuses the existing CPU dataset validator.
+pydantic==2.14.0
+PyYAML==6.0.3

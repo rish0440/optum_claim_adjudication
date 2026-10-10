@@ -8,10 +8,10 @@ import argparse
 import json
 from pathlib import Path
 
-from src.policy import load_policy
+from src.adjudication.policy import load_policy
 from src.rag.resolver import PolicyRuleResolver
 from src.rag.retriever import PolicyRetriever
-from src.settings import ROOT, get_settings
+from src.config.settings import ROOT, get_settings
 
 
 def evaluate(retriever, resolver, cases: list[dict], top_k: int = 3) -> dict:

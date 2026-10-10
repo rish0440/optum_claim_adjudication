@@ -5,8 +5,8 @@ from pathlib import Path
 from zipfile import ZipFile
 
 from scripts.prepare_colab_dataset import ROOT, package
-from src.vlm.evaluate import evaluate_pairs, get_predicted_rows
-from src.vlm.training_data import INSTRUCTION, read_records
+from src.trainer.sft.evaluate import evaluate_pairs, get_predicted_rows
+from src.trainer.sft.training_data import INSTRUCTION, read_records
 
 
 class Phase3Tests(unittest.TestCase):
@@ -48,7 +48,8 @@ class Phase3Tests(unittest.TestCase):
             self.assertEqual((info["train_images"], info["validation_images"]), (8, 2))
             with ZipFile(out) as z:
                 names = z.namelist()
-                self.assertIn("src/vlm/train_lora.py", names)
+                self.assertIn("src/trainer/sft/train_lora.py", names)
+                self.assertIn("src/vlm/train_lora.py", names)  # legacy notebook compatibility
                 self.assertIn("data/synthetic/train/annotations.jsonl", names)
                 self.assertFalse(any(x.startswith(("data/invoices/", "data/evaluation/", "data/cord/")) for x in names))
 

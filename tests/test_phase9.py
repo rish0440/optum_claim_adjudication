@@ -12,8 +12,8 @@ from unittest.mock import patch
 from fastapi.testclient import TestClient
 from PIL import Image
 
-from src.main import app
-from src.settings import get_settings
+from app.main import app
+from src.config.settings import get_settings
 from tests.test_phase8 import run_test_nodes
 
 
@@ -55,11 +55,11 @@ class Phase9APITests(unittest.TestCase):
         self.assertIn('image_inference_configured', health.json())
         page = self.client.get('/')
         self.assertEqual(page.status_code,200)
-        self.assertIn('Reference demo',page.text)
-        self.assertIn('CSV / JSON upload',page.text)
-        self.assertIn('Invoice image',page.text)
+        self.assertIn('Claim Adjudication Copilot',page.text)
+        self.assertNotIn('CSV / JSON upload',page.text)
+        self.assertIn('Upload invoice image',page.text)
         self.assertEqual(self.client.get('/static/app.js').status_code,200)
-        self.assertIn('/api/adjudicate',self.client.get('/static/app.js').text)
+        self.assertIn('/api/claims/analyze',self.client.get('/static/app.js').text)
 
     def test_examples_fixed_allowlist(self):
         response = self.client.get('/api/examples')
@@ -73,7 +73,7 @@ class Phase9APITests(unittest.TestCase):
             self.assertEqual(response.status_code,404)
 
     def test_demo_real_calculator_and_provenance(self):
-        with patch('src.main._run_graph',side_effect=self.simulated_graph):
+        with patch('app.main._run_graph',side_effect=self.simulated_graph):
             response = self.client.post('/api/adjudicate/demo',json={
                 'example_id':'invoice_01_standard','use_milvus':False})
         self.assertEqual(response.status_code,200, response.text[:1000])
@@ -85,7 +85,7 @@ class Phase9APITests(unittest.TestCase):
         self.assertEqual(result['rag_status'],'policy_only_no_vector_search')
 
     def test_csv_upload_invoice_04_missing_rates_not_inferred(self):
-        with patch('src.main._run_graph',side_effect=self.simulated_graph):
+        with patch('app.main._run_graph',side_effect=self.simulated_graph):
             response = self.request_csv()
         self.assertEqual(response.status_code,200,response.text[:1000])
         result = response.json()
@@ -95,12 +95,12 @@ class Phase9APITests(unittest.TestCase):
         self.assertTrue(any(',,' in row for row in result['extracted_csv'].splitlines()[1:]))
 
     def test_csv_missing_and_invalid_date(self):
-        with patch('src.main._run_graph',side_effect=self.simulated_graph):
+        with patch('app.main._run_graph',side_effect=self.simulated_graph):
             for date in ('','2024-99-99','04/18/2024'):
                 self.assertEqual(self.request_csv(date=date).status_code,422)
 
     def test_bad_csv_never_generates_claim(self):
-        with patch('src.main._run_graph',side_effect=self.simulated_graph):
+        with patch('app.main._run_graph',side_effect=self.simulated_graph):
             response = self.client.post('/api/adjudicate',data={'invoice_date':'2024-04-18'},
                 files={'file':('bad.csv',b'Broken,Header\na,b\n','text/csv')})
         self.assertEqual(response.status_code,422)
@@ -110,7 +110,7 @@ class Phase9APITests(unittest.TestCase):
 
     def test_json_file_upload(self):
         path = self.ground/'invoice_02_exclusions.json'
-        with patch('src.main._run_graph',side_effect=self.simulated_graph):
+        with patch('app.main._run_graph',side_effect=self.simulated_graph):
             response = self.client.post('/api/adjudicate',
                 files={'file':('invoice.json',path.read_bytes(),'application/json')})
         self.assertEqual(response.status_code,200,response.text[:1000])

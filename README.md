@@ -1,17 +1,33 @@
-# Optum Claim Adjudication — Phases 1–3 and 5–8
+# Optum Claim Adjudication
 
 A focused FastAPI + LangGraph + fine-tuned VLM + Milvus RAG assignment prototype.
 
-**Current status:** Phase 1–2 datasets and Phase 7 deterministic financial engine
-are implemented. Phase 3 QLoRA smoke-training was completed by the user on
-Colab, with adapter artifacts saved in Drive. Phase 5 adds the remote vLLM
-client but live GPU serving remains on hold. Phase 6 provides Milvus Lite policy
-indexing/retrieval and conservative exact rule resolution. **Phase 8 adds an
-actual LangGraph workflow** with six nodes and safe failure routing. The Phase 8
-Python nodes have passed CPU tests; compiled LangGraph execution must still be
-verified on your Windows environment using `requirements-workflow.txt`.
-The existing FastAPI UI still previews uploads but is not connected to this
-workflow until Phase 9. **Structured reference results are not VLM output.**
+The Phase 3 repository restructuring is complete on Python 3.12. FastAPI
+uses the compiled LangGraph workflow for structured invoice adjudication.
+All 66 existing CPU tests and eight migration checks pass. Image serving and
+GPU training have not been executed during restructuring.
+
+See [the migration report](reports/migration_phase3.md) for the folder tree,
+path map, configuration, preserved artifacts, validation and remaining issues.
+The numbered phase sections below retain the project's earlier implementation
+history; their historical deployment status is superseded by that report.
+
+On this VM, from the Git repository root, reuse the existing parent `.venv`:
+
+```bash
+source ../.venv/bin/activate
+python -B -m unittest discover -s tests -v
+python -B -m scripts.run_workflow --csv data/evaluation/ground_truth/invoice_04_diagnostics.csv --date 2024-04-18
+uvicorn app.main:app --host 127.0.0.1 --port 8000
+```
+
+Canonical modules are `app.main`, `src.trainer.sft`, `src.inference`, and
+`src.orchestration`. Old Python import/CLI paths remain compatibility wrappers.
+Configuration lives in `src/config/default.yaml`; set `OPTUM_CONFIG_FILE` to
+use another YAML file. `OPTUM_PROJECT_ROOT` overrides the root for relative
+configured paths. SFT CLI flags continue to accept explicit data/model paths;
+`OPTUM_SYNTHETIC_DATASET`, `OPTUM_SFT_OUTPUT_DIR` and `MODEL_ID` provide defaults.
+No `.env` file is loaded automatically.
 
 ## 1. Quick start (Windows PowerShell)
 
@@ -24,7 +40,7 @@ py -3.11 -m venv .venv
 python -m pip install -r requirements.txt
 python -m scripts.inspect_phase1_phase2
 python -m unittest discover -s tests -v
-uvicorn src.main:app --reload
+uvicorn app.main:app --reload
 ```
 
 Open **http://127.0.0.1:8000/**. Check API status at
@@ -35,9 +51,9 @@ macOS/Linux: use `python3 -m venv .venv`, `source .venv/bin/activate` and
 
 ## 2. Phase 1 — supplied policy and evaluation ground truth
 
-The original `data/policy.json` is validated by `src/policy.py` and typed
-`src/schemas.py` contracts. `src/settings.py` loads settings from
-`src/config.yaml`. `src/agentic_workflow/state.py` defines a reusable TypedDict
+The original `data/policy.json` is validated by `src/adjudication/policy.py` and typed
+`src/schemas.py` contracts. `src/config/settings.py` loads settings from
+`src/config/default.yaml`. `src/orchestration/state.py` defines a reusable TypedDict
 for future LangGraph nodes. No LangGraph execution is needed yet.
 
 The five supplied invoice images are stored **unchanged** under `data/invoices/`.
@@ -68,7 +84,7 @@ train/validation data, DPO pairs, training prompts, or model-selection runs.**
 
 ## 3. Phase 2 — synthetic invoice image/CSV generator
 
-The data generator is **`src/vlm/dataset.py`** and uses Pillow only. It follows:
+The data generator is **`src/trainer/sft/dataset.py`** and uses Pillow only. It follows:
 
 1. Randomly generate structured line items and prices.
 2. Render the same data as fictional hospital invoice JPGs.
@@ -86,13 +102,13 @@ The downloaded project already contains 10 reproducibly generated pairs.
 To verify without overwriting anything:
 
 ```bash
-python -m src.vlm.dataset --verify
+python -m src.trainer.sft.dataset --verify
 ```
 
 To regenerate those exact examples:
 
 ```bash
-python -m src.vlm.dataset --count 10 --seed 42 --overwrite
+python -m src.trainer.sft.dataset --count 10 --seed 42 --overwrite
 ```
 
 Expected: **10 JPGs + 10 CSVs, 8 train / 2 validation, 64 invoice rows**.
@@ -103,8 +119,8 @@ Only after visually inspecting the first ten JPGs and reading sample CSVs,
 generate a larger training dataset:
 
 ```bash
-python -m src.vlm.dataset --count 500 --seed 42 --overwrite
-python -m src.vlm.dataset --verify
+python -m src.trainer.sft.dataset --count 500 --seed 42 --overwrite
+python -m src.trainer.sft.dataset --verify
 ```
 
 `--overwrite` only replaces the synthetic `train/` and `validation/` outputs.
@@ -193,10 +209,10 @@ contain the adapter; actual model quality is not yet established.
 |---|---|
 | `requirements-colab.txt` | Separate GPU-only dependencies; do NOT install in Windows local `.venv` |
 | `scripts/prepare_colab_dataset.py` | Verify and ZIP synthetic train/validation only, plus training code |
-| `src/vlm/training_data.py` | Verify JSONL ↔ JPG ↔ CSV; make VLM prompt/completion samples |
-| `src/vlm/inference.py` | Real Qwen vision inference, optionally with a PEFT adapter |
-| `src/vlm/train_lora.py` | 4-bit NF4 + rank-8 LoRA via PEFT and TRL SFTTrainer |
-| `src/vlm/evaluate.py` | Base/adapter evaluation with transparent numerator/denominator metrics |
+| `src/trainer/sft/training_data.py` | Verify JSONL ↔ JPG ↔ CSV; make VLM prompt/completion samples |
+| `src/inference/local.py` | Real Qwen vision inference, optionally with a PEFT adapter |
+| `src/trainer/sft/train_lora.py` | 4-bit NF4 + rank-8 LoRA via PEFT and TRL SFTTrainer |
+| `src/trainer/sft/evaluate.py` | Base/adapter evaluation with transparent numerator/denominator metrics |
 | `notebooks/qwen25_vl_colab.ipynb` | Follow-along Colab notebook, from GPU setup to Drive saving |
 | `tests/test_phase3.py` | CPU-only tests for safety, parsing, metrics and bundle contents |
 
@@ -209,7 +225,7 @@ Run these commands from the repository root after copying the Phase 3 patch:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
-python -m src.vlm.dataset --verify
+python -m src.trainer.sft.dataset --verify
 python -m unittest discover -s tests -v
 python -m scripts.prepare_colab_dataset
 ```
@@ -231,11 +247,11 @@ It contains synthetic data and Phase 3 training files, **not** `data/invoices`,
 The Colab notebook includes runnable shell commands equivalent to:
 
 ```bash
-python -m src.vlm.evaluate --dataset-root data/synthetic --split validation \
+python -m src.trainer.sft.evaluate --dataset-root data/synthetic --split validation \
   --max-samples 2 --output reports/training/baseline.json
-python -m src.vlm.train_lora --dataset-root data/synthetic --max-steps 2 \
+python -m src.trainer.sft.train_lora --dataset-root data/synthetic --max-steps 2 \
   --grad-accum 2 --lora-rank 8 --output-dir models/qwen25-vl-invoice-lora
-python -m src.vlm.evaluate --dataset-root data/synthetic --split validation \
+python -m src.trainer.sft.evaluate --dataset-root data/synthetic --split validation \
   --max-samples 2 --adapter models/qwen25-vl-invoice-lora/adapter \
   --output reports/training/finetuned.json
 ```
@@ -272,7 +288,7 @@ model selection, or synthetic validation.
 - `deploy/vllm/start_vllm.sh`: runs `vllm serve` privately on Linux GPU, loads
   the trained LoRA adapter as `invoice-extractor`, validates adapter path.
 - `deploy/vllm/README.md`: step-by-step GPU setup, SSH tunnel, and security.
-- `src/vlm/remote_client.py`: local authenticated image-to-CSV client; checks
+- `src/inference/remote_client.py`: local authenticated image-to-CSV client; checks
   image size/type, validates CSV with Pydantic and records round-trip latency.
 - `scripts/test_remote_vlm.py`: real `/v1/models` check and synthetic invoice
   extraction from local laptop; no inference is fabricated.
@@ -286,7 +302,7 @@ model selection, or synthetic validation.
 python -m pip install -r requirements.txt
 python -m unittest discover -s tests -v
 python -m scripts.test_remote_vlm --help
-uvicorn src.main:app --reload
+uvicorn app.main:app --reload
 ```
 
 ### Actual GPU server: mandatory later to close Phase 5
@@ -468,10 +484,10 @@ Phase 5 instructions. Inference latency and model name appear as metadata.
 
 ### Code organization
 
-- `src/agentic_workflow/state.py`: typed state contract.
-- `src/agentic_workflow/graph.py`: actual compiled graph, safe edges.
-- `src/agentic_workflow/workflow.py`: one-call facade for FastAPI in Phase 9.
-- `src/agentic_workflow/nodes/*/node.py`: separate executable nodes.
+- `src/orchestration/state.py`: typed state contract.
+- `src/orchestration/graph.py`: actual compiled graph, safe edges.
+- `src/orchestration/workflow.py`: one-call facade for FastAPI in Phase 9.
+- `src/orchestration/nodes/*/node.py`: separate executable nodes.
 - `src/adjudication/{rules,calculator}.py`: reuse and validate Phase 7 rules
   and money; vector similarity never sets financial caps.
 - `scripts/run_workflow.py`: local demonstration and JSON export.
@@ -523,7 +539,7 @@ python -m pip install -r requirements-workflow.txt
 
 ```powershell
 python -m unittest discover -s tests -v
-uvicorn src.main:app --reload --host 127.0.0.1 --port 8000
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
 Open `http://127.0.0.1:8000/`. Select **Reference demo**, choose
@@ -558,9 +574,9 @@ extraction performance**.
   HTTP 503. Unavailable model or invalid model response does not fabricate
   line items or reimbursement.
 
-**Files added/modified:** `src/main.py`, `src/templates/index.html`,
-`src/static/app.js`, `src/static/styles.css`,
-`src/agentic_workflow/nodes/response_builder/node.py`, `requirements.txt`,
+**Files added/modified:** `app/main.py`, `app/templates/index.html`,
+`app/static/app.js`, `app/static/styles.css`,
+`src/orchestration/nodes/response_builder/node.py`, `requirements.txt`,
 `tests/test_phase9.py`, and this README.
 
 **Verification boundary:** Phase 9's API regression tests execute the real

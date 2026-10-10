@@ -1,0 +1,37 @@
+{
+  "id": "chatcmpl-141b72d012b04fb6b5de3906b08782a0",
+  "object": "chat.completion",
+  "created": 1791669106,
+  "model": "invoice-extractor",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Item,Quantity,Rate,Amount\nRoom Charges,2,3500.00,7000.00\nConsultation,1,1500.00,1500.00\nMedicines,5,240.00,1200.00\nBlood Test,1,800.00,800.00\n",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [],
+        "reasoning": null,
+        "reasoning_content": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "prompt_tokens": 335,
+    "total_tokens": 426,
+    "completion_tokens": 91,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "kv_transfer_params": null
+}

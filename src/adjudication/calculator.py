@@ -8,7 +8,7 @@ from datetime import date
 from decimal import Decimal, ROUND_HALF_UP
 
 from src.adjudication.rules import LIMITED_BY_QUANTITY, resolve_lines
-from src.policy import load_policy
+from src.adjudication.policy import load_policy
 from src.schemas import ClaimResult, InvoiceGroundTruth, ItemDecision
 
 CENT = Decimal("0.01")

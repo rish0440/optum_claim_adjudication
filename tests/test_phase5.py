@@ -13,7 +13,7 @@ from pathlib import Path
 import httpx
 from PIL import Image
 
-from src.vlm.remote_client import RemoteVLMClient, RemoteVLMConfig, RemoteVLMError
+from src.inference.remote_client import RemoteVLMClient, RemoteVLMConfig, RemoteVLMError
 
 
 class RemoteClientTests(unittest.TestCase):

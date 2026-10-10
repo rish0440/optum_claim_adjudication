@@ -7,7 +7,7 @@ This module deliberately NEVER calculates claim payouts (Phase 7).
 
 import re
 
-from src.policy import load_policy
+from src.adjudication.policy import load_policy
 
 # A small transparent normalization glossary, NOT learned from Optum test images.
 # Keys refer to exact IDs from the supplied policy and are validated at runtime.
@@ -59,6 +59,20 @@ def _is_match(item_normalized: str, phrase_normalized: str) -> bool:
     return phrase_normalized == "blood test" and item_normalized.startswith("blood test ")
 
 
+def _is_exclusion_subtype(item: str, phrase: str) -> bool:
+    """Recognize explicit excluded names within a broader billing category.
+
+    Whole-word canonical names/approved aliases only, never vector similarity.
+    Negated/qualified references remain unresolved instead of causing a denial.
+    """
+    padded, needle = f" {item} ", f" {phrase} "
+    if not phrase or needle not in padded:
+        return False
+    remainder = padded.replace(needle, " ").split()
+    return not set(remainder) & {"no", "not", "non", "without", "excluding", "except",
+                                 "including", "plus", "with", "and", "or", "versus"}
+
+
 class PolicyRuleResolver:
     """Ground rule selection in the original JSON policy, never the vector scores."""
 
@@ -86,6 +100,10 @@ class PolicyRuleResolver:
             elif any(_is_match(normalized, normalize_item(term)) for term in
                      ALIASES.get(rule.rule_id, ())):
                 matches.append((rule, "approved_alias"))
+            elif rule.rule_id.startswith("EXC-") and any(
+                    _is_exclusion_subtype(normalized, normalize_item(term))
+                    for term in (rule.category, *ALIASES.get(rule.rule_id, ()))):
+                matches.append((rule, "explicit_excluded_subtype"))
         if matches:
             # Exclusions override coverage. Within coverage, exact/specific outranks
             # a synonym/general category. No silent semantic approval.

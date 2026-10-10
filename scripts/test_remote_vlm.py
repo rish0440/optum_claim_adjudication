@@ -12,7 +12,7 @@ import argparse
 import json
 from pathlib import Path
 
-from src.vlm.remote_client import RemoteVLMClient, RemoteVLMConfig, RemoteVLMError
+from src.inference.remote_client import RemoteVLMClient, RemoteVLMConfig, RemoteVLMError
 
 
 def main() -> int:
