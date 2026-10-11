@@ -30,6 +30,7 @@ service-account*.json
 /models/qwen25-vl-invoice-lora/
 /models/qwen25_vl_sft/
 /models/qwen25_3b_reasoning_dpo/
+/models/qwen25_vl_cord_sft/
 
 # Local databases, logs, and outputs
 *.sqlite
@@ -39,3 +40,8 @@ service-account*.json
 /outputs/
 /runs/
 /reports/claims/
+
+# Phase 10A: local CORD source downloads and selected receipts/labels only
+/data/cord_source/
+/data/cord_200/
+/reports/cord/
