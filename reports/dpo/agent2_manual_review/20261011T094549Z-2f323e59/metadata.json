@@ -1,0 +1,246 @@
+{
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "adapter": {
+    "adapter": "/home/rishabh_mishra0440/optum_claim_adjudication/optum_claim_adjudication/models/qwen25_3b_reasoning_dpo/runs/20261011T074847Z-60ab777d/adapter",
+    "adapter_sha256": "29431d4df8baa1e7690b5ec1d2a1ecabcd1f3dd28b75243a75445e0210ca08bf",
+    "rank": 8,
+    "tensor_count": 288,
+    "artifacts": [
+      "README.md",
+      "adapter_config.json",
+      "adapter_model.safetensors",
+      "added_tokens.json",
+      "chat_template.jinja",
+      "merges.txt",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.json"
+    ]
+  },
+  "dataset": {
+    "split": "standalone_smoke",
+    "pairs": 1,
+    "case_id": "agent2-new-manual-review-smoke-20240617",
+    "case": {
+      "case_id": "agent2-new-manual-review-smoke-20240617",
+      "family": "new-smoke:medical-relationship-unverified",
+      "rule_id": "COV-005",
+      "mode": "canonical",
+      "prior_disagreement": false,
+      "split": "standalone_smoke",
+      "date": "2024-06-17",
+      "item": "Medicines",
+      "lines": [
+        {
+          "item": "Medicines",
+          "quantity": 3,
+          "rate": null,
+          "amount": "1475.25"
+        }
+      ]
+    },
+    "canonical_rule_id": "COV-005",
+    "canonical_conditions": "Covered at billed amount when medically related and not excluded.",
+    "expected_references": {
+      "items": [
+        {
+          "item_index": 0,
+          "status": "manual_review",
+          "fact_indices": [
+            0,
+            1
+          ],
+          "concerns": [
+            0
+          ]
+        }
+      ]
+    },
+    "deterministic_claim": {
+      "invoice_id": "agent2-new-manual-review-smoke-20240617",
+      "policy_id": "POL-CLM-001",
+      "currency": "INR",
+      "claim_status": "manual_review",
+      "decisions": [
+        {
+          "item": "Medicines",
+          "quantity": 3,
+          "billed_amount": "1475.25",
+          "approved_amount": "0.00",
+          "disallowed_amount": "0.00",
+          "pending_review_amount": "1475.25",
+          "status": "manual_review",
+          "rule_id": null,
+          "category": null,
+          "limit_type": null,
+          "cap_amount": null,
+          "rule_source": null,
+          "explanation": "Review required: Treatment context requires manual review..",
+          "review_note": "Treatment context requires manual review."
+        }
+      ],
+      "billed_total": "1475.25",
+      "eligible_total": "0.00",
+      "disallowed_total": "0.00",
+      "pending_review_total": "1475.25",
+      "copay_rate_percent": "10",
+      "copay_amount": "0.00",
+      "final_reimbursement": null,
+      "notes": [
+        "Per-claim limits are shared across invoice rows and assigned in row order.",
+        "Reimbursement not finalized while item/date review is pending; eligible and co-pay totals are provisional."
+      ]
+    },
+    "fixture_sha256": "183e84c1977f51aa3b5e1ff5ff3aa0bc6676f5389f29d69071b18ff1a1f1bbd2",
+    "evaluation_kind": "new_non_dataset_manual_review_smoke",
+    "independent_generalization_evidence": false,
+    "human_verified": false
+  },
+  "schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "FactSelections",
+      "strict": true,
+      "schema": {
+        "$defs": {
+          "FactSelection": {
+            "additionalProperties": false,
+            "properties": {
+              "item_index": {
+                "minimum": 0,
+                "title": "Item Index",
+                "type": "integer"
+              },
+              "status": {
+                "enum": [
+                  "approved",
+                  "partial",
+                  "denied",
+                  "manual_review"
+                ],
+                "title": "Status",
+                "type": "string"
+              },
+              "fact_indices": {
+                "items": {
+                  "type": "integer"
+                },
+                "maxItems": 2,
+                "minItems": 1,
+                "title": "Fact Indices",
+                "type": "array"
+              },
+              "concerns": {
+                "description": "Select only concern indices supplied for this item; [] means no concern",
+                "items": {
+                  "type": "integer"
+                },
+                "maxItems": 2,
+                "title": "Concerns",
+                "type": "array"
+              }
+            },
+            "required": [
+              "item_index",
+              "status",
+              "fact_indices",
+              "concerns"
+            ],
+            "title": "FactSelection",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/FactSelection"
+            },
+            "maxItems": 50,
+            "minItems": 1,
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "title": "FactSelections",
+        "type": "object"
+      }
+    }
+  },
+  "schema_sha256": "df3422d63aa8a89a93cc1fd32c62197301c9b0a433d7676eb62db4246f02d5d7",
+  "endpoint": "http://127.0.0.1:8002",
+  "max_new_tokens": 512,
+  "seed": 42,
+  "decoding": "identical temperature=0 and generic strict JSON schema; no gold constraints",
+  "versions": {
+    "httpx": "0.28.1",
+    "pydantic": "2.14.0",
+    "transformers": "4.57.1",
+    "peft": "0.17.1"
+  },
+  "server": {
+    "version": {
+      "version": "0.11.2"
+    },
+    "base": {
+      "id": "reasoning-base",
+      "object": "model",
+      "created": 1791711945,
+      "owned_by": "vllm",
+      "root": "Qwen/Qwen2.5-3B-Instruct",
+      "parent": null,
+      "max_model_len": 2048,
+      "permission": [
+        {
+          "id": "modelperm-4508c6eac0f240668d84d15f809897b5",
+          "object": "model_permission",
+          "created": 1791711945,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ]
+    },
+    "dpo": {
+      "id": "reasoning-dpo",
+      "object": "model",
+      "created": 1791711945,
+      "owned_by": "vllm",
+      "root": "/home/rishabh_mishra0440/optum_claim_adjudication/optum_claim_adjudication/models/qwen25_3b_reasoning_dpo/runs/20261011T074847Z-60ab777d/adapter",
+      "parent": "reasoning-base",
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-4d92daf8a7014fd789fec701e18e3b2c",
+          "object": "model_permission",
+          "created": 1791711945,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ]
+    },
+    "verification": "vLLM model-card routing; server loads base without LoRA and adapter by separate served ID"
+  },
+  "status": "completed",
+  "run_id": "20261011T094549Z-2f323e59",
+  "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+  "base_weight_identity": "same loaded vLLM base for both served model IDs; server model-card routing audited",
+  "conclusion": "Diagnostic only; schema constraints do not establish semantic correctness or deployment readiness"
+}

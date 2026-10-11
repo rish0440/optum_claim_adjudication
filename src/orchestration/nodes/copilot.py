@@ -21,11 +21,13 @@ class ClaimNodes:
         self.timeout, self.verbose = timeout, verbose
         self.extraction_client = extraction_client
         client = text_client or TextReasoningClient(endpoint, timeout=timeout, max_tokens=max_tokens)
+        self.reasoning_route = client.route.diagnostics() if isinstance(client, TextReasoningClient) else None
         self.adjudicator = PolicyAdjudicationAgent(client)
         self.reviewer = ReasoningReviewAgent(client)
 
     def execute(self, name, state, action):
         started = time.monotonic()
+        transport_failure = False
         try:
             if started >= state["deadline_monotonic"]:
                 raise TimeoutError("Claim deadline exceeded")
@@ -33,6 +35,7 @@ class ClaimNodes:
             update.setdefault("retry_node", None)
             outcome = "ok" if update.get("workflow_status") != "REVIEW_REQUIRED" else "review"
         except Exception as exc:
+            transport_failure = isinstance(exc, RemoteVLMError)
             recoverable = isinstance(exc, AgentFormatError)
             counters = dict(state["retry_counters"])
             if recoverable and sum(counters.values()) < state["max_retries"]:
@@ -55,10 +58,28 @@ class ClaimNodes:
                     "item_index": None, "sanitized_response": None}}
         trace = {"node": name, "request_id": state["request_id"], "outcome": outcome,
                  "elapsed_ms": round((time.monotonic()-started)*1000)}
+        if self.reasoning_route and name in ("policy_adjudication_agent", "reasoning_review_agent"):
+            # This is the requested route; only successful response metadata verifies service.
+            trace["requested_reasoning_route"] = self.reasoning_route
+            key = "agent_1" if name == "policy_adjudication_agent" else "agent_2"
+            served = update.get("metadata", {}).get(key, {}).get("model")
+            if served:
+                trace["served_model"] = served
+            if outcome == "rejected" and transport_failure:
+                update["warnings"] = [*update.get("warnings", state["warnings"]),
+                                      "Selected reasoning service failed; no alternate model was used"]
+        if self.reasoning_route and name == "orchestrator":
+            update["model_ids"] = {**state["model_ids"], "agent_1": self.reasoning_route["model"],
+                                   "agent_2": self.reasoning_route["model"]}
+            update["metadata"] = {**state["metadata"], "reasoning_route": self.reasoning_route}
         update["execution_trace"] = [*state["execution_trace"], trace]
         update["trace"] = [*state["trace"], name]
         if self.verbose:
             print(f"{state['request_id']} {name}: {outcome} ({trace['elapsed_ms']} ms)", flush=True)
+            if "requested_reasoning_route" in trace:
+                print(f"  reasoning route: {self.reasoning_route['model']} at {self.reasoning_route['endpoint']}", flush=True)
+                if "served_model" in trace:
+                    print(f"  verified response model: {trace['served_model']}", flush=True)
         return update
 
     def orchestrator(self, state):

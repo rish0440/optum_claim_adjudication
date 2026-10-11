@@ -1,0 +1,60 @@
+[
+  {
+    "node": "orchestrator",
+    "request_id": "14350838d4f2497c99dc409f856db944",
+    "outcome": "ok",
+    "elapsed_ms": 0
+  },
+  {
+    "node": "csv_validation",
+    "request_id": "14350838d4f2497c99dc409f856db944",
+    "outcome": "ok",
+    "elapsed_ms": 1
+  },
+  {
+    "node": "policy_retrieval",
+    "request_id": "14350838d4f2497c99dc409f856db944",
+    "outcome": "ok",
+    "elapsed_ms": 10748
+  },
+  {
+    "node": "policy_adjudication_agent",
+    "request_id": "14350838d4f2497c99dc409f856db944",
+    "outcome": "ok",
+    "elapsed_ms": 2895,
+    "requested_reasoning_route": {
+      "backend": "text_dpo",
+      "endpoint": "http://127.0.0.1:8002/v1",
+      "model": "reasoning-dpo",
+      "base_model_id": "Qwen/Qwen2.5-3B-Instruct",
+      "adapter_sha256": "29431d4df8baa1e7690b5ec1d2a1ecabcd1f3dd28b75243a75445e0210ca08bf"
+    },
+    "served_model": "reasoning-dpo"
+  },
+  {
+    "node": "deterministic_adjudication",
+    "request_id": "14350838d4f2497c99dc409f856db944",
+    "outcome": "review",
+    "elapsed_ms": 0
+  },
+  {
+    "node": "reasoning_review_agent",
+    "request_id": "14350838d4f2497c99dc409f856db944",
+    "outcome": "review",
+    "elapsed_ms": 5001,
+    "requested_reasoning_route": {
+      "backend": "text_dpo",
+      "endpoint": "http://127.0.0.1:8002/v1",
+      "model": "reasoning-dpo",
+      "base_model_id": "Qwen/Qwen2.5-3B-Instruct",
+      "adapter_sha256": "29431d4df8baa1e7690b5ec1d2a1ecabcd1f3dd28b75243a75445e0210ca08bf"
+    },
+    "served_model": "reasoning-dpo"
+  },
+  {
+    "node": "final_response",
+    "request_id": "14350838d4f2497c99dc409f856db944",
+    "outcome": "REVIEW_REQUIRED",
+    "elapsed_ms": 0
+  }
+]

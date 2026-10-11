@@ -1,0 +1,242 @@
+[
+  {
+    "pair_id": "synthetic-COV-002-agent_1",
+    "agent_role": "agent_1",
+    "scenario_family": "category:COV-002",
+    "token_counts": {
+      "prompt": 367,
+      "chosen": 51,
+      "rejected": 53
+    },
+    "baseline": {
+      "chosen_logp": -5.885371685028076,
+      "rejected_logp": -17.749874114990234,
+      "margin": 11.864502429962158,
+      "outcome": "correct",
+      "scoring_seconds": 2.1307257860025857
+    },
+    "dpo": {
+      "chosen_logp": -2.300954818725586,
+      "rejected_logp": -18.401615142822266,
+      "margin": 16.10066032409668,
+      "outcome": "correct",
+      "scoring_seconds": 0.3609383590082871
+    }
+  },
+  {
+    "pair_id": "synthetic-COV-002-agent_2",
+    "agent_role": "agent_2",
+    "scenario_family": "category:COV-002",
+    "token_counts": {
+      "prompt": 625,
+      "chosen": 50,
+      "rejected": 50
+    },
+    "baseline": {
+      "chosen_logp": -12.742677688598633,
+      "rejected_logp": -24.832626342773438,
+      "margin": 12.089948654174805,
+      "outcome": "correct",
+      "scoring_seconds": 0.25333127699559554
+    },
+    "dpo": {
+      "chosen_logp": -12.18759536743164,
+      "rejected_logp": -25.831459045410156,
+      "margin": 13.643863677978516,
+      "outcome": "correct",
+      "scoring_seconds": 0.3062884300015867
+    }
+  },
+  {
+    "pair_id": "synthetic-COV-009-agent_1",
+    "agent_role": "agent_1",
+    "scenario_family": "category:COV-009",
+    "token_counts": {
+      "prompt": 361,
+      "chosen": 51,
+      "rejected": 53
+    },
+    "baseline": {
+      "chosen_logp": -4.6628642082214355,
+      "rejected_logp": -17.2309627532959,
+      "margin": 12.568098545074463,
+      "outcome": "correct",
+      "scoring_seconds": 0.21843004699621815
+    },
+    "dpo": {
+      "chosen_logp": -2.1993167400360107,
+      "rejected_logp": -18.55134391784668,
+      "margin": 16.35202717781067,
+      "outcome": "correct",
+      "scoring_seconds": 0.2752545419934904
+    }
+  },
+  {
+    "pair_id": "synthetic-COV-009-agent_2",
+    "agent_role": "agent_2",
+    "scenario_family": "category:COV-009",
+    "token_counts": {
+      "prompt": 638,
+      "chosen": 51,
+      "rejected": 52
+    },
+    "baseline": {
+      "chosen_logp": -7.948822021484375,
+      "rejected_logp": -24.837831497192383,
+      "margin": 16.889009475708008,
+      "outcome": "correct",
+      "scoring_seconds": 0.2566670350061031
+    },
+    "dpo": {
+      "chosen_logp": -6.9248857498168945,
+      "rejected_logp": -24.46772575378418,
+      "margin": 17.542840003967285,
+      "outcome": "correct",
+      "scoring_seconds": 0.28818945300008636
+    }
+  },
+  {
+    "pair_id": "synthetic-COV-012-agent_1",
+    "agent_role": "agent_1",
+    "scenario_family": "category:COV-012",
+    "token_counts": {
+      "prompt": 361,
+      "chosen": 51,
+      "rejected": 53
+    },
+    "baseline": {
+      "chosen_logp": -6.017160892486572,
+      "rejected_logp": -17.13826560974121,
+      "margin": 11.121104717254639,
+      "outcome": "correct",
+      "scoring_seconds": 0.2015725749952253
+    },
+    "dpo": {
+      "chosen_logp": -2.436277389526367,
+      "rejected_logp": -17.82173728942871,
+      "margin": 15.385459899902344,
+      "outcome": "correct",
+      "scoring_seconds": 0.2787387639982626
+    }
+  },
+  {
+    "pair_id": "synthetic-COV-012-agent_2",
+    "agent_role": "agent_2",
+    "scenario_family": "category:COV-012",
+    "token_counts": {
+      "prompt": 614,
+      "chosen": 50,
+      "rejected": 50
+    },
+    "baseline": {
+      "chosen_logp": -8.22958755493164,
+      "rejected_logp": -23.616117477416992,
+      "margin": 15.386529922485352,
+      "outcome": "correct",
+      "scoring_seconds": 0.25329634800436907
+    },
+    "dpo": {
+      "chosen_logp": -7.7924065589904785,
+      "rejected_logp": -23.92757797241211,
+      "margin": 16.13517141342163,
+      "outcome": "correct",
+      "scoring_seconds": 0.28405970700259786
+    }
+  },
+  {
+    "pair_id": "synthetic-COV-014-agent_1",
+    "agent_role": "agent_1",
+    "scenario_family": "category:COV-014",
+    "token_counts": {
+      "prompt": 367,
+      "chosen": 51,
+      "rejected": 53
+    },
+    "baseline": {
+      "chosen_logp": -5.896141529083252,
+      "rejected_logp": -17.406208038330078,
+      "margin": 11.510066509246826,
+      "outcome": "correct",
+      "scoring_seconds": 0.20705734999501146
+    },
+    "dpo": {
+      "chosen_logp": -2.5045063495635986,
+      "rejected_logp": -18.32366180419922,
+      "margin": 15.81915545463562,
+      "outcome": "correct",
+      "scoring_seconds": 0.2884661259886343
+    }
+  },
+  {
+    "pair_id": "synthetic-COV-014-agent_2",
+    "agent_role": "agent_2",
+    "scenario_family": "category:COV-014",
+    "token_counts": {
+      "prompt": 627,
+      "chosen": 50,
+      "rejected": 50
+    },
+    "baseline": {
+      "chosen_logp": -9.507024765014648,
+      "rejected_logp": -20.972103118896484,
+      "margin": 11.465078353881836,
+      "outcome": "correct",
+      "scoring_seconds": 0.25649134900595527
+    },
+    "dpo": {
+      "chosen_logp": -10.087677001953125,
+      "rejected_logp": -22.92209243774414,
+      "margin": 12.834415435791016,
+      "outcome": "correct",
+      "scoring_seconds": 0.28982494499359746
+    }
+  },
+  {
+    "pair_id": "synthetic-EXC-012-agent_1",
+    "agent_role": "agent_1",
+    "scenario_family": "category:EXC-012",
+    "token_counts": {
+      "prompt": 357,
+      "chosen": 51,
+      "rejected": 51
+    },
+    "baseline": {
+      "chosen_logp": -5.775429725646973,
+      "rejected_logp": -13.8407564163208,
+      "margin": 8.065326690673828,
+      "outcome": "correct",
+      "scoring_seconds": 0.20786665599734988
+    },
+    "dpo": {
+      "chosen_logp": -3.199082851409912,
+      "rejected_logp": -13.551909446716309,
+      "margin": 10.352826595306396,
+      "outcome": "correct",
+      "scoring_seconds": 0.28814700500515755
+    }
+  },
+  {
+    "pair_id": "synthetic-EXC-012-agent_2",
+    "agent_role": "agent_2",
+    "scenario_family": "category:EXC-012",
+    "token_counts": {
+      "prompt": 618,
+      "chosen": 53,
+      "rejected": 54
+    },
+    "baseline": {
+      "chosen_logp": -7.992262840270996,
+      "rejected_logp": -16.327104568481445,
+      "margin": 8.33484172821045,
+      "outcome": "correct",
+      "scoring_seconds": 0.2582079419953516
+    },
+    "dpo": {
+      "chosen_logp": -7.031495094299316,
+      "rejected_logp": -15.980489730834961,
+      "margin": 8.948994636535645,
+      "outcome": "correct",
+      "scoring_seconds": 0.2875503389950609
+    }
+  }
+]

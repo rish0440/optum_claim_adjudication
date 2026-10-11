@@ -1,0 +1,112 @@
+{
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "adapter": {
+    "adapter": "/home/rishabh_mishra0440/optum_claim_adjudication/optum_claim_adjudication/models/qwen25_3b_reasoning_dpo/runs/20261011T074847Z-60ab777d/adapter",
+    "adapter_sha256": "29431d4df8baa1e7690b5ec1d2a1ecabcd1f3dd28b75243a75445e0210ca08bf",
+    "rank": 8,
+    "tensor_count": 288,
+    "artifacts": [
+      "README.md",
+      "adapter_config.json",
+      "adapter_model.safetensors",
+      "added_tokens.json",
+      "chat_template.jinja",
+      "merges.txt",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.json"
+    ]
+  },
+  "adapter_config_sha256": "5337ab6ce9cccca11bd7ea342a3c084ac1151cf0fce82f5cb89559d3a1399821",
+  "training_config_sha256": "4378fb426a2cf098f52ade1df82bca558d067e2bbdb4609c29e0f0e1b6c90eb1",
+  "dataset": {
+    "split": "test",
+    "pairs": 10,
+    "by_role": {
+      "agent_1": 5,
+      "agent_2": 5
+    },
+    "underlying_cases": 5,
+    "test_sha256": "59810e9d535312175925ff32657f64fe7839fc83f60ef96bde786e1ce998ac66",
+    "manifest_sha256": "2bfca3fff010348cbe0253edf20ecd9ec880da68b55b916764e49c9b38277e3a",
+    "policy_sha256": "51a590cffdec1f74a6f759deccc33a495c20f52d0d9c71cf86c972bc2ded2927",
+    "source_sha256": {
+      "src/agents/contracts.py": "df3422d63aa8a89a93cc1fd32c62197301c9b0a433d7676eb62db4246f02d5d7",
+      "src/agents/policy_adjudicator.py": "1024659462cd0274934862a61fc85121085f84e5c2c726327daa14a07f057be5",
+      "src/agents/reasoning_reviewer.py": "65c35655e92d091dbb2ddd4c344d6eb57bf29e6cd1df60a1798c22eafb2d616d",
+      "src/prompts/adjudicator.txt": "09708972e5e881d970c6ad0def5d7b4401a917b044f1d8627847c160723165fd",
+      "src/prompts/reasoning.txt": "cc4d264b939a70a953ee6051f72f60d2a779e2bbd3b138ccb0f48cc65aee5497",
+      "src/inference/reasoning_client.py": "b1dea523d31434e63e7a9fc46bd574069384523eab9c3058b65bb88672520fa6",
+      "src/adjudication/calculator.py": "b13548d8f401ad22fb5d5fc5e72c422cd999b9f600f3efdd916686c480b7efd9",
+      "src/rag/resolver.py": "ac1f93bfadf91a3c4c2501d326f49890214cd1b526cb2181617d41593a753c96",
+      "src/orchestration/nodes/copilot.py": "bb78959baa96c4ba238bb262b11e7afddd481dc634afac5db8cca7472ca94a3e",
+      "src/trainer/preference_optimization/annotation/cases.py": "bf3803924981790b28d1ee64587bf90f1175962a25be019a4394928a29088f7b",
+      "src/trainer/preference_optimization/annotation/generate.py": "7a7c16b3048b0809700609f3b0e27f118ae729a7778fb9e74ff4e4798989f20c",
+      "src/trainer/preference_optimization/annotation/validate.py": "8c74a95aea3f233d486be234b9cd8f758c30e97727deeae08c1ba1ee01ae3b84"
+    },
+    "human_verified": false,
+    "train_validation_opened": false,
+    "annotation_source_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "rejected_error_types": [
+      "exclusion_ignored",
+      "unnecessary_wrong_item_concern",
+      "unsupported_exclusion",
+      "wrong_item_fact"
+    ]
+  },
+  "versions": {
+    "trl": "0.24.0",
+    "transformers": "4.57.1",
+    "peft": "0.17.1",
+    "accelerate": "1.12.0",
+    "datasets": "4.3.0",
+    "bitsandbytes": "0.48.1",
+    "safetensors": "0.8.0",
+    "torch": "2.14.1"
+  },
+  "interpreter": "/home/rishabh_mishra0440/optum_claim_adjudication/.venv/bin/python",
+  "output_root": "/home/rishabh_mishra0440/optum_claim_adjudication/optum_claim_adjudication/reports/dpo/evaluation",
+  "chat_template": "checked against saved adapter tokenizer at GPU-evaluation startup",
+  "gpu_kernels_and_inference": "not verified by CPU preflight",
+  "status": "completed",
+  "run_id": "20261011T084146Z-292fffc4",
+  "seed": 42,
+  "context_length": 2048,
+  "generation_settings": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 512,
+    "eos_token_id": 151645,
+    "pad_token_id": 151643,
+    "use_cache": true
+  },
+  "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+  "base_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "base_config_sha256": "3a3b2832b057a3ea3ef40521bf5ff5ae196cffe4a84f60ca830dfbc502ee15d1",
+  "base_weight_sha256": {
+    "model-00001-of-00002.safetensors": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+    "model-00002-of-00002.safetensors": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d"
+  },
+  "torch_runtime_version": "2.14.1+cu130",
+  "evaluator_source_sha256": {
+    "evaluate.py": "1183ff28a0d4e4a7101bd2e378fa226944fd8def3024259914e669498d2626f9",
+    "metrics.py": "bebf1a616f5ea66ffb67d0acfa21e30f8c70b23f26d439a7920820f6623874ab",
+    "report.py": "b3d3853157a32576e78e3999fdd25f5a661a6960ad2523f0b797954e19037774"
+  },
+  "quantization": "4-bit NF4, double quantization; same base object and tokenizer for both modes",
+  "dtype": "torch.bfloat16",
+  "gpu_name": "NVIDIA L4",
+  "cuda": "13.0",
+  "scoring": "summed completion-only conditional logp, including stock TRL completion EOS; prompt/padding excluded",
+  "pairwise_tie_tolerance": 1e-06,
+  "total_seconds": 283.644251500009,
+  "metric_definitions": {
+    "eligible_completion": "nontruncated, valid-schema answer with row-owned references; not approval or semantic correctness",
+    "unsupported_approval_rate": "percent of Agent 1 prompts containing any unsupported approval",
+    "wrong_item_evidence_rate": "percent of Agent 2 prompts containing any cross-item reference"
+  },
+  "peak_cuda_allocated_gib": 2.874004364013672,
+  "peak_cuda_reserved_gib": 3.001953125,
+  "created_utc": "2026-10-11T08:46:02.390262+00:00"
+}

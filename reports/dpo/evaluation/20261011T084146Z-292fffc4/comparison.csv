@@ -1,0 +1,76 @@
+group,metric,baseline,dpo,delta,dpo_result
+overall,valid_json,90.0,90.0,0.0,tied
+overall,valid_schema,60.0,60.0,0.0,tied
+overall,correct_scoped_references,60.0,60.0,0.0,tied
+overall,eligible_completion,60.0,60.0,0.0,tied
+overall,semantic_correct,60.0,60.0,0.0,tied
+overall,unsupported_reference_count,0,0,0,tied
+overall,wrong_item_reference_count,0,0,0,tied
+overall,unsupported_approval_count,0,0,0,tied
+overall,missing_required_concern_count,0,0,0,tied
+overall,unsupported_review_count,0,0,0,tied
+overall,classification_correct,100.0,100.0,0.0,tied
+overall,candidate_correct,100.0,100.0,0.0,tied
+overall,basis_correct,100.0,100.0,0.0,tied
+overall,facts_correct,20.0,20.0,0.0,tied
+overall,concerns_correct,20.0,20.0,0.0,tied
+overall,status_correct,20.0,20.0,0.0,tied
+overall,coverage_selection,100.0,100.0,0.0,tied
+overall,exclusion_identification,100.0,100.0,0.0,tied
+overall,appropriate_review,,,,not measured
+overall,unsupported_approval_rate,0.0,0.0,0.0,tied
+overall,wrong_item_evidence_rate,0.0,0.0,0.0,tied
+overall,generation_failures,4,4,0,tied
+overall,average_generation_seconds,10.152398944601009,14.617685109995364,4.465286165394355,worsened
+overall,raw_preference_accuracy,100.0,100.0,0.0,tied
+overall,raw_preference_mean_margin,11.929450702667236,14.31154146194458,2.382090759277345,improved
+agent_1,valid_json,100.0,100.0,0.0,tied
+agent_1,valid_schema,100.0,100.0,0.0,tied
+agent_1,correct_scoped_references,100.0,100.0,0.0,tied
+agent_1,eligible_completion,100.0,100.0,0.0,tied
+agent_1,semantic_correct,100.0,100.0,0.0,tied
+agent_1,unsupported_reference_count,0,0,0,tied
+agent_1,wrong_item_reference_count,0,0,0,tied
+agent_1,unsupported_approval_count,0,0,0,tied
+agent_1,missing_required_concern_count,0,0,0,tied
+agent_1,unsupported_review_count,0,0,0,tied
+agent_1,classification_correct,100.0,100.0,0.0,tied
+agent_1,candidate_correct,100.0,100.0,0.0,tied
+agent_1,basis_correct,100.0,100.0,0.0,tied
+agent_1,facts_correct,,,,not measured
+agent_1,concerns_correct,,,,not measured
+agent_1,status_correct,,,,not measured
+agent_1,coverage_selection,100.0,100.0,0.0,tied
+agent_1,exclusion_identification,100.0,100.0,0.0,tied
+agent_1,appropriate_review,,,,not measured
+agent_1,unsupported_approval_rate,0.0,0.0,0.0,tied
+agent_1,wrong_item_evidence_rate,,,,not measured
+agent_1,generation_failures,0,0,0,tied
+agent_1,average_generation_seconds,4.118188962803106,5.831755223195069,1.7135662603919632,worsened
+agent_1,raw_preference_accuracy,100.0,100.0,0.0,tied
+agent_1,raw_preference_mean_margin,11.025819778442383,14.802025890350341,3.7762061119079586,improved
+agent_2,valid_json,80.0,80.0,0.0,tied
+agent_2,valid_schema,20.0,20.0,0.0,tied
+agent_2,correct_scoped_references,20.0,20.0,0.0,tied
+agent_2,eligible_completion,20.0,20.0,0.0,tied
+agent_2,semantic_correct,20.0,20.0,0.0,tied
+agent_2,unsupported_reference_count,0,0,0,tied
+agent_2,wrong_item_reference_count,0,0,0,tied
+agent_2,unsupported_approval_count,0,0,0,tied
+agent_2,missing_required_concern_count,0,0,0,tied
+agent_2,unsupported_review_count,0,0,0,tied
+agent_2,classification_correct,,,,not measured
+agent_2,candidate_correct,,,,not measured
+agent_2,basis_correct,,,,not measured
+agent_2,facts_correct,20.0,20.0,0.0,tied
+agent_2,concerns_correct,20.0,20.0,0.0,tied
+agent_2,status_correct,20.0,20.0,0.0,tied
+agent_2,coverage_selection,,,,not measured
+agent_2,exclusion_identification,,,,not measured
+agent_2,appropriate_review,,,,not measured
+agent_2,unsupported_approval_rate,,,,not measured
+agent_2,wrong_item_evidence_rate,0.0,0.0,0.0,tied
+agent_2,generation_failures,4,4,0,tied
+agent_2,average_generation_seconds,16.18660892639891,23.40361499679566,7.217006070396749,worsened
+agent_2,raw_preference_accuracy,100.0,100.0,0.0,tied
+agent_2,raw_preference_mean_margin,12.83308162689209,13.821057033538818,0.9879754066467274,improved

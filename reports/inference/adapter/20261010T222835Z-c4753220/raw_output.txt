@@ -1,0 +1,5 @@
+Item,Quantity,Rate,Amount
+Room Charges,2,3500.00,7000.00
+Consultation,1,1500.00,1500.00
+Medicines,5,240.00,1200.00
+Blood Test,1,800.00,800.00

@@ -1,0 +1,9 @@
+# Compatibility declarations matching the EXISTING training environment.
+# Do not bulk-install, upgrade Torch, or use ~/.venv-vllm. No new package required.
+trl==0.24.0
+transformers==4.57.1
+peft==0.17.1
+accelerate==1.12.0
+datasets==4.3.0
+bitsandbytes==0.48.1
+safetensors==0.8.0
