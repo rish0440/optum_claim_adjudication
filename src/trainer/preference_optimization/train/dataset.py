@@ -1,7 +1,7 @@
 """Read only train/validation; reuse Phase 9A validation without opening test."""
 import hashlib
 from src.adjudication.policy import load_policy
-from src.trainer.preference_optimization.annotation.cases import source_hashes
+from src.trainer.preference_optimization.annotation.provenance import verify_provenance
 from src.trainer.preference_optimization.annotation.validate import strict_json, validate_records
 from src.utils.paths import ROOT, project_path
 
@@ -9,8 +9,7 @@ from src.utils.paths import ROOT, project_path
 def load_preferences(directory):
     directory = project_path(directory).resolve()
     manifest = strict_json((directory/"manifest.json").read_text(encoding="utf-8"))
-    if manifest["source_sha256"] != source_hashes() or manifest["policy_sha256"] != hashlib.sha256((ROOT/"data/policy.json").read_bytes()).hexdigest():
-        raise ValueError("Phase 9A policy/contracts changed; stop and inspect the validated dataset")
+    provenance = verify_provenance(manifest)
     if manifest["pair_count"] != 80 or manifest["flagged_cases"]:
         raise ValueError("Expected the verified complete 80-pair Phase 9A dataset")
     # Original annotation provenance is VL; training explicitly uses the NEW
@@ -39,7 +38,8 @@ def load_preferences(directory):
     audit = {"source_model_id": manifest["base_model_id"], "train_pairs": 60, "validation_pairs": 10,
              "counts_by_role": {s: counts[s] for s in data}, "split_sha256": hashes,
              "manifest_sha256": hashlib.sha256((directory/"manifest.json").read_bytes()).hexdigest(),
-             "test_accessed": False, "annotation_validator": "Phase 9A validate_records on train/validation only"}
+             "test_accessed": False, "source_provenance": provenance,
+             "annotation_validator": "Phase 9A validate_records on train/validation only"}
     return data, audit
 
 

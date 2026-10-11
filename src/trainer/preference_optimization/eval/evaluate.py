@@ -12,7 +12,7 @@ import time
 from uuid import uuid4
 
 from src.adjudication.policy import load_policy
-from src.trainer.preference_optimization.annotation.cases import source_hashes
+from src.trainer.preference_optimization.annotation.provenance import verify_provenance
 from src.trainer.preference_optimization.annotation.validate import strict_json, validate_records
 from src.trainer.preference_optimization.train.config import MODEL_ID, OUTPUT_ROOT, PINNED
 from src.trainer.preference_optimization.train.dataset import serialize_and_audit
@@ -51,8 +51,7 @@ def load_test(directory="data/dpo"):
     """Never open train/validation. Reuse canonical validation for test only."""
     directory = project_path(directory).resolve()
     manifest = strict_json((directory/"manifest.json").read_text(encoding="utf-8"))
-    if manifest["source_sha256"] != source_hashes() or manifest["policy_sha256"] != sha(ROOT/"data/policy.json"):
-        raise ValueError("Policy/contracts differ from validated Phase 9A data; do not relabel the held-out test")
+    provenance = verify_provenance(manifest)
     if manifest["pair_count"] != 80 or manifest["flagged_cases"] or manifest["human_verified"] is not False:
         raise ValueError("Expected complete, automatically validated 80-pair synthetic dataset")
     if manifest["base_model_id"] != "Qwen/Qwen2.5-VL-3B-Instruct":
@@ -78,6 +77,7 @@ def load_test(directory="data/dpo"):
         "underlying_cases": len({a["synthetic_case_id"] for a in annotations}),
         "test_sha256": sha(path), "manifest_sha256": sha(directory/"manifest.json"),
         "policy_sha256": manifest["policy_sha256"], "source_sha256": manifest["source_sha256"],
+        "source_provenance": provenance,
         "human_verified": False, "train_validation_opened": False,
         "annotation_source_model": manifest["base_model_id"],
         "rejected_error_types": sorted({a["rejected_error_type"] for a in annotations})}

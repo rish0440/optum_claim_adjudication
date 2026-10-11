@@ -1,0 +1,6 @@
+{
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "run_id": "20261011T074847Z-60ab777d",
+  "adapter_path": "runs/20261011T074847Z-60ab777d/adapter",
+  "adapter_sha256": "29431d4df8baa1e7690b5ec1d2a1ecabcd1f3dd28b75243a75445e0210ca08bf"
+}

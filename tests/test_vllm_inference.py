@@ -1,10 +1,12 @@
 """Focused Phase 6 CPU tests with mocked HTTP; never launch vLLM or load a model."""
 import base64
+import importlib
 import json
 from pathlib import Path
 import tempfile
+from types import SimpleNamespace
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 import httpx
 from PIL import Image
@@ -182,15 +184,25 @@ class VLLMInferenceTests(unittest.TestCase):
         distribution = type("Distribution", (), {
             "requires": [], "locate_file": lambda self, _: Path("/fake/qwen2_5_vl.py")})()
         qwen_source = ('SupportsLoRA hf_to_vllm_mapper "model.language_model.": "language_model.model."')
+        serving_prefix = Path(__file__).resolve().parents[1].parent / ".venv-vllm"
+        imports = Mock(side_effect=modules.__getitem__)
+        real_import_module = importlib.import_module
         with patch("src.inference.vllm_server.metadata.version", side_effect=versions.__getitem__) as version, \
                 patch("src.inference.vllm_server.metadata.distribution", return_value=distribution), \
-                patch("src.inference.vllm_server.importlib.import_module", side_effect=modules.__getitem__), \
+                patch("src.inference.vllm_server.importlib", SimpleNamespace(import_module=imports)), \
                 patch("src.inference.vllm_server.Path.is_file", return_value=True), \
                 patch("src.inference.vllm_server.Path.read_text", return_value=qwen_source), \
-                patch("src.inference.vllm_server.sys.prefix", str(Path(__file__).resolve().parents[1].parent / ".venv-vllm")):
+                patch("src.inference.vllm_server.sys.prefix", str(serving_prefix)), \
+                patch("src.inference.vllm_server.sys.executable", str(serving_prefix / "bin/python")):
+            # Replacing this module's importlib reference must not hijack the
+            # stdlib importer used by unittest.mock to resolve later patches.
+            self.assertIs(importlib.import_module, real_import_module)
             result = check_environment()
+        self.assertIs(importlib.import_module, real_import_module)
         self.assertEqual(result["errors"], [])
         self.assertIn("unverified", result["status"])
+        self.assertEqual([call.args[0] for call in imports.call_args_list],
+                         ["torch", "torchvision", "transformers", "vllm", "httpx", "PIL"])
         self.assertNotIn("trl", [call.args[0] for call in version.call_args_list])
         self.assertNotIn("peft", [call.args[0] for call in version.call_args_list])
 

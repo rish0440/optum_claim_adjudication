@@ -1,0 +1,22 @@
+{
+  "source_model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "train_pairs": 60,
+  "validation_pairs": 10,
+  "counts_by_role": {
+    "train": {
+      "agent_1": 30,
+      "agent_2": 30
+    },
+    "validation": {
+      "agent_1": 5,
+      "agent_2": 5
+    }
+  },
+  "split_sha256": {
+    "train": "601a7a270495c51f80866613d4cb71da20aa340e084757a61e8cd6dc2fbdcd13",
+    "validation": "9b42825fe1f1c851324b5621781e25a43c8036e28f0b34f84827a70bd6e94f2a"
+  },
+  "manifest_sha256": "2bfca3fff010348cbe0253edf20ecd9ec880da68b55b916764e49c9b38277e3a",
+  "test_accessed": false,
+  "annotation_validator": "Phase 9A validate_records on train/validation only"
+}

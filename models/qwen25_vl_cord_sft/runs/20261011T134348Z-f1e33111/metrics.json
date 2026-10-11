@@ -1,0 +1,32 @@
+{
+  "training": {
+    "train_runtime": 315.612,
+    "train_samples_per_second": 1.02,
+    "train_steps_per_second": 0.26,
+    "total_flos": 2639009692188672.0,
+    "train_loss": 0.08519597544062246,
+    "epoch": 2.0
+  },
+  "evaluation": {
+    "eval_loss": 0.09379842877388,
+    "eval_runtime": 8.3498,
+    "eval_samples_per_second": 2.395,
+    "eval_steps_per_second": 2.395,
+    "eval_entropy": 1.9207708477973937,
+    "eval_num_tokens": 127594.0,
+    "eval_mean_token_accuracy": 0.9812536895275116,
+    "epoch": 2.0
+  },
+  "training_loss": 0.08519597544062246,
+  "global_steps_completed": 82,
+  "epochs_completed": 2.0,
+  "training_duration_seconds": 315.9809683259955,
+  "total_duration_seconds": 351.4606044800021,
+  "peak_cuda_allocated_gib": 3.49676513671875,
+  "peak_cuda_reserved_gib": 4.294921875,
+  "trainable_parameters": 3686400,
+  "adapter_parameters_changed": true,
+  "initial_adapter_digest": "0f470a0a2b8628dac6d7a3cabf4a664c3233120dbcbbaf2bf2793247240c4355",
+  "final_adapter_digest": "c5e31bcedefb546a90204a81fb3e62fac26355d4259c4c130ff1b47dc2fe5b96",
+  "best_validation_checkpoint": "/home/rishabh_mishra0440/optum_claim_adjudication/optum_claim_adjudication/models/qwen25_vl_cord_sft/runs/20261011T134348Z-f1e33111/checkpoints/checkpoint-82"
+}

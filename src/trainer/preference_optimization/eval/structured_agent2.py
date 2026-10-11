@@ -16,8 +16,9 @@ from src.agents.contracts import AgentSafetyError, FactSelections
 from src.agents.reasoning_reviewer import ReasoningReviewAgent
 from src.inference.remote_client import RemoteVLMClient, RemoteVLMConfig, RemoteVLMError
 from src.trainer.preference_optimization.annotation.cases import (
-    AnnotationClient, agent1, calculate, prepare_case, rejected_selection, source_hashes,
+    AnnotationClient, agent1, calculate, prepare_case, rejected_selection,
 )
+from src.trainer.preference_optimization.annotation.provenance import verify_provenance
 from src.trainer.preference_optimization.annotation.validate import strict_json, validate_records
 from src.trainer.preference_optimization.train.config import MODEL_ID, OUTPUT_ROOT
 from src.trainer.preference_optimization.train.train_dpo import verify_latest
@@ -36,8 +37,7 @@ def load_cases(split="validation", limit=None, acknowledge=False):
         raise ValueError("Observed test requires --acknowledge-observed-test; it is a diagnostic retest, not independent evaluation")
     directory = ROOT/"data/dpo"
     manifest = strict_json((directory/"manifest.json").read_text(encoding="utf-8"))
-    if manifest["source_sha256"] != source_hashes() or manifest["policy_sha256"] != sha(ROOT/"data/policy.json"):
-        raise ValueError("Canonical policy/contracts changed; stop rather than alter held-out labels")
+    provenance = verify_provenance(manifest)
     annotations = [a for a in manifest["annotations"] if a["data_split"] == split]
     records = [strict_json(line) for line in (directory/f"{split}.jsonl").read_text(encoding="utf-8").splitlines()]
     if len(records) != len(annotations) or len(records) != {"train": 60, "validation": 10, "test": 10}[split]:
@@ -51,6 +51,7 @@ def load_cases(split="validation", limit=None, acknowledge=False):
         agent2 = agent2[:limit]
     return agent2, {"split": split, "pairs": len(agent2), "split_sha256": sha(directory/f"{split}.jsonl"),
         "manifest_sha256": sha(directory/"manifest.json"), "policy_sha256": manifest["policy_sha256"],
+        "source_provenance": provenance,
         "evaluation_kind": "observed_test_diagnostic_retest" if split == "test" else "non_test_implementation_diagnostic",
         "independent_generalization_evidence": False, "human_verified": False}
 

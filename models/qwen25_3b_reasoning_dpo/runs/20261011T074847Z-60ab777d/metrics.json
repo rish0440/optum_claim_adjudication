@@ -1,0 +1,36 @@
+{
+  "training_loss": 0.6256254017353058,
+  "eval_loss": 0.5391092896461487,
+  "training": {
+    "train_runtime": 113.3511,
+    "train_samples_per_second": 0.706,
+    "train_steps_per_second": 0.176,
+    "total_flos": 0.0,
+    "train_loss": 0.6256254017353058,
+    "epoch": 1.3333333333333333
+  },
+  "evaluation": {
+    "eval_loss": 0.5391092896461487,
+    "eval_runtime": 5.3788,
+    "eval_samples_per_second": 1.859,
+    "eval_steps_per_second": 1.859,
+    "eval_rewards/chosen": 0.18575868010520935,
+    "eval_rewards/rejected": -0.15570183098316193,
+    "eval_rewards/accuracies": 1.0,
+    "eval_rewards/margins": 0.34146052598953247,
+    "eval_logps/chosen": -6.414495944976807,
+    "eval_logps/rejected": -23.156110763549805,
+    "eval_logits/chosen": -1.9920381307601929,
+    "eval_logits/rejected": -1.9550052881240845,
+    "epoch": 1.3333333333333333
+  },
+  "global_steps_completed": 20,
+  "policy_calls": 130,
+  "reference_calls": 130,
+  "gradient_checks": 80,
+  "adapter_changed": true,
+  "best_checkpoint": "/home/rishabh_mishra0440/optum_claim_adjudication/optum_claim_adjudication/models/qwen25_3b_reasoning_dpo/runs/20261011T074847Z-60ab777d/checkpoints/checkpoint-20",
+  "duration_seconds": 130.36358504199598,
+  "peak_cuda_allocated_gib": 3.088721752166748,
+  "peak_cuda_reserved_gib": 4.109375
+}

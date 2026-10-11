@@ -1,0 +1,4 @@
+# Only the three pointer-selected final LoRA weights; no pretrained backbones.
+models/qwen25_vl_sft/runs/20261010T174916Z-0b733db4/adapter/adapter_model.safetensors filter=lfs diff=lfs merge=lfs -text
+models/qwen25_3b_reasoning_dpo/runs/20261011T074847Z-60ab777d/adapter/adapter_model.safetensors filter=lfs diff=lfs merge=lfs -text
+models/qwen25_vl_cord_sft/runs/20261011T134348Z-f1e33111/adapter/adapter_model.safetensors filter=lfs diff=lfs merge=lfs -text

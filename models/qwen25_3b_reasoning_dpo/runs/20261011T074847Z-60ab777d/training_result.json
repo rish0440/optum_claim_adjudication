@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "run_id": "20261011T074847Z-60ab777d",
+  "finished_utc": "2026-10-11T07:50:58.723306+00:00",
+  "adapter": {
+    "adapter_sha256": "29431d4df8baa1e7690b5ec1d2a1ecabcd1f3dd28b75243a75445e0210ca08bf",
+    "rank": 8,
+    "tensor_count": 288,
+    "artifacts": [
+      "README.md",
+      "adapter_config.json",
+      "adapter_model.safetensors",
+      "added_tokens.json",
+      "chat_template.jinja",
+      "merges.txt",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.json"
+    ]
+  }
+}

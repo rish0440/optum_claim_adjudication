@@ -1,4 +1,0 @@
-Item,Quantity,Rate,Amount
-Blood Test (Lipid Profile),8,,6160
-Diet Meal,8,,3120
-Ultrasound,5,,7400

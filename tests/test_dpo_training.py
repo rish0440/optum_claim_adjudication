@@ -11,6 +11,7 @@ from src.trainer.preference_optimization.train.config import (
 )
 from src.trainer.preference_optimization.train.dataset import load_preferences, serialize_and_audit
 from src.trainer.preference_optimization.train.train_dpo import build_trainer, publish_success, verify_latest
+from src.trainer.preference_optimization.annotation import provenance
 
 
 class ToyTokenizer:
@@ -58,12 +59,40 @@ class DPOTrainingTests(unittest.TestCase):
             data, audit = load_preferences("data/dpo")
         self.assertEqual([len(data[s]) for s in ("train", "validation")], [60, 10])
         self.assertFalse(audit["test_accessed"])
+        self.assertEqual(audit["source_provenance"]["status"], "compatible_runtime_revision")
+        self.assertEqual(set(audit["source_provenance"]["source_changes"]),
+                         set(provenance.RUNTIME_TRANSITIONS))
         self.assertEqual(audit["counts_by_role"]["train"], {"agent_1": 30, "agent_2": 30})
         for records in data.values():
             for row in records:
                 self.assertEqual([m["role"] for m in row["prompt"]], ["system", "user"])
                 self.assertEqual(row["chosen"][0]["role"], "assistant")
                 self.assertNotEqual(row["chosen"], row["rejected"])
+
+    def test_provenance_accepts_only_inspected_runtime_transitions(self):
+        manifest = json.loads((ROOT / "data/dpo/manifest.json").read_text())
+        current = provenance.source_hashes()
+        self.assertEqual(set(provenance.verify_provenance(manifest)["source_changes"]),
+                         set(provenance.RUNTIME_TRANSITIONS))
+        exact = {**manifest, "source_sha256": current}
+        self.assertEqual(provenance.verify_provenance(exact)["status"], "exact")
+        for path in ("src/agents/contracts.py", "src/adjudication/calculator.py",
+                     "src/inference/reasoning_client.py", "src/orchestration/nodes/copilot.py"):
+            with self.subTest(path=path):
+                changed = {**current, path: "0" * 64}
+                with patch.object(provenance, "source_hashes", return_value=changed):
+                    with self.assertRaisesRegex(ValueError, "unreviewed source fingerprint"):
+                        provenance.verify_provenance(manifest)
+        unknown_origin = {**manifest, "source_sha256": dict(manifest["source_sha256"])}
+        unknown_origin["source_sha256"]["src/inference/reasoning_client.py"] = "0" * 64
+        with self.assertRaisesRegex(ValueError, "unreviewed source fingerprint"):
+            provenance.verify_provenance(unknown_origin)
+        incomplete = {**manifest, "source_sha256": dict(manifest["source_sha256"])}
+        incomplete["source_sha256"].pop("src/agents/contracts.py")
+        with self.assertRaisesRegex(ValueError, "fingerprint set mismatch"):
+            provenance.verify_provenance(incomplete)
+        with self.assertRaisesRegex(ValueError, "canonical policy fingerprint"):
+            provenance.verify_provenance({**manifest, "policy_sha256": "0" * 64})
 
     def copy_selected_data(self, directory):
         for name in ("manifest.json", "train.jsonl", "validation.jsonl"):

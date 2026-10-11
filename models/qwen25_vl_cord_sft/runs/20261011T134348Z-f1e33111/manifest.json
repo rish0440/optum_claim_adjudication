@@ -1,0 +1,50 @@
+{
+  "counts": {
+    "train": 161,
+    "validation": 20,
+    "test": 19
+  },
+  "source": {
+    "repo_id": "Heliosoph/CORD",
+    "requested_revision": "51b7e93",
+    "revision": "51b7e932f2a07a883d77487b34aa5a33f76fa713",
+    "files": {
+      "cord-train-images.zip": {
+        "size": 167944014,
+        "sha256": "626173e36d20082fa004d000c0ac71365890598c6dfc94b0a2f321d66a28c270",
+        "url": "https://huggingface.co/datasets/Heliosoph/CORD/resolve/51b7e932f2a07a883d77487b34aa5a33f76fa713/cord-train-images.zip"
+      },
+      "cord-train.jsonl.gz": {
+        "size": 653988,
+        "sha256": "73abcf5e389e6687976384b6f0d5958c003f70369ef796bf789ad5cde1a7b6f3",
+        "url": "https://huggingface.co/datasets/Heliosoph/CORD/resolve/51b7e932f2a07a883d77487b34aa5a33f76fa713/cord-train.jsonl.gz"
+      },
+      "cord-validation-images.zip": {
+        "size": 22071652,
+        "sha256": "bb75acf7c497395329059f67c256572deee727753593f96ddc2479705ac39763",
+        "url": "https://huggingface.co/datasets/Heliosoph/CORD/resolve/51b7e932f2a07a883d77487b34aa5a33f76fa713/cord-validation-images.zip"
+      },
+      "cord-validation.jsonl.gz": {
+        "size": 75828,
+        "sha256": "1b6c8ea65df70ea4ec2d3fbe7599395a96827e87d51179d2d0a362fbc4b3f48e",
+        "url": "https://huggingface.co/datasets/Heliosoph/CORD/resolve/51b7e932f2a07a883d77487b34aa5a33f76fa713/cord-validation.jsonl.gz"
+      },
+      "cord-test-images.zip": {
+        "size": 20962139,
+        "sha256": "f08e97ddab89ba02422948c41289ac4a32221d76cbdd131828e6bc37cdc822d6",
+        "url": "https://huggingface.co/datasets/Heliosoph/CORD/resolve/51b7e932f2a07a883d77487b34aa5a33f76fa713/cord-test-images.zip"
+      },
+      "cord-test.jsonl.gz": {
+        "size": 80827,
+        "sha256": "a2aed84c8b507d68f554def4a60e4749e2c74b64cd40d30cbb50b7c32619f1e2",
+        "url": "https://huggingface.co/datasets/Heliosoph/CORD/resolve/51b7e932f2a07a883d77487b34aa5a33f76fa713/cord-test.jsonl.gz"
+      }
+    }
+  },
+  "dataset_manifest_sha256": "84099cd98b7e7d44cd3b3b9f6a1170ab73c237ea8390a36e2a6ae1889b68f609",
+  "split_sha256": {
+    "train": "c15a5fd253a7c851551822be2af3c709e7bf58aa906098dc8734dab24c0437dd",
+    "validation": "f495a9d6c4adc168ad5b17ba4d854da4a58714c0cf2b1f46585af28e1711b5ab"
+  },
+  "test_artifacts_opened": false
+}
