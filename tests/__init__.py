@@ -1,1 +1,1 @@
-"""Future automated test suite; currently no executable tests."""
+"""Essential offline regression tests for the claim application and training."""

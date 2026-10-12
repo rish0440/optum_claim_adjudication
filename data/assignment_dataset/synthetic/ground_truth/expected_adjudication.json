@@ -1,0 +1,234 @@
+[
+  {
+    "invoice_id": "invoice_01_standard",
+    "billed_total": "10500",
+    "eligible_total": "9500",
+    "copay_total": "950",
+    "reimbursement_total": "8550",
+    "item_decisions": [
+      {
+        "item": "Room Charges",
+        "rule_id": "COV-001",
+        "billed": "7000",
+        "eligible": "6000",
+        "status": "partial"
+      },
+      {
+        "item": "Consultation",
+        "rule_id": "COV-003",
+        "billed": "1500",
+        "eligible": "1500",
+        "status": "approved"
+      },
+      {
+        "item": "Medicines",
+        "rule_id": "COV-005",
+        "billed": "1200",
+        "eligible": "1200",
+        "status": "approved"
+      },
+      {
+        "item": "Blood Test",
+        "rule_id": "COV-010",
+        "billed": "800",
+        "eligible": "800",
+        "status": "approved"
+      }
+    ],
+    "annotation_note": ""
+  },
+  {
+    "invoice_id": "invoice_02_exclusions",
+    "billed_total": "6750",
+    "eligible_total": "5050",
+    "copay_total": "505",
+    "reimbursement_total": "4545",
+    "item_decisions": [
+      {
+        "item": "Room Charges",
+        "rule_id": "COV-001",
+        "billed": "2800",
+        "eligible": "2800",
+        "status": "approved"
+      },
+      {
+        "item": "Consultation",
+        "rule_id": "COV-003",
+        "billed": "1200",
+        "eligible": "1200",
+        "status": "approved"
+      },
+      {
+        "item": "Medicines",
+        "rule_id": "COV-005",
+        "billed": "1050",
+        "eligible": "1050",
+        "status": "approved"
+      },
+      {
+        "item": "Personal Care Kit",
+        "rule_id": "EXC-001",
+        "billed": "800",
+        "eligible": "0",
+        "status": "denied"
+      },
+      {
+        "item": "Health Supplement",
+        "rule_id": "EXC-004",
+        "billed": "900",
+        "eligible": "0",
+        "status": "denied"
+      }
+    ],
+    "annotation_note": ""
+  },
+  {
+    "invoice_id": "invoice_03_icu_mixed",
+    "billed_total": "28100",
+    "eligible_total": "24900",
+    "copay_total": "2490",
+    "reimbursement_total": "22410",
+    "item_decisions": [
+      {
+        "item": "ICU Charges",
+        "rule_id": "COV-002",
+        "billed": "15000",
+        "eligible": "12000",
+        "status": "partial"
+      },
+      {
+        "item": "Room Charges",
+        "rule_id": "COV-001",
+        "billed": "3200",
+        "eligible": "3000",
+        "status": "partial"
+      },
+      {
+        "item": "Consultation",
+        "rule_id": "COV-003",
+        "billed": "3000",
+        "eligible": "3000",
+        "status": "approved"
+      },
+      {
+        "item": "Medicines",
+        "rule_id": "COV-005",
+        "billed": "2400",
+        "eligible": "2400",
+        "status": "approved"
+      },
+      {
+        "item": "CT Scan",
+        "rule_id": "COV-008",
+        "billed": "4500",
+        "eligible": "4500",
+        "status": "approved"
+      }
+    ],
+    "annotation_note": ""
+  },
+  {
+    "invoice_id": "invoice_04_diagnostics",
+    "billed_total": "13060",
+    "eligible_total": "13060",
+    "copay_total": "1306",
+    "reimbursement_total": "11754",
+    "item_decisions": [
+      {
+        "item": "MRI Scan",
+        "rule_id": "COV-007",
+        "billed": "8000",
+        "eligible": "8000",
+        "status": "approved"
+      },
+      {
+        "item": "Blood Test (CBC)",
+        "rule_id": "COV-010",
+        "billed": "600",
+        "eligible": "600",
+        "status": "approved"
+      },
+      {
+        "item": "Blood Test (Lipid Profile)",
+        "rule_id": "COV-010",
+        "billed": "1200",
+        "eligible": "1200",
+        "status": "approved"
+      },
+      {
+        "item": "X-Ray",
+        "rule_id": "COV-009",
+        "billed": "800",
+        "eligible": "800",
+        "status": "approved"
+      },
+      {
+        "item": "Consultation",
+        "rule_id": "COV-003",
+        "billed": "1500",
+        "eligible": "1500",
+        "status": "approved"
+      },
+      {
+        "item": "Medicines",
+        "rule_id": "COV-005",
+        "billed": "960",
+        "eligible": "960",
+        "status": "approved"
+      }
+    ],
+    "annotation_note": "No unit-rate column is printed; every Rate field is intentionally null/blank."
+  },
+  {
+    "invoice_id": "invoice_05_nonmedical",
+    "billed_total": "10250",
+    "eligible_total": "8950",
+    "copay_total": "895",
+    "reimbursement_total": "8055",
+    "item_decisions": [
+      {
+        "item": "Room Charges",
+        "rule_id": "COV-001",
+        "billed": "5000",
+        "eligible": "5000",
+        "status": "approved"
+      },
+      {
+        "item": "Consultation",
+        "rule_id": "COV-003",
+        "billed": "1200",
+        "eligible": "1200",
+        "status": "approved"
+      },
+      {
+        "item": "Medicines",
+        "rule_id": "COV-005",
+        "billed": "2400",
+        "eligible": "2400",
+        "status": "approved"
+      },
+      {
+        "item": "Diet Meal",
+        "rule_id": "EXC-006",
+        "billed": "900",
+        "eligible": "0",
+        "status": "denied"
+      },
+      {
+        "item": "Television Charges",
+        "rule_id": "EXC-007",
+        "billed": "400",
+        "eligible": "0",
+        "status": "denied"
+      },
+      {
+        "item": "Surgical Gloves",
+        "rule_id": "COV-019",
+        "billed": "350",
+        "eligible": "350",
+        "status": "approved"
+      }
+    ],
+    "annotation_note": "Surgical Gloves mapped provisionally to COV-019 (Medical Consumables). Confirm if alternative interpretation is requested."
+  }
+]

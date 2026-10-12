@@ -1,7 +1,7 @@
 # Manual verification and demo operations
 
 None of these commands was executed during cleanup. Run from the repository
-root. Do not recreate environments or install from every requirements file.
+root. Reuse the existing environments and review any dependency installation.
 
 ## CPU imports and dependencies
 
@@ -9,42 +9,43 @@ root. Do not recreate environments or install from every requirements file.
 source ../.venv/bin/activate
 python -m pip check
 python -m pip show fastapi uvicorn pydantic Pillow httpx python-multipart reportlab langgraph pymilvus sentence-transformers
-python -B -c 'import app.main, src.agents.contracts, src.orchestration.graph, src.rag.retriever, src.adjudication.calculator; print("Application imports OK")'
+python -B -c 'import UI.main, src.components.agentic_workflow.contracts, src.components.agentic_workflow.graph, src.components.rag.retriever, src.utils.calculator; print("Application imports OK")'
 $HOME/.venv-vllm/bin/python -m pip check
 $HOME/.venv-vllm/bin/python -m pip show vllm torch torchvision transformers
 ```
 
-Review missing/import errors before installing anything. `requirements.txt`,
-`requirements-workflow.txt`, `requirements-rag.txt`, `requirements-web.txt` define
-runtime dependencies; SFT/DPO pins apply only to `../.venv`. Serving vLLM 0.11.2
-has its own Torch/Transformers stack. Never bulk-upgrade either environment.
+Review missing/import errors before installing anything. `requirements.txt`
+contains application, workflow, retrieval and training dependencies, including
+GPU packages. Preview changes with `python -m pip install --dry-run -r requirements.txt`
+when reusing `../.venv`. Serving vLLM 0.11.2 has its own Torch/Transformers stack
+and `src/components/deploy/vllm/constraints.txt`. Never bulk-upgrade either environment.
 
-## CPU regressions (mocked external services)
+## Essential CPU regressions (mocked external services)
 
 ```bash
-OPTUM_REASONING_BACKEND=phase8 python -B -m unittest tests.test_reasoning_routing tests.test_claim_graph tests.test_agent1_integration tests.test_claim_web tests.test_phase7 tests.test_phase9 tests.test_cord_evaluation tests.test_optum_extraction -v
 OPTUM_REASONING_BACKEND=phase8 python -B -m unittest discover -s tests -v
 ```
 
-Some existing suites require local original invoice fixtures. Preserve them on
+The retained suites cover the demo workflow, financial calculations, retrieval,
+web reports, inference and training safeguards. See [testing guide](TESTING.md).
+Some suites require local original invoice fixtures. Preserve them on
 this VM; an image-free public checkout must restore authorized copies before
 running those suites. Historical preference provenance checks may report source
 drift after Phase 9D; do not rewrite labels/manifests to conceal it.
 
-## Verify all three successful adapters (CPU; no model load)
+## Verify both successful adapters (CPU; no model load)
 
 ```bash
-python -u -m src.trainer.sft.train.checkpoints --output-dir models/qwen25_vl_sft
-python -u -m src.trainer.preference_optimization.train.train_dpo --verify-latest
-python -u -m src.trainer.cord.train --verify-latest
+python -u -m trainer.dpo_qlora_policy_reasoning.train --verify-latest
+python -u -m trainer.sft_qlora_invoice_extraction.train --verify-latest
 OPTUM_REASONING_BACKEND=text_dpo python -m scripts.check_reasoning_route
-sha256sum models/qwen25_vl_sft/runs/20261010T174916Z-0b733db4/adapter/adapter_model.safetensors models/qwen25_3b_reasoning_dpo/runs/20261011T074847Z-60ab777d/adapter/adapter_model.safetensors models/qwen25_vl_cord_sft/runs/20261011T134348Z-f1e33111/adapter/adapter_model.safetensors
-bash -n deploy/vllm/start_reasoning.sh deploy/vllm/start_vlm.sh
+sha256sum models/qwen_25_finetune_dpo_qlora/runs/20261011T074847Z-60ab777d/model_weights/adapter_model.safetensors models/qwen25_finetune_sf_qlora/runs/20261011T134348Z-f1e33111/model_weights/adapter_model.safetensors
+bash -n src/components/deploy/vllm/start_reasoning.sh src/components/deploy/vllm/start_vlm.sh
 ```
 
-Compare hashes with `models/README.md` and each latest pointer. Shell syntax and
+Compare hashes with `docs/models_README.md` and each latest pointer. Shell syntax and
 CPU checks do not prove GPU kernels/adapter loading. Do not modify successful
-metadata: original/CORD pointer checks require selected `training_log.json`.
+metadata: extraction pointer checks require selected `training_log.json`.
 
 ## Three terminals and health
 
@@ -73,7 +74,7 @@ python -m scripts.build_policy_index
 ```
 
 An incompatible existing index needs explicit review before a manual `--rebuild`;
-do not overwrite it automatically. Preserve `data/policy.json`.
+do not overwrite it automatically. Preserve `data/assignment_dataset/policy.json`.
 
 ## End-to-end image and PDF
 
@@ -102,17 +103,13 @@ Compare the PDF with the actual JSON/UI: item decisions, real rule IDs, pending
 evidence, copay and NOT FINALIZED reimbursement. A downloaded PDF alone is not a
 correctness check. Local reports stay under `reports/claims/<request_id>/`.
 
-## Rollback without changing weights or saved pointers
+## Switch reasoning backends
 
-Stop only the relevant foreground process with Ctrl-C; never launch two servers
-on the same port. For the original extractor, restart terminal 1 with:
-
-```bash
-OPTUM_SFT_OUTPUT_DIR=models/qwen25_vl_sft VLM_PYTHON="$HOME/.venv-vllm/bin/python" bash deploy/vllm/start_vlm.sh adapter --gpu-memory-utilization 0.40
-```
+Stop the relevant foreground process before restarting; keep one server per port.
+The extraction server uses the retained SFT model selected in README.
 
 Return to the previous reasoning startup by using the untouched temporary script
-instead of `deploy/vllm/start_reasoning.sh`. To compare text-base reasoning,
+instead of `src/components/deploy/vllm/start_reasoning.sh`. To compare text-base reasoning,
 restart FastAPI with `OPTUM_REASONING_BACKEND=text_base`; for the historical
 vision-base agent route use `phase8`. Do not change environment variables during
 an in-flight claim. The final setup in README remains text_dpo + CORD SFT.

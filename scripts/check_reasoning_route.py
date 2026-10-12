@@ -3,7 +3,7 @@ import argparse
 import json
 import time
 
-from src.inference.reasoning_client import TextReasoningClient
+from src.components.inference.reasoning_client import TextReasoningClient
 
 
 def main():

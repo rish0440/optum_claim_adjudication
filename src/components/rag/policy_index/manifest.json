@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "policy_id": "POL-CLM-001",
+  "policy_sha256": "51a590cffdec1f74a6f759deccc33a495c20f52d0d9c71cf86c972bc2ded2927",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "collection": "policy_rules",
+  "db_path": "/home/rishabh_mishra0440/optum_claim_adjudication/optum_claim_adjudication/src/components/rag/policy_index/policy.db",
+  "dimension": 384,
+  "rule_count": 45,
+  "coverage_count": 25,
+  "exclusion_count": 20,
+  "built_at_utc": "2026-10-10T20:43:25.230940+00:00"
+}

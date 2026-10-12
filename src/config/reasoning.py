@@ -32,11 +32,11 @@ def successful_reasoning_adapter():
 
     The existing train_dpo --verify-latest remains the deep tensor validator.
     """
-    root = (ROOT / "models/qwen25_3b_reasoning_dpo").resolve()
+    root = (ROOT / "models/qwen_25_finetune_dpo_qlora").resolve()
     try:
         pointer = json.loads((root / "latest_successful.json").read_text())
         adapter = (root / pointer["adapter_path"]).resolve()
-        if (not adapter.is_relative_to(root / "runs") or adapter.name != "adapter"
+        if (not adapter.is_relative_to(root / "runs") or adapter.name != "model_weights"
                 or adapter.parent.name != pointer["run_id"]):
             raise ValueError("Unsafe reasoning adapter pointer")
         result = json.loads((adapter.parent / "training_result.json").read_text())

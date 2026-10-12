@@ -1,8 +1,30 @@
-# CPU-friendly Phase 1–2 setup; no PyTorch/CUDA required.
+# Unified application and training dependencies.
+# Python 3.12. Training dependencies require a compatible GPU/CUDA environment.
+# Keep the separate vLLM serving environment on src/components/deploy/vllm/constraints.txt.
+
+# API and web application
 fastapi>=0.115,<1.0
 uvicorn>=0.30,<1.0
-pydantic>=2.7,<3.0
-PyYAML>=6.0,<7.0
-Pillow>=10.0,<13.0
-httpx>=0.27,<1.0  # Phase 5 CPU-only authenticated remote VLM client
-python-multipart>=0.0.9,<1.0  # Phase 9: browser multipart invoice uploads
+pydantic==2.14.0
+PyYAML==6.0.3
+Pillow==12.3.0
+httpx>=0.27,<1.0
+python-multipart>=0.0.9,<1.0
+reportlab==4.4.3
+
+# Workflow and retrieval
+langgraph>=1.0,<2.0
+pymilvus[milvus-lite]>=2.5,<4
+sentence-transformers>=3.0,<6
+
+# Model training (existing version pins)
+transformers==4.57.1
+trl==0.24.0
+peft==0.17.1
+accelerate==1.12.0
+datasets==4.3.0
+bitsandbytes==0.48.1
+qwen-vl-utils==0.0.14
+torch==2.14.1
+torchvision==0.29.1
+safetensors==0.8.0

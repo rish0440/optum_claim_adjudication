@@ -2,7 +2,7 @@
 
 From project root (after setting VLM_* environment variables):
   python -m scripts.test_remote_vlm --ping
-  python -m scripts.test_remote_vlm --image data/synthetic/validation/images/invoice_00004.jpg
+  python -m scripts.test_remote_vlm --image data/assignment_dataset/synthetic/validation/images/invoice_00004.jpg
   python -m scripts.test_remote_vlm --image sample.jpg --output reports/generated/vlm_sample.json
 
 No ground-truth CSV is sent to the GPU. Results are real model predictions.
@@ -12,7 +12,7 @@ import argparse
 import json
 from pathlib import Path
 
-from src.inference.remote_client import RemoteVLMClient, RemoteVLMConfig, RemoteVLMError
+from src.components.inference.remote_client import RemoteVLMClient, RemoteVLMConfig, RemoteVLMError
 
 
 def main() -> int:

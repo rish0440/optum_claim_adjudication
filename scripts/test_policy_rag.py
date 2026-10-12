@@ -8,9 +8,9 @@ import argparse
 import json
 from pathlib import Path
 
-from src.adjudication.policy import load_policy
-from src.rag.resolver import PolicyRuleResolver
-from src.rag.retriever import PolicyRetriever
+from src.utils.policy import load_policy
+from src.components.rag.resolver import PolicyRuleResolver
+from src.components.rag.retriever import PolicyRetriever
 from src.config.settings import ROOT, get_settings
 
 
@@ -58,7 +58,7 @@ def main():
     retriever = PolicyRetriever()
     resolver = PolicyRuleResolver()
     if args.evaluate:
-        path = ROOT / "data" / "evaluation" / "policy_rag_cases.json"
+        path = ROOT / "src/components/rag/policy_rag_cases.json"
         cases = json.loads(path.read_text(encoding="utf-8"))
         report = evaluate(retriever, resolver, cases, top_k=args.top_k)
         for name, metric in report["metrics"].items():

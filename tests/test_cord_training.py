@@ -9,13 +9,12 @@ from unittest.mock import Mock, patch
 
 from PIL import Image
 
-from src.trainer.cord import schema, training_data
-from src.trainer.cord.schema import convert, fingerprint, messages, sha
-from src.trainer.cord.train import (MODEL_ID, OUTPUT, check_arguments, expected_steps,
-                                    language_targets, parser, publish_success, verify_saved)
-from src.trainer.cord.training_data import BoundedCollator, INSTRUCTION, load_training_data, read_split
+from trainer.sft_qlora_invoice_extraction import data_prep as schema, data_prep as training_data
+from trainer.sft_qlora_invoice_extraction.data_prep import convert, fingerprint, messages, sha
+from trainer.sft_qlora_invoice_extraction.train import MODEL_ID, OUTPUT, check_arguments, expected_steps, language_targets, parser, publish_success, verify_saved
+from trainer.sft_qlora_invoice_extraction.data_prep import BoundedCollator, INSTRUCTION, load_training_data, read_split
 from src.utils.paths import project_path
-from tests.test_cord_preparation import item, receipt
+from tests.helpers import item, receipt
 
 
 class LoaderTests(unittest.TestCase):
@@ -109,7 +108,7 @@ class LoaderTests(unittest.TestCase):
             def map(self, function):
                 return Dataset([{**row, **function(copy.deepcopy(row))} for row in self])
         original = Dataset([{**messages(str(row["image_path"]), row["target_csv"])} for row in records["train"]])
-        with patch("src.trainer.sft.training_data.make_hf_dataset", return_value=original) as shared:
+        with patch("trainer.sft_qlora_invoice_extraction.data_prep.make_hf_dataset", return_value=original) as shared:
             dataset = training_data.make_dataset(records["train"], INSTRUCTION)
         shared.assert_called_once_with(records["train"])
         self.assertEqual(dataset[0]["images"], original[0]["images"])
@@ -121,7 +120,7 @@ class LoaderTests(unittest.TestCase):
 class CollatorTests(unittest.TestCase):
     def fixture(self):
         import torch
-        from src.trainer.sft.train.runtime import CheckedInvoiceCollator
+        from trainer.sft_qlora_invoice_extraction.runtime import CheckedInvoiceCollator
         expected = "Item,Quantity,Rate,Amount\nMeal,2,10.00,20.00\n"
         example = {"images": [Image.new("RGB", (28, 28))], "prompt": [{"role": "user"}],
                    "completion": [{"role": "assistant", "content": [{"type": "text", "text": expected}]}]}
@@ -133,7 +132,7 @@ class CollatorTests(unittest.TestCase):
                  "labels": torch.tensor([[-100, -100, -100, -100, 30, 99, -100]]),
                  "attention_mask": torch.tensor([[1, 1, 1, 1, 1, 1, 0]]),
                  "pixel_values": torch.ones((1, 3)), "image_grid_thw": torch.tensor([[1, 1, 1]])}
-        with patch("src.trainer.sft.train.runtime.DataCollatorForVisionLanguageModeling") as factory:
+        with patch("trainer.sft_qlora_invoice_extraction.runtime.DataCollatorForVisionLanguageModeling") as factory:
             factory.return_value.return_value = batch
             checked = CheckedInvoiceCollator(processor)
         return example, batch, checked
@@ -171,8 +170,8 @@ class ConfigurationCheckpointTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             check_arguments(parser().parse_args(["--smoke", "--max-steps", "2"]))
 
-    def test_original_adapters_cannot_be_output_destinations(self):
-        for output in ("models/qwen25_vl_sft", "models/qwen25_3b_reasoning_dpo", "models", "app"):
+    def test_other_model_roots_cannot_be_output_destinations(self):
+        for output in ("models/other_extraction", "models/qwen_25_finetune_dpo_qlora", "models", "UI"):
             with self.subTest(output=output), self.assertRaisesRegex(ValueError, "protected"):
                 check_arguments(parser().parse_args(["--output-dir", output]))
         self.assertEqual(check_arguments(parser().parse_args([])), project_path(OUTPUT).resolve())
@@ -196,7 +195,7 @@ class ConfigurationCheckpointTests(unittest.TestCase):
 
     def checkpoint(self, root, smoke):
         run = root / ("smoke/runs" if smoke else "runs") / "fixture"
-        (run / "adapter").mkdir(parents=True)
+        (run / "model_weights").mkdir(parents=True)
         config = {"model_id": MODEL_ID, "run_id": run.name, "smoke": smoke, "instruction": INSTRUCTION,
                   "instruction_sha256": hashlib.sha256(INSTRUCTION.encode()).hexdigest()}
         metrics = {"global_steps_completed": 1, "adapter_parameters_changed": True,
@@ -208,7 +207,7 @@ class ConfigurationCheckpointTests(unittest.TestCase):
         return run, config, metrics, {"sha256": "verified-weights", "tensor_count": 4}
 
     def test_smoke_isolated_and_completed_run_pointer_published(self):
-        with tempfile.TemporaryDirectory() as tmp, patch("src.trainer.cord.train.verify_adapter") as verify:
+        with tempfile.TemporaryDirectory() as tmp, patch("trainer.sft_qlora_invoice_extraction.train.verify_adapter") as verify:
             root = Path(tmp)
             pointer = root / "latest_successful.json"
             pointer.write_text('{"previous":"preserved"}')
@@ -218,11 +217,11 @@ class ConfigurationCheckpointTests(unittest.TestCase):
             self.assertEqual(pointer.read_text(), '{"previous":"preserved"}')
             run, config, metrics, artifacts = self.checkpoint(root, False)
             publish_success(root, run, config, metrics, artifacts)
-            self.assertEqual(json.loads(pointer.read_text())["adapter_path"], "runs/fixture/adapter")
-            self.assertFalse(verify_saved(run / "adapter", root)["smoke"])
+            self.assertEqual(json.loads(pointer.read_text())["adapter_path"], "runs/fixture/model_weights")
+            self.assertFalse(verify_saved(run / "model_weights", root)["smoke"])
             (run / "manifest.json").write_text("{}")
             with self.assertRaisesRegex(RuntimeError, "checksum"):
-                verify_saved(run / "adapter", root)
+                verify_saved(run / "model_weights", root)
 
     def test_failed_zero_step_or_unchanged_run_never_replaces_pointer(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -236,7 +235,60 @@ class ConfigurationCheckpointTests(unittest.TestCase):
                     publish_success(root, run, config, {**metrics, **updates}, artifacts)
                 self.assertEqual(pointer.read_text(), '{"previous":"preserved"}')
             with self.assertRaises(ValueError):
-                verify_saved(root / "../qwen25_vl_sft/adapter", root)
+                verify_saved(root / "../other_extraction/model_weights", root)
+
+
+class ExtractionEvaluationTests(unittest.TestCase):
+    def test_default_comparison_needs_only_the_retained_adapter(self):
+        from trainer.sft_qlora_invoice_extraction import evaluate
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            weights = root / "runs/fixture/model_weights"
+            weights.mkdir(parents=True)
+            config = {"model_id": MODEL_ID, "expected_optimizer_steps": 82,
+                      "instruction": INSTRUCTION, "instruction_sha256": evaluate.hashlib_prompt(INSTRUCTION),
+                      "resolved_model_revision": "a" * 40}
+            (weights.parent / "training_config.json").write_text(json.dumps(config))
+            (weights.parent / "training_result.json").write_text(json.dumps({
+                "smoke": False, "metrics": {"global_steps_completed": 82,
+                "training_loss": .1, "evaluation": {"eval_loss": .2}}}))
+            with patch.object(evaluate, "latest_adapter", return_value=weights) as latest, \
+                 patch.object(evaluate, "verify_adapter", return_value={"sha256": "verified", "tensor_count": 288}), \
+                 patch.object(evaluate, "verify_saved", return_value={"smoke": False}):
+                adapters, instruction, revision = evaluate.resolve_checkpoints(cord_root=root)
+            latest.assert_called_once_with(root.resolve())
+            self.assertIsNone(adapters["baseline"]["path"])
+            self.assertEqual(adapters["baseline"]["kind"], "pretrained_base")
+            self.assertEqual(instruction, INSTRUCTION)
+            self.assertEqual(revision, "a" * 40)
+
+    def test_base_comparison_disables_lora_only_during_base_generation(self):
+        from contextlib import contextmanager
+        from trainer.sft_qlora_invoice_extraction.evaluate import AdapterComparison
+        enabled = [True]
+
+        @contextmanager
+        def disable_adapter():
+            enabled[0] = False
+            try:
+                yield
+            finally:
+                enabled[0] = True
+
+        engine = AdapterComparison.__new__(AdapterComparison)
+        engine.base_baseline = True
+        engine.model = Mock(active_adapters=["cord_sft"])
+        engine.model.peft_config = {"cord_sft": Mock(base_model_name_or_path=MODEL_ID)}
+        engine.model.parameters.return_value = []
+        engine.model.disable_adapter.side_effect = disable_adapter
+        engine.select("baseline")
+        with engine._adapter_context():
+            self.assertFalse(enabled[0])
+        self.assertTrue(enabled[0])
+        engine.select("cord_sft")
+        with engine._adapter_context():
+            self.assertTrue(enabled[0])
+        engine.model.disable_adapter.assert_called_once_with()
 
 
 if __name__ == "__main__":

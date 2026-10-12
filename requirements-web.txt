@@ -1,3 +1,0 @@
-# Install only for the browser report feature; existing requirements.txt already
-# includes FastAPI, Pillow, httpx and python-multipart.
-reportlab==4.4.3

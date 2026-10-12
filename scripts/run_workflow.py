@@ -1,9 +1,9 @@
 """Phase 8 CLI: run the actual LangGraph against saved invoice inputs.
 
 Examples:
-  python -m scripts.run_workflow --invoice-json data/evaluation/ground_truth/invoice_01_standard.json
-  python -m scripts.run_workflow --csv data/evaluation/ground_truth/invoice_04_diagnostics.csv --date 2024-04-18
-  python -m scripts.run_workflow --invoice-json data/evaluation/ground_truth/invoice_01_standard.json --with-milvus
+  python -m scripts.run_workflow --invoice-json data/assignment_dataset/ground_truth/invoice_01_standard.json
+  python -m scripts.run_workflow --csv data/assignment_dataset/ground_truth/invoice_04_diagnostics.csv --date 2024-04-18
+  python -m scripts.run_workflow --invoice-json data/assignment_dataset/ground_truth/invoice_01_standard.json --with-milvus
 
 Use --image and --remote-vlm only when a real authenticated GPU VLM is online.
 """
@@ -11,7 +11,7 @@ import argparse
 import json
 from pathlib import Path
 
-from src.orchestration.workflow import run_claim_workflow
+from src.components.agentic_workflow.workflow import run_claim_workflow
 
 
 def main():

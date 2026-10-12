@@ -11,11 +11,11 @@ import httpx
 from PIL import Image
 
 from tests import test_claim_graph as graph_tests
-from src.agents.contracts import AgentFormatError, CandidateSelections
+from src.components.agentic_workflow.contracts import AgentFormatError, CandidateSelections
 from src.config.reasoning import TEXT_MODEL_ID, reasoning_route, successful_reasoning_adapter
-from src.inference.reasoning_client import TextReasoningClient
-from src.inference.vlm_client import VLMClient
-from src.orchestration.workflow import run_claim_graph
+from src.components.inference.reasoning_client import TextReasoningClient
+from src.components.inference.vlm_client import VLMClient
+from src.components.agentic_workflow.workflow import run_claim_graph
 
 
 class RoutingTests(unittest.TestCase):
@@ -75,7 +75,7 @@ class RoutingTests(unittest.TestCase):
             return wrapped
         with patch.dict("os.environ", {"OPTUM_REASONING_BACKEND": backend}), \
              patch.object(TextReasoningClient, "__init__", text_init), \
-             patch("src.orchestration.nodes.copilot.VLMClient", side_effect=image_factory):
+             patch("src.components.agentic_workflow.nodes.copilot.VLMClient", side_effect=image_factory):
             return run_claim_graph(invoice_date=invoice_date, policy=self.harness.policy,
                                    retriever=self.harness.retriever, **inputs)
 
@@ -183,14 +183,14 @@ class RoutingTests(unittest.TestCase):
 class CheckpointIdentityTests(unittest.TestCase):
     def test_pointer_checksum_and_success_are_required(self):
         with tempfile.TemporaryDirectory() as directory, patch("src.config.reasoning.ROOT", Path(directory)):
-            root = Path(directory) / "models/qwen25_3b_reasoning_dpo"
-            adapter = root / "runs/test-run/adapter"
+            root = Path(directory) / "models/qwen_25_finetune_dpo_qlora"
+            adapter = root / "runs/test-run/model_weights"
             adapter.mkdir(parents=True)
             weights = adapter / "adapter_model.safetensors"
             weights.write_bytes(b"CPU checksum fixture, not real model weights")
             digest = hashlib.sha256(weights.read_bytes()).hexdigest()
             pointer = {"model_id": TEXT_MODEL_ID, "run_id": "test-run",
-                       "adapter_path": "runs/test-run/adapter", "adapter_sha256": digest}
+                       "adapter_path": "runs/test-run/model_weights", "adapter_sha256": digest}
             (root / "latest_successful.json").write_text(json.dumps(pointer))
             result = {"model_id": TEXT_MODEL_ID, "run_id": "test-run", "status": "success",
                       "adapter": {"adapter_sha256": digest}}

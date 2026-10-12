@@ -1,4 +1,0 @@
-# Phase 6 CPU-only installation. Do NOT install requirements-colab.txt on Windows.
--r requirements.txt
-pymilvus[milvus-lite]>=2.5,<4
-sentence-transformers>=3.0,<6

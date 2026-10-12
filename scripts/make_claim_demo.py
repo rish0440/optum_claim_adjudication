@@ -11,11 +11,11 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-from src.adjudication.rules import parse_invoice_csv
+from src.utils.rules import parse_invoice_csv
 from src.utils.paths import ROOT, project_path
 
 DEMO_DATE = date(2024, 1, 15)
-REFERENCE = ROOT / "data/evaluation/ground_truth/invoice_01_standard.csv"
+REFERENCE = ROOT / "data/assignment_dataset/ground_truth/invoice_01_standard.csv"
 
 
 def main():

@@ -11,13 +11,10 @@ from unittest.mock import Mock, patch
 import httpx
 from PIL import Image
 
-from src.inference.remote_client import RemoteVLMError
-from src.inference.vlm_client import (
-    ADAPTER_SERVED_MODEL, BASE_MODEL_ID, BASE_SERVED_MODEL,
-    VLMClient, VLMConfig, select_model, validate_csv,
-)
-from src.inference.vllm_server import build_command, check_environment, parser, resolve_adapter
-from src.prompts.extraction import INSTRUCTION
+from src.components.inference.remote_client import RemoteVLMError
+from src.components.inference.vlm_client import ADAPTER_SERVED_MODEL, BASE_MODEL_ID, BASE_SERVED_MODEL, VLMClient, VLMConfig, select_model, validate_csv
+from src.components.inference.vllm_server import build_command, check_environment, parser, resolve_adapter
+from src.components.prompts.extraction import INSTRUCTION
 
 TARGET = 'Item,Quantity,Rate,Amount\n"Consultation, specialist",1,,500\n'
 
@@ -131,7 +128,7 @@ class VLLMInferenceTests(unittest.TestCase):
     def adapter_fixture(self):
         pointer = self.root / "latest_successful.json"
         pointer.write_text(json.dumps({"model_id": BASE_MODEL_ID}))
-        directory = self.root / "runs/test/adapter"
+        directory = self.root / "runs/test/model_weights"
         directory.mkdir(parents=True)
         (directory / "adapter_config.json").write_text(json.dumps({"base_model_name_or_path": BASE_MODEL_ID, "r": 8}))
         (directory / "chat_template.jinja").write_text("test template")
@@ -140,7 +137,7 @@ class VLLMInferenceTests(unittest.TestCase):
 
     def test_adapter_resolution_reuses_verified_phase5_pointer(self):
         pointer, adapter = self.adapter_fixture()
-        with patch("src.trainer.sft.train.checkpoints.latest_adapter", return_value=adapter) as verify:
+        with patch("trainer.sft_qlora_invoice_extraction.train.latest_adapter", return_value=adapter) as verify:
             result = resolve_adapter(pointer)
         verify.assert_called_once_with(pointer.parent)
         self.assertEqual((result["path"], result["rank"]), (adapter, 8))
@@ -150,7 +147,7 @@ class VLLMInferenceTests(unittest.TestCase):
 
     def test_invalid_checkpoint_stops_adapter_resolution(self):
         pointer, _ = self.adapter_fixture()
-        with patch("src.trainer.sft.train.checkpoints.latest_adapter", side_effect=RuntimeError("checksum mismatch")):
+        with patch("trainer.sft_qlora_invoice_extraction.train.latest_adapter", side_effect=RuntimeError("checksum mismatch")):
             with self.assertRaisesRegex(RuntimeError, "checksum"):
                 resolve_adapter(pointer)
 
@@ -158,7 +155,7 @@ class VLLMInferenceTests(unittest.TestCase):
         base = build_command(parser().parse_args(["--mode", "base"]), "/test/vllm")
         self.assertEqual(base[base.index("--host")+1], "127.0.0.1")
         self.assertNotIn("--enable-lora", base)
-        with patch("src.inference.vllm_server.resolve_adapter", return_value={
+        with patch("src.components.inference.vllm_server.resolve_adapter", return_value={
             "path": Path("/test/adapter"), "template": Path("/test/template"),
             "min_pixels": 50176, "max_pixels": 200704,
         }):
@@ -187,13 +184,13 @@ class VLLMInferenceTests(unittest.TestCase):
         serving_prefix = Path(__file__).resolve().parents[1].parent / ".venv-vllm"
         imports = Mock(side_effect=modules.__getitem__)
         real_import_module = importlib.import_module
-        with patch("src.inference.vllm_server.metadata.version", side_effect=versions.__getitem__) as version, \
-                patch("src.inference.vllm_server.metadata.distribution", return_value=distribution), \
-                patch("src.inference.vllm_server.importlib", SimpleNamespace(import_module=imports)), \
-                patch("src.inference.vllm_server.Path.is_file", return_value=True), \
-                patch("src.inference.vllm_server.Path.read_text", return_value=qwen_source), \
-                patch("src.inference.vllm_server.sys.prefix", str(serving_prefix)), \
-                patch("src.inference.vllm_server.sys.executable", str(serving_prefix / "bin/python")):
+        with patch("src.components.inference.vllm_server.metadata.version", side_effect=versions.__getitem__) as version, \
+                patch("src.components.inference.vllm_server.metadata.distribution", return_value=distribution), \
+                patch("src.components.inference.vllm_server.importlib", SimpleNamespace(import_module=imports)), \
+                patch("src.components.inference.vllm_server.Path.is_file", return_value=True), \
+                patch("src.components.inference.vllm_server.Path.read_text", return_value=qwen_source), \
+                patch("src.components.inference.vllm_server.sys.prefix", str(serving_prefix)), \
+                patch("src.components.inference.vllm_server.sys.executable", str(serving_prefix / "bin/python")):
             # Replacing this module's importlib reference must not hijack the
             # stdlib importer used by unittest.mock to resolve later patches.
             self.assertIs(importlib.import_module, real_import_module)
@@ -207,7 +204,7 @@ class VLLMInferenceTests(unittest.TestCase):
         self.assertNotIn("peft", [call.args[0] for call in version.call_args_list])
 
     def test_preflight_rejects_training_interpreter(self):
-        with patch("src.inference.vllm_server.sys.prefix", str(Path(__file__).resolve().parents[1].parent / ".venv")):
+        with patch("src.components.inference.vllm_server.sys.prefix", str(Path(__file__).resolve().parents[1].parent / ".venv")):
             result = check_environment()
         self.assertTrue(any("serving environment" in error for error in result["errors"]))
 

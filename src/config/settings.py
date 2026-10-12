@@ -46,8 +46,8 @@ class RagSettings(BaseModel):
     """Local Milvus Lite RAG configuration; no database server/API key."""
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
     collection: str = "policy_rules"
-    db_path: Path = Path("data/policy_index/policy.db")
-    manifest_path: Path = Path("data/policy_index/manifest.json")
+    db_path: Path = Path("src/components/rag/policy_index/policy.db")
+    manifest_path: Path = Path("src/components/rag/policy_index/manifest.json")
     top_k: int = Field(default=5, ge=1, le=45)
     min_score: float | None = Field(default=None, ge=-1, le=1)
     query_timeout: float = Field(default=10, gt=0)

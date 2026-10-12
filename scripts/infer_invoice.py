@@ -4,8 +4,8 @@ import json
 import os
 from pathlib import Path
 
-from src.inference.vlm_client import VLMClient, VLMConfig, validate_csv
-from src.inference.remote_client import RemoteVLMError
+from src.components.inference.vlm_client import VLMClient, VLMConfig, validate_csv
+from src.components.inference.remote_client import RemoteVLMError
 from src.utils.paths import project_path
 
 

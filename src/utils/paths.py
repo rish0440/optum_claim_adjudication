@@ -13,3 +13,15 @@ def project_path(value: str | Path) -> Path:
 
 def configured_path(variable: str, default: str | Path) -> Path:
     return project_path(os.environ.get(variable, default))
+
+
+def assignment_annotation_path(value: str | Path) -> Path:
+    """Resolve recorded assignment paths while keeping original label bytes intact."""
+    path = Path(value)
+    for original, current in (
+        (Path("data/invoices"), Path("data/assignment_dataset/invoices")),
+        (Path("data/evaluation/ground_truth"), Path("data/assignment_dataset/ground_truth")),
+    ):
+        if path.is_relative_to(original):
+            return current / path.relative_to(original)
+    return path

@@ -1,1 +1,1 @@
-"""Claim processing, training and inference; the HTTP application lives in app."""
+"""Claim processing, training and inference; the HTTP application lives in UI."""

@@ -1,2 +1,0 @@
-# Preserve the existing PyTorch version; use its matching CUDA wheel channel.
-torch==2.14.1

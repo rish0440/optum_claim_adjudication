@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 import json
 from pathlib import Path
 
-from src.orchestration.workflow import run_claim_graph
+from src.components.agentic_workflow.workflow import run_claim_graph
 from src.utils.paths import project_path
 
 

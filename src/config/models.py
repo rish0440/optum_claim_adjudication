@@ -7,11 +7,11 @@ MAX_PIXELS = 512 * 28 * 28
 
 
 def sft_output_root():
-    """Shared, portable location for SFT runs and future inference discovery."""
+    """Shared, portable location for SFT runs and inference discovery."""
     from src.utils.paths import configured_path
-    return configured_path("OPTUM_SFT_OUTPUT_DIR", "models/qwen25_vl_sft")
+    return configured_path("OPTUM_SFT_OUTPUT_DIR", "models/qwen25_finetune_sf_qlora")
 
 
 def sft_adapter_pointer():
-    """Future inference reads model_id and relative adapter_path from this JSON."""
+    """Inference reads model_id and relative adapter_path from this JSON."""
     return sft_output_root() / "latest_successful.json"

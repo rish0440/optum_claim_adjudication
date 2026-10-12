@@ -1,0 +1,46 @@
+{
+  "invoice_id": "invoice_04_diagnostics",
+  "image_file": "data/invoices/invoice_04_diagnostics.jpg",
+  "invoice_date": "2024-04-18",
+  "lines": [
+    {
+      "item": "MRI Scan",
+      "quantity": 1,
+      "rate": null,
+      "amount": "8000"
+    },
+    {
+      "item": "Blood Test (CBC)",
+      "quantity": 1,
+      "rate": null,
+      "amount": "600"
+    },
+    {
+      "item": "Blood Test (Lipid Profile)",
+      "quantity": 1,
+      "rate": null,
+      "amount": "1200"
+    },
+    {
+      "item": "X-Ray",
+      "quantity": 1,
+      "rate": null,
+      "amount": "800"
+    },
+    {
+      "item": "Consultation",
+      "quantity": 1,
+      "rate": null,
+      "amount": "1500"
+    },
+    {
+      "item": "Medicines",
+      "quantity": 4,
+      "rate": null,
+      "amount": "960"
+    }
+  ],
+  "billed_total": "13060",
+  "rate_column_visible": false,
+  "notes": "No unit-rate column is printed; every Rate field is intentionally null/blank."
+}

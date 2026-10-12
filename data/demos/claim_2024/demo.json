@@ -1,9 +1,0 @@
-{
-  "synthetic": true,
-  "purpose": "image-only claim graph demonstration, never SFT",
-  "invoice_date": "2024-01-15",
-  "image": "data/demos/claim_2024/invoice_2024.jpg",
-  "source_csv": "data/evaluation/ground_truth/invoice_01_standard.csv",
-  "source_sha256": "4682c9f8c56b2f2cc92632efa453e559c8d82b27de92dd09297764f53732f649",
-  "rows": 4
-}

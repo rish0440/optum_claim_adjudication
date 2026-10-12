@@ -13,18 +13,18 @@ from unittest.mock import patch
 import httpx
 from PIL import Image
 
-from src.adjudication.calculator import adjudicate_invoice
-from src.adjudication.policy import load_policy
-from src.adjudication.rules import parse_invoice_csv
-from src.agents.contracts import WorkflowReport
+from src.utils.calculator import adjudicate_invoice
+from src.utils.policy import load_policy
+from src.utils.rules import parse_invoice_csv
+from src.components.agentic_workflow.contracts import WorkflowReport
 from src.config.settings import get_settings
-from src.inference.reasoning_client import TextReasoningClient
-from src.inference.vlm_client import VLMClient, VLMConfig, BASE_MODEL_ID
-from src.orchestration.graph import create_claim_graph
-from src.orchestration.workflow import initialize_claim_state, run_claim_graph
-from src.rag.evidence import retrieve_evidence
-from src.rag.indexer import source_documents
-from src.rag.resolver import PolicyRuleResolver
+from src.components.inference.reasoning_client import TextReasoningClient
+from src.components.inference.vlm_client import VLMClient, VLMConfig, BASE_MODEL_ID
+from src.components.agentic_workflow.graph import create_claim_graph
+from src.components.agentic_workflow.workflow import initialize_claim_state, run_claim_graph
+from src.components.rag.evidence import retrieve_evidence
+from src.components.rag.indexer import source_documents
+from src.components.rag.resolver import PolicyRuleResolver
 
 CSV = "Item,Quantity,Rate,Amount\nBlood Test,1,,1000\nPersonal Care Kit,1,200,200\n"
 
@@ -282,7 +282,7 @@ class ClaimGraphTests(unittest.TestCase):
         self.assertTrue(report["reviewed"])
 
     def test_calculation_error_fails_safely(self):
-        with patch("src.orchestration.nodes.copilot.adjudicate_invoice", side_effect=ArithmeticError("bad math")):
+        with patch("src.components.agentic_workflow.nodes.copilot.adjudicate_invoice", side_effect=ArithmeticError("bad math")):
             report = self.run_graph()
         self.assertEqual(report["status"], "FAILED")
         self.assertIsNone(report["claim"])

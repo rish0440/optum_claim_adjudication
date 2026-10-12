@@ -4,10 +4,10 @@ import csv
 import json
 from pathlib import Path
 
-from src.adjudication.policy import load_policy, summarize_policy
-from src.schemas import InvoiceGroundTruth
+from src.utils.policy import load_policy, summarize_policy
+from src.schema import InvoiceGroundTruth
 from src.config.settings import get_settings
-from src.trainer.sft.dataset import verify_dataset
+from scripts.synthetic_annotation.generator import verify_dataset
 
 
 def main() -> None:

@@ -1,7 +1,7 @@
 """Phase 7 offline claim adjudication and reference verification.
 
 Examples:
-  python -m scripts.run_adjudication --invoice-json data/evaluation/ground_truth/invoice_01_standard.json
+  python -m scripts.run_adjudication --invoice-json data/assignment_dataset/ground_truth/invoice_01_standard.json
   python -m scripts.run_adjudication --csv my_invoice.csv --date 2024-06-01
   python -m scripts.run_adjudication --all-reference
 
@@ -13,10 +13,11 @@ import argparse
 import json
 from pathlib import Path
 
-from src.adjudication import adjudicate_invoice, parse_invoice_csv
-from src.adjudication.policy import load_policy
-from src.rag.resolver import PolicyRuleResolver
-from src.schemas import InvoiceGroundTruth
+from src.utils.calculator import adjudicate_invoice
+from src.utils.rules import parse_invoice_csv
+from src.utils.policy import load_policy
+from src.components.rag.resolver import PolicyRuleResolver
+from src.schema import InvoiceGroundTruth
 from src.config.settings import get_settings
 
 
@@ -89,7 +90,7 @@ def main():
     resolver = PolicyRuleResolver(policy)
     retriever = None
     if args.with_milvus:
-        from src.rag.retriever import PolicyRetriever
+        from src.components.rag.retriever import PolicyRetriever
         retriever = PolicyRetriever()
     if args.all_reference:
         payload = reference_evaluation(policy, resolver, retriever)

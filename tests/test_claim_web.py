@@ -10,11 +10,11 @@ from unittest.mock import Mock, patch
 from fastapi import HTTPException
 from fastapi.testclient import TestClient
 from PIL import Image
-from app.main import app
-from app import claims
-from app.invoice_date import InvoiceDate, extract_invoice_date
-from app.claim_report import generate_claim_pdf, money
-from src.inference.remote_client import RemoteVLMError
+from UI.main import app
+from UI import claims
+from UI.invoice_date import InvoiceDate, extract_invoice_date
+from UI.claim_report import generate_claim_pdf, money
+from src.components.inference.remote_client import RemoteVLMError
 
 
 def image_bytes(size=(40, 60)):
@@ -67,7 +67,7 @@ class WebTests(unittest.TestCase):
         image.write_bytes(image_bytes())
         claims.jobs[request_id] = dict(request_id=request_id, state="queued", result=None, invoice_date=None, report_available=False)
         claims.slots.acquire()
-        with patch("app.claims.extract_invoice_date", return_value=date_result), patch("app.claims._graph", return_value=graph_result or report_fixture(request_id)) as graph, patch("app.claims.generate_claim_pdf") as pdf:
+        with patch("UI.claims.extract_invoice_date", return_value=date_result), patch("UI.claims._graph", return_value=graph_result or report_fixture(request_id)) as graph, patch("UI.claims.generate_claim_pdf") as pdf:
             claims._process(request_id, image, directory)
         self.assertFalse(image.exists())
         self.addCleanup(claims.jobs.pop, request_id, None)
@@ -89,11 +89,11 @@ class WebTests(unittest.TestCase):
             ("invoice.png", image_bytes(), "image/jpeg", 415),
             ("invoice.png", b"x"*(claims.MAX_BYTES+1), "image/png", 413)):
             self.assertEqual(self.upload(name, data, mime).status_code, expected)
-        with patch("app.claims.MAX_PIXELS", 100):
+        with patch("UI.claims.MAX_PIXELS", 100):
             self.assertEqual(self.upload().status_code, 413)
 
     def test_upload_queued_controlled_filename(self):
-        with patch("app.claims.executor.submit") as submit:
+        with patch("UI.claims.executor.submit") as submit:
             response = self.upload("../../invoice.png")
         self.assertEqual(response.status_code, 202)
         request_id = response.json()["request_id"]
@@ -120,7 +120,7 @@ class WebTests(unittest.TestCase):
         self.assertEqual(self.client.get(f"/api/claims/{request_id}").status_code, 200)
 
     def test_graph_facade_calls_existing_phase7_api(self):
-        with patch("src.orchestration.workflow.run_claim_graph", return_value={"genuine": True}) as graph:
+        with patch("src.components.agentic_workflow.workflow.run_claim_graph", return_value={"genuine": True}) as graph:
             result = claims._graph(image=Path("private/upload.png"), invoice_date="2024-01-15", request_id="f"*32)
         self.assertTrue(result["genuine"])
         self.assertEqual(graph.call_args.kwargs["image"], Path("private/upload.png"))
@@ -134,14 +134,14 @@ class WebTests(unittest.TestCase):
 
     def test_gpu_unavailable_fails_without_approval(self):
         request_id = "b"*32
-        with patch("app.claims.extract_invoice_date", side_effect=RemoteVLMError("Unavailable")):
+        with patch("UI.claims.extract_invoice_date", side_effect=RemoteVLMError("Unavailable")):
             # run_job overrides extraction, so prepare this job directly.
             directory = self.root / request_id; directory.mkdir()
             image = directory / "upload.png"; image.write_bytes(image_bytes())
             claims.jobs[request_id] = dict(request_id=request_id, result=None, report_available=False)
             self.addCleanup(claims.jobs.pop, request_id, None)
             claims.slots.acquire()
-            with patch("app.claims._graph") as graph:
+            with patch("UI.claims._graph") as graph:
                 claims._process(request_id, image, directory)
             graph.assert_not_called()
         self.assertEqual(claims.jobs[request_id]["state"], "failed")

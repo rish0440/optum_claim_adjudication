@@ -10,8 +10,8 @@ import json
 from decimal import Decimal
 from pathlib import Path
 
-from src.adjudication.policy import load_policy
-from src.schemas import InvoiceGroundTruth
+from src.utils.policy import load_policy
+from src.schema import InvoiceGroundTruth
 from src.config.settings import get_settings
 
 # Item, quantity, visible rate (None means no Rate column), visible amount,
@@ -90,7 +90,7 @@ def write_gold() -> None:
         raw_lines = spec["lines"]
         gold = InvoiceGroundTruth.model_validate({
             "invoice_id": name,
-            "image_file": str(Path("data/invoices") / f"{name}.jpg"),
+            "image_file": str(Path("data/assignment_dataset/invoices") / f"{name}.jpg"),
             "invoice_date": spec["date"],
             "lines": [
                 {"item": item, "quantity": qty, "rate": rate, "amount": amount}
@@ -134,9 +134,9 @@ def write_gold() -> None:
         })
         manifest.append({
             "invoice_id": name,
-            "image": f"data/invoices/{name}.jpg",
-            "csv": f"data/evaluation/ground_truth/{name}.csv",
-            "json": f"data/evaluation/ground_truth/{name}.json",
+            "image": f"data/assignment_dataset/invoices/{name}.jpg",
+            "csv": f"data/assignment_dataset/ground_truth/{name}.csv",
+            "json": f"data/assignment_dataset/ground_truth/{name}.json",
             "rows": len(raw_lines),
             "split": "final_evaluation_only",
         })

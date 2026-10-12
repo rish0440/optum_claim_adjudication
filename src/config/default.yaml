@@ -6,11 +6,11 @@ app:
   currency: INR
 
 paths:
-  policy: data/policy.json
-  optum_invoices: data/invoices
-  evaluation_ground_truth: data/evaluation/ground_truth
-  synthetic_dataset: data/synthetic
-  cord: data/cord
+  policy: data/assignment_dataset/policy.json
+  optum_invoices: data/assignment_dataset/invoices
+  evaluation_ground_truth: data/assignment_dataset/ground_truth
+  synthetic_dataset: data/assignment_dataset/synthetic
+  cord: data/cord_sft_qlora
 
 synthetic:
   initial_count: 10
@@ -24,6 +24,6 @@ synthetic:
 rag:
   embedding_model: sentence-transformers/all-MiniLM-L6-v2
   collection: policy_rules
-  db_path: data/policy_index/policy.db
-  manifest_path: data/policy_index/manifest.json
+  db_path: src/components/rag/policy_index/policy.db
+  manifest_path: src/components/rag/policy_index/manifest.json
   top_k: 5

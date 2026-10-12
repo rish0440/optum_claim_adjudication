@@ -7,7 +7,7 @@ Run: python -m scripts.build_policy_index
 import argparse
 import json
 
-from src.rag.indexer import build_policy_index
+from src.components.rag.indexer import build_policy_index
 
 
 def main():

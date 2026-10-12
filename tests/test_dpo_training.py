@@ -6,12 +6,10 @@ import unittest
 from unittest.mock import Mock, patch
 
 from src.utils.paths import ROOT
-from src.trainer.preference_optimization.train.config import (
-    MODEL_ID, TARGETS, TrainingConfig, dpo_arguments, language_targets, safe_output_root,
-)
-from src.trainer.preference_optimization.train.dataset import load_preferences, serialize_and_audit
-from src.trainer.preference_optimization.train.train_dpo import build_trainer, publish_success, verify_latest
-from src.trainer.preference_optimization.annotation import provenance
+from trainer.dpo_qlora_policy_reasoning.train import MODEL_ID, TARGETS, TrainingConfig, dpo_arguments, language_targets, safe_output_root
+from trainer.dpo_qlora_policy_reasoning.data_prep import load_preferences, serialize_and_audit
+from trainer.dpo_qlora_policy_reasoning.train import build_trainer, publish_success, verify_latest
+from trainer.dpo_qlora_policy_reasoning import provenance
 
 
 class ToyTokenizer:
@@ -56,7 +54,7 @@ class DPOTrainingTests(unittest.TestCase):
             self.assertNotEqual(path.name, "test.jsonl")
             return original_bytes(path, *args, **kwargs)
         with patch.object(Path, "read_text", guarded_text), patch.object(Path, "read_bytes", guarded_bytes):
-            data, audit = load_preferences("data/dpo")
+            data, audit = load_preferences("data/policy_reasoning_dpo_qlora")
         self.assertEqual([len(data[s]) for s in ("train", "validation")], [60, 10])
         self.assertFalse(audit["test_accessed"])
         self.assertEqual(audit["source_provenance"]["status"], "compatible_runtime_revision")
@@ -70,7 +68,7 @@ class DPOTrainingTests(unittest.TestCase):
                 self.assertNotEqual(row["chosen"], row["rejected"])
 
     def test_provenance_accepts_only_inspected_runtime_transitions(self):
-        manifest = json.loads((ROOT / "data/dpo/manifest.json").read_text())
+        manifest = json.loads((ROOT / "data/policy_reasoning_dpo_qlora/manifest.json").read_text())
         current = provenance.source_hashes()
         self.assertEqual(set(provenance.verify_provenance(manifest)["source_changes"]),
                          set(provenance.RUNTIME_TRANSITIONS))
@@ -96,7 +94,7 @@ class DPOTrainingTests(unittest.TestCase):
 
     def copy_selected_data(self, directory):
         for name in ("manifest.json", "train.jsonl", "validation.jsonl"):
-            (directory/name).write_bytes((ROOT/"data/dpo"/name).read_bytes())
+            (directory/name).write_bytes((ROOT/"data/policy_reasoning_dpo_qlora"/name).read_bytes())
 
     def test_malformed_duplicate_and_identical_records_rejected(self):
         for mutation in ("malformed", "duplicate", "identical"):
@@ -144,7 +142,7 @@ class DPOTrainingTests(unittest.TestCase):
                        {"beta": 0}, {"learning_rate": float("nan")}, {"max_length": 4096}):
             with self.subTest(values=values), self.assertRaises(ValueError):
                 TrainingConfig(**values).validate()
-        for directory in ("models/qwen25_vl_sft", "models/qwen25_vl_sft/new", "models"):
+        for directory in ("models/qwen25_finetune_sf_qlora", "models/qwen25_finetune_sf_qlora/new", "models"):
             with self.assertRaises(ValueError):
                 safe_output_root(directory)
 
@@ -172,7 +170,7 @@ class DPOTrainingTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)/"reasoning"
             run = root/"runs"/"new-run"
-            (run/"adapter").mkdir(parents=True)
+            (run/"model_weights").mkdir(parents=True)
             pointer = root/"latest_successful.json"
             pointer.write_text('{"previous":"successful"}')
             config = TrainingConfig(max_steps=1, output_dir=str(root))
@@ -188,22 +186,34 @@ class DPOTrainingTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)/"reasoning"
             run = root/"runs"/"new-run"
-            (run/"adapter").mkdir(parents=True)
+            (run/"model_weights").mkdir(parents=True)
             for name in ("training_config", "training_args", "dataset_manifest", "metrics", "training_log"):
                 (run/(name+".json")).write_text("{}")
-            info = {"rank": 8, "adapter_sha256": "verified-checksum"}
+            info = {"rank": 8, "adapter_sha256": "verified-checksum",
+                    "artifacts": ["README.md", "adapter_config.json", "adapter_model.safetensors"]}
             metrics = dict(global_steps_completed=1, training_loss=.6, eval_loss=.7,
                            policy_calls=1, reference_calls=1, gradient_checks=1, adapter_changed=True)
             (run/"metrics.json").write_text(json.dumps(metrics))
             (run/"training_config.json").write_text(json.dumps({"model_id": MODEL_ID, "max_steps": 1}))
             (run/"dataset_manifest.json").write_text(json.dumps({
                 "train_pairs": 60, "validation_pairs": 10, "test_accessed": False}))
-            with patch("src.trainer.preference_optimization.train.train_dpo.verify_adapter", return_value=info):
+            with patch("trainer.dpo_qlora_policy_reasoning.train.verify_adapter", return_value=info):
                 publish_success(root, run, TrainingConfig(max_steps=1, output_dir=str(root)), metrics, info)
             pointer_path = root/"latest_successful.json"
             pointer = json.loads(pointer_path.read_text())
             self.assertEqual(pointer["model_id"], MODEL_ID)
-            self.assertEqual(pointer["adapter_path"], "runs/new-run/adapter")
+            self.assertEqual(pointer["adapter_path"], "runs/new-run/model_weights")
+            relocated = {**info, "artifacts": ["adapter_config.json", "adapter_model.safetensors"]}
+            with patch("trainer.dpo_qlora_policy_reasoning.train.verify_adapter", return_value=relocated):
+                self.assertEqual(verify_latest(root)["adapter_sha256"], info["adapter_sha256"])
+            missing_config = {**relocated, "artifacts": ["adapter_model.safetensors"]}
+            with patch("trainer.dpo_qlora_policy_reasoning.train.verify_adapter", return_value=missing_config):
+                with self.assertRaisesRegex(RuntimeError, "checksum"):
+                    verify_latest(root)
+            corrupted = {**relocated, "adapter_sha256": "wrong-checksum"}
+            with patch("trainer.dpo_qlora_policy_reasoning.train.verify_adapter", return_value=corrupted):
+                with self.assertRaisesRegex(RuntimeError, "checksum"):
+                    verify_latest(root)
             pointer["adapter_path"] = "../../outside/adapter"
             pointer_path.write_text(json.dumps(pointer))
             with self.assertRaisesRegex(RuntimeError, "Unsafe"):

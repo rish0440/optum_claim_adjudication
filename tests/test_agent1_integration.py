@@ -4,12 +4,12 @@ import time
 import unittest
 from pydantic import ValidationError
 
-from src.adjudication.policy import load_policy
-from src.adjudication.rules import parse_invoice_csv
-from src.agents.contracts import AgentFormatError, AgentSafetyError
-from src.agents.policy_adjudicator import PolicyAdjudicationAgent
-from src.rag.indexer import source_documents
-from src.rag.resolver import PolicyRuleResolver
+from src.utils.policy import load_policy
+from src.utils.rules import parse_invoice_csv
+from src.components.agentic_workflow.contracts import AgentFormatError, AgentSafetyError
+from src.components.agentic_workflow.policy_adjudicator import PolicyAdjudicationAgent
+from src.components.rag.indexer import source_documents
+from src.components.rag.resolver import PolicyRuleResolver
 from src.utils.paths import ROOT
 
 
@@ -31,7 +31,7 @@ class CapturingClient:
 class Agent1IntegrationTests(unittest.TestCase):
     def setUp(self):
         self.policy = load_policy()
-        self.invoice = parse_invoice_csv(ROOT / "data/evaluation/ground_truth/invoice_01_standard.csv",
+        self.invoice = parse_invoice_csv(ROOT / "data/assignment_dataset/ground_truth/invoice_01_standard.csv",
                                          invoice_date="2024-01-15")
         self.docs = {doc["rule_id"]: doc for doc in source_documents(self.policy)}
         resolver = PolicyRuleResolver(self.policy)
