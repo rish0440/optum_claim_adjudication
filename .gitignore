@@ -92,7 +92,7 @@ service-account*.json
 
 # Phase 10A: local CORD source downloads and selected receipts/labels only
 /.cache/cord_source/
-/data/cord_sft_qlora/
+
 
 # Generated reports and private outputs stay local.
 /reports/

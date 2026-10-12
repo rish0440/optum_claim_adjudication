@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "images": 200,
+  "annotations": 200,
+  "counts": {
+    "train": 161,
+    "validation": 20,
+    "test": 19
+  },
+  "total_line_items": 409,
+  "rows_by_split": {
+    "train": 334,
+    "validation": 37,
+    "test": 38
+  },
+  "unique_image_hashes": 200,
+  "cross_split_duplicates": 0,
+  "arithmetic": "exact Decimal PASS; zero-priced rows preserved; explicit rates only",
+  "source_revision": "51b7e932f2a07a883d77487b34aa5a33f76fa713",
+  "dataset_manifest_sha256": "84099cd98b7e7d44cd3b3b9f6a1170ab73c237ea8390a36e2a6ae1889b68f609",
+  "original_compressed_annotations_checked": false,
+  "hf_examples": {},
+  "hf_builder_compatibility": "not_requested",
+  "current_training_cli_compatibility": "BLOCKED: synthetic-only guards; Phase 10B adaptation required",
+  "human_visual_review": "pending"
+}

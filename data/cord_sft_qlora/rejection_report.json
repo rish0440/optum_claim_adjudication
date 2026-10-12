@@ -1,0 +1,6968 @@
+[
+  {
+    "source_filename": "cord-train-0000.jpg",
+    "source_split": "train",
+    "source_line": 1,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0001.jpg",
+    "source_split": "train",
+    "source_line": 2,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0002.jpg",
+    "source_split": "train",
+    "source_line": 3,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0003.jpg",
+    "source_split": "train",
+    "source_line": 4,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0005.jpg",
+    "source_split": "train",
+    "source_line": 6,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0007.jpg",
+    "source_split": "train",
+    "source_line": 8,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0008.jpg",
+    "source_split": "train",
+    "source_line": 9,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "price",
+    "row_index": 1,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0009.jpg",
+    "source_split": "train",
+    "source_line": 10,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0010.jpg",
+    "source_split": "train",
+    "source_line": 11,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0011.jpg",
+    "source_split": "train",
+    "source_line": 12,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0012.jpg",
+    "source_split": "train",
+    "source_line": 13,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0013.jpg",
+    "source_split": "train",
+    "source_line": 14,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0015.jpg",
+    "source_split": "train",
+    "source_line": 16,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0016.jpg",
+    "source_split": "train",
+    "source_line": 17,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0017.jpg",
+    "source_split": "train",
+    "source_line": 18,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0018.jpg",
+    "source_split": "train",
+    "source_line": 19,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0019.jpg",
+    "source_split": "train",
+    "source_line": 20,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 1,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0020.jpg",
+    "source_split": "train",
+    "source_line": 21,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0023.jpg",
+    "source_split": "train",
+    "source_line": 24,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0025.jpg",
+    "source_split": "train",
+    "source_line": 26,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0027.jpg",
+    "source_split": "train",
+    "source_line": 28,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0029.jpg",
+    "source_split": "train",
+    "source_line": 30,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0030.jpg",
+    "source_split": "train",
+    "source_line": 31,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0031.jpg",
+    "source_split": "train",
+    "source_line": 32,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0032.jpg",
+    "source_split": "train",
+    "source_line": 33,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0033.jpg",
+    "source_split": "train",
+    "source_line": 34,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0036.jpg",
+    "source_split": "train",
+    "source_line": 37,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0037.jpg",
+    "source_split": "train",
+    "source_line": 38,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0038.jpg",
+    "source_split": "train",
+    "source_line": 39,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0039.jpg",
+    "source_split": "train",
+    "source_line": 40,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0040.jpg",
+    "source_split": "train",
+    "source_line": 41,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0041.jpg",
+    "source_split": "train",
+    "source_line": 42,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0043.jpg",
+    "source_split": "train",
+    "source_line": 44,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0044.jpg",
+    "source_split": "train",
+    "source_line": 45,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0045.jpg",
+    "source_split": "train",
+    "source_line": 46,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0047.jpg",
+    "source_split": "train",
+    "source_line": 48,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0049.jpg",
+    "source_split": "train",
+    "source_line": 50,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0050.jpg",
+    "source_split": "train",
+    "source_line": 51,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0053.jpg",
+    "source_split": "train",
+    "source_line": 54,
+    "reason": "missing_field",
+    "field": "nm",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0054.jpg",
+    "source_split": "train",
+    "source_line": 55,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0057.jpg",
+    "source_split": "train",
+    "source_line": 58,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0058.jpg",
+    "source_split": "train",
+    "source_line": 59,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0059.jpg",
+    "source_split": "train",
+    "source_line": 60,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0060.jpg",
+    "source_split": "train",
+    "source_line": 61,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0063.jpg",
+    "source_split": "train",
+    "source_line": 64,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0064.jpg",
+    "source_split": "train",
+    "source_line": 65,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0065.jpg",
+    "source_split": "train",
+    "source_line": 66,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0067.jpg",
+    "source_split": "train",
+    "source_line": 68,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0068.jpg",
+    "source_split": "train",
+    "source_line": 69,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0069.jpg",
+    "source_split": "train",
+    "source_line": 70,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0070.jpg",
+    "source_split": "train",
+    "source_line": 71,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0073.jpg",
+    "source_split": "train",
+    "source_line": 74,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0074.jpg",
+    "source_split": "train",
+    "source_line": 75,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0076.jpg",
+    "source_split": "train",
+    "source_line": 77,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0081.jpg",
+    "source_split": "train",
+    "source_line": 82,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0082.jpg",
+    "source_split": "train",
+    "source_line": 83,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0083.jpg",
+    "source_split": "train",
+    "source_line": 84,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0084.jpg",
+    "source_split": "train",
+    "source_line": 85,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0085.jpg",
+    "source_split": "train",
+    "source_line": 86,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0086.jpg",
+    "source_split": "train",
+    "source_line": 87,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0087.jpg",
+    "source_split": "train",
+    "source_line": 88,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0088.jpg",
+    "source_split": "train",
+    "source_line": 89,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0089.jpg",
+    "source_split": "train",
+    "source_line": 90,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0091.jpg",
+    "source_split": "train",
+    "source_line": 92,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0092.jpg",
+    "source_split": "train",
+    "source_line": 93,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0093.jpg",
+    "source_split": "train",
+    "source_line": 94,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0096.jpg",
+    "source_split": "train",
+    "source_line": 97,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0099.jpg",
+    "source_split": "train",
+    "source_line": 100,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0100.jpg",
+    "source_split": "train",
+    "source_line": 101,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0101.jpg",
+    "source_split": "train",
+    "source_line": 102,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0102.jpg",
+    "source_split": "train",
+    "source_line": 103,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0103.jpg",
+    "source_split": "train",
+    "source_line": 104,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0104.jpg",
+    "source_split": "train",
+    "source_line": 105,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0105.jpg",
+    "source_split": "train",
+    "source_line": 106,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0106.jpg",
+    "source_split": "train",
+    "source_line": 107,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0107.jpg",
+    "source_split": "train",
+    "source_line": 108,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0108.jpg",
+    "source_split": "train",
+    "source_line": 109,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0109.jpg",
+    "source_split": "train",
+    "source_line": 110,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0110.jpg",
+    "source_split": "train",
+    "source_line": 111,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0111.jpg",
+    "source_split": "train",
+    "source_line": 112,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0112.jpg",
+    "source_split": "train",
+    "source_line": 113,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0113.jpg",
+    "source_split": "train",
+    "source_line": 114,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0115.jpg",
+    "source_split": "train",
+    "source_line": 116,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0116.jpg",
+    "source_split": "train",
+    "source_line": 117,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0118.jpg",
+    "source_split": "train",
+    "source_line": 119,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0120.jpg",
+    "source_split": "train",
+    "source_line": 121,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0122.jpg",
+    "source_split": "train",
+    "source_line": 123,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0123.jpg",
+    "source_split": "train",
+    "source_line": 124,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0124.jpg",
+    "source_split": "train",
+    "source_line": 125,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0126.jpg",
+    "source_split": "train",
+    "source_line": 127,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0129.jpg",
+    "source_split": "train",
+    "source_line": 130,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0130.jpg",
+    "source_split": "train",
+    "source_line": 131,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0132.jpg",
+    "source_split": "train",
+    "source_line": 133,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0133.jpg",
+    "source_split": "train",
+    "source_line": 134,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0134.jpg",
+    "source_split": "train",
+    "source_line": 135,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0135.jpg",
+    "source_split": "train",
+    "source_line": 136,
+    "reason": "invalid_quantity",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0136.jpg",
+    "source_split": "train",
+    "source_line": 137,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0137.jpg",
+    "source_split": "train",
+    "source_line": 138,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0138.jpg",
+    "source_split": "train",
+    "source_line": 139,
+    "reason": "invalid_quantity",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0140.jpg",
+    "source_split": "train",
+    "source_line": 141,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0141.jpg",
+    "source_split": "train",
+    "source_line": 142,
+    "reason": "invalid_quantity",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0142.jpg",
+    "source_split": "train",
+    "source_line": 143,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0143.jpg",
+    "source_split": "train",
+    "source_line": 144,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0144.jpg",
+    "source_split": "train",
+    "source_line": 145,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0146.jpg",
+    "source_split": "train",
+    "source_line": 147,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0147.jpg",
+    "source_split": "train",
+    "source_line": 148,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0149.jpg",
+    "source_split": "train",
+    "source_line": 150,
+    "reason": "invalid_quantity",
+    "field": "cnt",
+    "row_index": 6,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0150.jpg",
+    "source_split": "train",
+    "source_line": 151,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0151.jpg",
+    "source_split": "train",
+    "source_line": 152,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "price",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0152.jpg",
+    "source_split": "train",
+    "source_line": 153,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0153.jpg",
+    "source_split": "train",
+    "source_line": 154,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0155.jpg",
+    "source_split": "train",
+    "source_line": 156,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0156.jpg",
+    "source_split": "train",
+    "source_line": 157,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0157.jpg",
+    "source_split": "train",
+    "source_line": 158,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0158.jpg",
+    "source_split": "train",
+    "source_line": 159,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0159.jpg",
+    "source_split": "train",
+    "source_line": 160,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0161.jpg",
+    "source_split": "train",
+    "source_line": 162,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0165.jpg",
+    "source_split": "train",
+    "source_line": 166,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0166.jpg",
+    "source_split": "train",
+    "source_line": 167,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0167.jpg",
+    "source_split": "train",
+    "source_line": 168,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0168.jpg",
+    "source_split": "train",
+    "source_line": 169,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0171.jpg",
+    "source_split": "train",
+    "source_line": 172,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0172.jpg",
+    "source_split": "train",
+    "source_line": 173,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0173.jpg",
+    "source_split": "train",
+    "source_line": 174,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0174.jpg",
+    "source_split": "train",
+    "source_line": 175,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0175.jpg",
+    "source_split": "train",
+    "source_line": 176,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0176.jpg",
+    "source_split": "train",
+    "source_line": 177,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0178.jpg",
+    "source_split": "train",
+    "source_line": 179,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0179.jpg",
+    "source_split": "train",
+    "source_line": 180,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0180.jpg",
+    "source_split": "train",
+    "source_line": 181,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 2,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0181.jpg",
+    "source_split": "train",
+    "source_line": 182,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0182.jpg",
+    "source_split": "train",
+    "source_line": 183,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0183.jpg",
+    "source_split": "train",
+    "source_line": 184,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0184.jpg",
+    "source_split": "train",
+    "source_line": 185,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0185.jpg",
+    "source_split": "train",
+    "source_line": 186,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0186.jpg",
+    "source_split": "train",
+    "source_line": 187,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0187.jpg",
+    "source_split": "train",
+    "source_line": 188,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0188.jpg",
+    "source_split": "train",
+    "source_line": 189,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0189.jpg",
+    "source_split": "train",
+    "source_line": 190,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0190.jpg",
+    "source_split": "train",
+    "source_line": 191,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0192.jpg",
+    "source_split": "train",
+    "source_line": 193,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0193.jpg",
+    "source_split": "train",
+    "source_line": 194,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0194.jpg",
+    "source_split": "train",
+    "source_line": 195,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0195.jpg",
+    "source_split": "train",
+    "source_line": 196,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0197.jpg",
+    "source_split": "train",
+    "source_line": 198,
+    "reason": "arithmetic_mismatch",
+    "field": "cnt/unitprice/price",
+    "row_index": 1,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0198.jpg",
+    "source_split": "train",
+    "source_line": 199,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0199.jpg",
+    "source_split": "train",
+    "source_line": 200,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0202.jpg",
+    "source_split": "train",
+    "source_line": 203,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0203.jpg",
+    "source_split": "train",
+    "source_line": 204,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0205.jpg",
+    "source_split": "train",
+    "source_line": 206,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0207.jpg",
+    "source_split": "train",
+    "source_line": 208,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0208.jpg",
+    "source_split": "train",
+    "source_line": 209,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0209.jpg",
+    "source_split": "train",
+    "source_line": 210,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0211.jpg",
+    "source_split": "train",
+    "source_line": 212,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0212.jpg",
+    "source_split": "train",
+    "source_line": 213,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0213.jpg",
+    "source_split": "train",
+    "source_line": 214,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0214.jpg",
+    "source_split": "train",
+    "source_line": 215,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0215.jpg",
+    "source_split": "train",
+    "source_line": 216,
+    "reason": "arithmetic_mismatch",
+    "field": "cnt/unitprice/price",
+    "row_index": 1,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0216.jpg",
+    "source_split": "train",
+    "source_line": 217,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0218.jpg",
+    "source_split": "train",
+    "source_line": 219,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0219.jpg",
+    "source_split": "train",
+    "source_line": 220,
+    "reason": "invalid_quantity",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0220.jpg",
+    "source_split": "train",
+    "source_line": 221,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0221.jpg",
+    "source_split": "train",
+    "source_line": 222,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0222.jpg",
+    "source_split": "train",
+    "source_line": 223,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0223.jpg",
+    "source_split": "train",
+    "source_line": 224,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0226.jpg",
+    "source_split": "train",
+    "source_line": 227,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0227.jpg",
+    "source_split": "train",
+    "source_line": 228,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0229.jpg",
+    "source_split": "train",
+    "source_line": 230,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0230.jpg",
+    "source_split": "train",
+    "source_line": 231,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0231.jpg",
+    "source_split": "train",
+    "source_line": 232,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0232.jpg",
+    "source_split": "train",
+    "source_line": 233,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0234.jpg",
+    "source_split": "train",
+    "source_line": 235,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0236.jpg",
+    "source_split": "train",
+    "source_line": 237,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0237.jpg",
+    "source_split": "train",
+    "source_line": 238,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0238.jpg",
+    "source_split": "train",
+    "source_line": 239,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0239.jpg",
+    "source_split": "train",
+    "source_line": 240,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0241.jpg",
+    "source_split": "train",
+    "source_line": 242,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0243.jpg",
+    "source_split": "train",
+    "source_line": 244,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0245.jpg",
+    "source_split": "train",
+    "source_line": 246,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0246.jpg",
+    "source_split": "train",
+    "source_line": 247,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0247.jpg",
+    "source_split": "train",
+    "source_line": 248,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0248.jpg",
+    "source_split": "train",
+    "source_line": 249,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0249.jpg",
+    "source_split": "train",
+    "source_line": 250,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0251.jpg",
+    "source_split": "train",
+    "source_line": 252,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0253.jpg",
+    "source_split": "train",
+    "source_line": 254,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0254.jpg",
+    "source_split": "train",
+    "source_line": 255,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0255.jpg",
+    "source_split": "train",
+    "source_line": 256,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0256.jpg",
+    "source_split": "train",
+    "source_line": 257,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0257.jpg",
+    "source_split": "train",
+    "source_line": 258,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0258.jpg",
+    "source_split": "train",
+    "source_line": 259,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0260.jpg",
+    "source_split": "train",
+    "source_line": 261,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0262.jpg",
+    "source_split": "train",
+    "source_line": 263,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0263.jpg",
+    "source_split": "train",
+    "source_line": 264,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0264.jpg",
+    "source_split": "train",
+    "source_line": 265,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0265.jpg",
+    "source_split": "train",
+    "source_line": 266,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0266.jpg",
+    "source_split": "train",
+    "source_line": 267,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0267.jpg",
+    "source_split": "train",
+    "source_line": 268,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0269.jpg",
+    "source_split": "train",
+    "source_line": 270,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0270.jpg",
+    "source_split": "train",
+    "source_line": 271,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0273.jpg",
+    "source_split": "train",
+    "source_line": 274,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0275.jpg",
+    "source_split": "train",
+    "source_line": 276,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0276.jpg",
+    "source_split": "train",
+    "source_line": 277,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0277.jpg",
+    "source_split": "train",
+    "source_line": 278,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0278.jpg",
+    "source_split": "train",
+    "source_line": 279,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0279.jpg",
+    "source_split": "train",
+    "source_line": 280,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0280.jpg",
+    "source_split": "train",
+    "source_line": 281,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0281.jpg",
+    "source_split": "train",
+    "source_line": 282,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0282.jpg",
+    "source_split": "train",
+    "source_line": 283,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0284.jpg",
+    "source_split": "train",
+    "source_line": 285,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0285.jpg",
+    "source_split": "train",
+    "source_line": 286,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0286.jpg",
+    "source_split": "train",
+    "source_line": 287,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0288.jpg",
+    "source_split": "train",
+    "source_line": 289,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0289.jpg",
+    "source_split": "train",
+    "source_line": 290,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 1,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0292.jpg",
+    "source_split": "train",
+    "source_line": 293,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0293.jpg",
+    "source_split": "train",
+    "source_line": 294,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0294.jpg",
+    "source_split": "train",
+    "source_line": 295,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0295.jpg",
+    "source_split": "train",
+    "source_line": 296,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0297.jpg",
+    "source_split": "train",
+    "source_line": 298,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0298.jpg",
+    "source_split": "train",
+    "source_line": 299,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0299.jpg",
+    "source_split": "train",
+    "source_line": 300,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0301.jpg",
+    "source_split": "train",
+    "source_line": 302,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0303.jpg",
+    "source_split": "train",
+    "source_line": 304,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0304.jpg",
+    "source_split": "train",
+    "source_line": 305,
+    "reason": "missing_field",
+    "field": "nm",
+    "row_index": 1,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0307.jpg",
+    "source_split": "train",
+    "source_line": 308,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0308.jpg",
+    "source_split": "train",
+    "source_line": 309,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0309.jpg",
+    "source_split": "train",
+    "source_line": 310,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0311.jpg",
+    "source_split": "train",
+    "source_line": 312,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0312.jpg",
+    "source_split": "train",
+    "source_line": 313,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0314.jpg",
+    "source_split": "train",
+    "source_line": 315,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0315.jpg",
+    "source_split": "train",
+    "source_line": 316,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0316.jpg",
+    "source_split": "train",
+    "source_line": 317,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0318.jpg",
+    "source_split": "train",
+    "source_line": 319,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0320.jpg",
+    "source_split": "train",
+    "source_line": 321,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0321.jpg",
+    "source_split": "train",
+    "source_line": 322,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0322.jpg",
+    "source_split": "train",
+    "source_line": 323,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0323.jpg",
+    "source_split": "train",
+    "source_line": 324,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0324.jpg",
+    "source_split": "train",
+    "source_line": 325,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0325.jpg",
+    "source_split": "train",
+    "source_line": 326,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0326.jpg",
+    "source_split": "train",
+    "source_line": 327,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0327.jpg",
+    "source_split": "train",
+    "source_line": 328,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0328.jpg",
+    "source_split": "train",
+    "source_line": 329,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0329.jpg",
+    "source_split": "train",
+    "source_line": 330,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0330.jpg",
+    "source_split": "train",
+    "source_line": 331,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0331.jpg",
+    "source_split": "train",
+    "source_line": 332,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0332.jpg",
+    "source_split": "train",
+    "source_line": 333,
+    "reason": "invalid_quantity",
+    "field": "cnt",
+    "row_index": 3,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0333.jpg",
+    "source_split": "train",
+    "source_line": 334,
+    "reason": "missing_field",
+    "field": "nm",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0334.jpg",
+    "source_split": "train",
+    "source_line": 335,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0335.jpg",
+    "source_split": "train",
+    "source_line": 336,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0336.jpg",
+    "source_split": "train",
+    "source_line": 337,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0337.jpg",
+    "source_split": "train",
+    "source_line": 338,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0338.jpg",
+    "source_split": "train",
+    "source_line": 339,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0340.jpg",
+    "source_split": "train",
+    "source_line": 341,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0341.jpg",
+    "source_split": "train",
+    "source_line": 342,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0343.jpg",
+    "source_split": "train",
+    "source_line": 344,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0344.jpg",
+    "source_split": "train",
+    "source_line": 345,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0345.jpg",
+    "source_split": "train",
+    "source_line": 346,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0346.jpg",
+    "source_split": "train",
+    "source_line": 347,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0347.jpg",
+    "source_split": "train",
+    "source_line": 348,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0348.jpg",
+    "source_split": "train",
+    "source_line": 349,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0349.jpg",
+    "source_split": "train",
+    "source_line": 350,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0350.jpg",
+    "source_split": "train",
+    "source_line": 351,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0351.jpg",
+    "source_split": "train",
+    "source_line": 352,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0352.jpg",
+    "source_split": "train",
+    "source_line": 353,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0353.jpg",
+    "source_split": "train",
+    "source_line": 354,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0355.jpg",
+    "source_split": "train",
+    "source_line": 356,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0356.jpg",
+    "source_split": "train",
+    "source_line": 357,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0357.jpg",
+    "source_split": "train",
+    "source_line": 358,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0358.jpg",
+    "source_split": "train",
+    "source_line": 359,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0359.jpg",
+    "source_split": "train",
+    "source_line": 360,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0360.jpg",
+    "source_split": "train",
+    "source_line": 361,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0361.jpg",
+    "source_split": "train",
+    "source_line": 362,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0362.jpg",
+    "source_split": "train",
+    "source_line": 363,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0363.jpg",
+    "source_split": "train",
+    "source_line": 364,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0364.jpg",
+    "source_split": "train",
+    "source_line": 365,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0365.jpg",
+    "source_split": "train",
+    "source_line": 366,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0366.jpg",
+    "source_split": "train",
+    "source_line": 367,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0367.jpg",
+    "source_split": "train",
+    "source_line": 368,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0368.jpg",
+    "source_split": "train",
+    "source_line": 369,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0369.jpg",
+    "source_split": "train",
+    "source_line": 370,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0370.jpg",
+    "source_split": "train",
+    "source_line": 371,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0371.jpg",
+    "source_split": "train",
+    "source_line": 372,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0373.jpg",
+    "source_split": "train",
+    "source_line": 374,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0375.jpg",
+    "source_split": "train",
+    "source_line": 376,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0376.jpg",
+    "source_split": "train",
+    "source_line": 377,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0377.jpg",
+    "source_split": "train",
+    "source_line": 378,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0380.jpg",
+    "source_split": "train",
+    "source_line": 381,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0381.jpg",
+    "source_split": "train",
+    "source_line": 382,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0382.jpg",
+    "source_split": "train",
+    "source_line": 383,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0383.jpg",
+    "source_split": "train",
+    "source_line": 384,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0385.jpg",
+    "source_split": "train",
+    "source_line": 386,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0386.jpg",
+    "source_split": "train",
+    "source_line": 387,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0389.jpg",
+    "source_split": "train",
+    "source_line": 390,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0390.jpg",
+    "source_split": "train",
+    "source_line": 391,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0395.jpg",
+    "source_split": "train",
+    "source_line": 396,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0396.jpg",
+    "source_split": "train",
+    "source_line": 397,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0397.jpg",
+    "source_split": "train",
+    "source_line": 398,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0398.jpg",
+    "source_split": "train",
+    "source_line": 399,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0399.jpg",
+    "source_split": "train",
+    "source_line": 400,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0400.jpg",
+    "source_split": "train",
+    "source_line": 401,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0401.jpg",
+    "source_split": "train",
+    "source_line": 402,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0402.jpg",
+    "source_split": "train",
+    "source_line": 403,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0403.jpg",
+    "source_split": "train",
+    "source_line": 404,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0405.jpg",
+    "source_split": "train",
+    "source_line": 406,
+    "reason": "invalid_quantity",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0407.jpg",
+    "source_split": "train",
+    "source_line": 408,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0408.jpg",
+    "source_split": "train",
+    "source_line": 409,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0409.jpg",
+    "source_split": "train",
+    "source_line": 410,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0410.jpg",
+    "source_split": "train",
+    "source_line": 411,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0412.jpg",
+    "source_split": "train",
+    "source_line": 413,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0416.jpg",
+    "source_split": "train",
+    "source_line": 417,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0417.jpg",
+    "source_split": "train",
+    "source_line": 418,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0418.jpg",
+    "source_split": "train",
+    "source_line": 419,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0420.jpg",
+    "source_split": "train",
+    "source_line": 421,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0421.jpg",
+    "source_split": "train",
+    "source_line": 422,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0422.jpg",
+    "source_split": "train",
+    "source_line": 423,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0423.jpg",
+    "source_split": "train",
+    "source_line": 424,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0424.jpg",
+    "source_split": "train",
+    "source_line": 425,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0425.jpg",
+    "source_split": "train",
+    "source_line": 426,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0426.jpg",
+    "source_split": "train",
+    "source_line": 427,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0427.jpg",
+    "source_split": "train",
+    "source_line": 428,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0428.jpg",
+    "source_split": "train",
+    "source_line": 429,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0429.jpg",
+    "source_split": "train",
+    "source_line": 430,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0431.jpg",
+    "source_split": "train",
+    "source_line": 432,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0432.jpg",
+    "source_split": "train",
+    "source_line": 433,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0433.jpg",
+    "source_split": "train",
+    "source_line": 434,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0434.jpg",
+    "source_split": "train",
+    "source_line": 435,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0435.jpg",
+    "source_split": "train",
+    "source_line": 436,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0436.jpg",
+    "source_split": "train",
+    "source_line": 437,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0438.jpg",
+    "source_split": "train",
+    "source_line": 439,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0439.jpg",
+    "source_split": "train",
+    "source_line": 440,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0442.jpg",
+    "source_split": "train",
+    "source_line": 443,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0443.jpg",
+    "source_split": "train",
+    "source_line": 444,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0445.jpg",
+    "source_split": "train",
+    "source_line": 446,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0446.jpg",
+    "source_split": "train",
+    "source_line": 447,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0447.jpg",
+    "source_split": "train",
+    "source_line": 448,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0448.jpg",
+    "source_split": "train",
+    "source_line": 449,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0449.jpg",
+    "source_split": "train",
+    "source_line": 450,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0450.jpg",
+    "source_split": "train",
+    "source_line": 451,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0452.jpg",
+    "source_split": "train",
+    "source_line": 453,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0453.jpg",
+    "source_split": "train",
+    "source_line": 454,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0454.jpg",
+    "source_split": "train",
+    "source_line": 455,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0456.jpg",
+    "source_split": "train",
+    "source_line": 457,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0457.jpg",
+    "source_split": "train",
+    "source_line": 458,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0458.jpg",
+    "source_split": "train",
+    "source_line": 459,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0459.jpg",
+    "source_split": "train",
+    "source_line": 460,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0461.jpg",
+    "source_split": "train",
+    "source_line": 462,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0462.jpg",
+    "source_split": "train",
+    "source_line": 463,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0464.jpg",
+    "source_split": "train",
+    "source_line": 465,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0465.jpg",
+    "source_split": "train",
+    "source_line": 466,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0466.jpg",
+    "source_split": "train",
+    "source_line": 467,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0467.jpg",
+    "source_split": "train",
+    "source_line": 468,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0469.jpg",
+    "source_split": "train",
+    "source_line": 470,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0471.jpg",
+    "source_split": "train",
+    "source_line": 472,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0474.jpg",
+    "source_split": "train",
+    "source_line": 475,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0475.jpg",
+    "source_split": "train",
+    "source_line": 476,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0476.jpg",
+    "source_split": "train",
+    "source_line": 477,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0477.jpg",
+    "source_split": "train",
+    "source_line": 478,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0479.jpg",
+    "source_split": "train",
+    "source_line": 480,
+    "reason": "missing_field",
+    "field": "price",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0480.jpg",
+    "source_split": "train",
+    "source_line": 481,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0481.jpg",
+    "source_split": "train",
+    "source_line": 482,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0482.jpg",
+    "source_split": "train",
+    "source_line": 483,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0483.jpg",
+    "source_split": "train",
+    "source_line": 484,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0484.jpg",
+    "source_split": "train",
+    "source_line": 485,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0487.jpg",
+    "source_split": "train",
+    "source_line": 488,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0489.jpg",
+    "source_split": "train",
+    "source_line": 490,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0490.jpg",
+    "source_split": "train",
+    "source_line": 491,
+    "reason": "invalid_quantity",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0491.jpg",
+    "source_split": "train",
+    "source_line": 492,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0492.jpg",
+    "source_split": "train",
+    "source_line": 493,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0493.jpg",
+    "source_split": "train",
+    "source_line": 494,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0494.jpg",
+    "source_split": "train",
+    "source_line": 495,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0495.jpg",
+    "source_split": "train",
+    "source_line": 496,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0496.jpg",
+    "source_split": "train",
+    "source_line": 497,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0498.jpg",
+    "source_split": "train",
+    "source_line": 499,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0499.jpg",
+    "source_split": "train",
+    "source_line": 500,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0502.jpg",
+    "source_split": "train",
+    "source_line": 503,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0503.jpg",
+    "source_split": "train",
+    "source_line": 504,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0504.jpg",
+    "source_split": "train",
+    "source_line": 505,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0505.jpg",
+    "source_split": "train",
+    "source_line": 506,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0506.jpg",
+    "source_split": "train",
+    "source_line": 507,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0507.jpg",
+    "source_split": "train",
+    "source_line": 508,
+    "reason": "missing_field",
+    "field": "price",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0508.jpg",
+    "source_split": "train",
+    "source_line": 509,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0509.jpg",
+    "source_split": "train",
+    "source_line": 510,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0511.jpg",
+    "source_split": "train",
+    "source_line": 512,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0512.jpg",
+    "source_split": "train",
+    "source_line": 513,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0513.jpg",
+    "source_split": "train",
+    "source_line": 514,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0514.jpg",
+    "source_split": "train",
+    "source_line": 515,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0515.jpg",
+    "source_split": "train",
+    "source_line": 516,
+    "reason": "invalid_quantity",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0516.jpg",
+    "source_split": "train",
+    "source_line": 517,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0517.jpg",
+    "source_split": "train",
+    "source_line": 518,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0518.jpg",
+    "source_split": "train",
+    "source_line": 519,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0519.jpg",
+    "source_split": "train",
+    "source_line": 520,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0520.jpg",
+    "source_split": "train",
+    "source_line": 521,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0521.jpg",
+    "source_split": "train",
+    "source_line": 522,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0523.jpg",
+    "source_split": "train",
+    "source_line": 524,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0525.jpg",
+    "source_split": "train",
+    "source_line": 526,
+    "reason": "missing_field",
+    "field": "nm",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0526.jpg",
+    "source_split": "train",
+    "source_line": 527,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0527.jpg",
+    "source_split": "train",
+    "source_line": 528,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0528.jpg",
+    "source_split": "train",
+    "source_line": 529,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0530.jpg",
+    "source_split": "train",
+    "source_line": 531,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0531.jpg",
+    "source_split": "train",
+    "source_line": 532,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0532.jpg",
+    "source_split": "train",
+    "source_line": 533,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0533.jpg",
+    "source_split": "train",
+    "source_line": 534,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0534.jpg",
+    "source_split": "train",
+    "source_line": 535,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0535.jpg",
+    "source_split": "train",
+    "source_line": 536,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0536.jpg",
+    "source_split": "train",
+    "source_line": 537,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0537.jpg",
+    "source_split": "train",
+    "source_line": 538,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0538.jpg",
+    "source_split": "train",
+    "source_line": 539,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0539.jpg",
+    "source_split": "train",
+    "source_line": 540,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0540.jpg",
+    "source_split": "train",
+    "source_line": 541,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0542.jpg",
+    "source_split": "train",
+    "source_line": 543,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0543.jpg",
+    "source_split": "train",
+    "source_line": 544,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0544.jpg",
+    "source_split": "train",
+    "source_line": 545,
+    "reason": "invalid_quantity",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0545.jpg",
+    "source_split": "train",
+    "source_line": 546,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0546.jpg",
+    "source_split": "train",
+    "source_line": 547,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0547.jpg",
+    "source_split": "train",
+    "source_line": 548,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0549.jpg",
+    "source_split": "train",
+    "source_line": 550,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0550.jpg",
+    "source_split": "train",
+    "source_line": 551,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0551.jpg",
+    "source_split": "train",
+    "source_line": 552,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0554.jpg",
+    "source_split": "train",
+    "source_line": 555,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0555.jpg",
+    "source_split": "train",
+    "source_line": 556,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0557.jpg",
+    "source_split": "train",
+    "source_line": 558,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0559.jpg",
+    "source_split": "train",
+    "source_line": 560,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0560.jpg",
+    "source_split": "train",
+    "source_line": 561,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0561.jpg",
+    "source_split": "train",
+    "source_line": 562,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0562.jpg",
+    "source_split": "train",
+    "source_line": 563,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0563.jpg",
+    "source_split": "train",
+    "source_line": 564,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0564.jpg",
+    "source_split": "train",
+    "source_line": 565,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0565.jpg",
+    "source_split": "train",
+    "source_line": 566,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0566.jpg",
+    "source_split": "train",
+    "source_line": 567,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0567.jpg",
+    "source_split": "train",
+    "source_line": 568,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0568.jpg",
+    "source_split": "train",
+    "source_line": 569,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0570.jpg",
+    "source_split": "train",
+    "source_line": 571,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0571.jpg",
+    "source_split": "train",
+    "source_line": 572,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0576.jpg",
+    "source_split": "train",
+    "source_line": 577,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0577.jpg",
+    "source_split": "train",
+    "source_line": 578,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0578.jpg",
+    "source_split": "train",
+    "source_line": 579,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0579.jpg",
+    "source_split": "train",
+    "source_line": 580,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0580.jpg",
+    "source_split": "train",
+    "source_line": 581,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0582.jpg",
+    "source_split": "train",
+    "source_line": 583,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0583.jpg",
+    "source_split": "train",
+    "source_line": 584,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0584.jpg",
+    "source_split": "train",
+    "source_line": 585,
+    "reason": "invalid_quantity",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0586.jpg",
+    "source_split": "train",
+    "source_line": 587,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0587.jpg",
+    "source_split": "train",
+    "source_line": 588,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0588.jpg",
+    "source_split": "train",
+    "source_line": 589,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0589.jpg",
+    "source_split": "train",
+    "source_line": 590,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0590.jpg",
+    "source_split": "train",
+    "source_line": 591,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0591.jpg",
+    "source_split": "train",
+    "source_line": 592,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0592.jpg",
+    "source_split": "train",
+    "source_line": 593,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0593.jpg",
+    "source_split": "train",
+    "source_line": 594,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0594.jpg",
+    "source_split": "train",
+    "source_line": 595,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0596.jpg",
+    "source_split": "train",
+    "source_line": 597,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0599.jpg",
+    "source_split": "train",
+    "source_line": 600,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0600.jpg",
+    "source_split": "train",
+    "source_line": 601,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0601.jpg",
+    "source_split": "train",
+    "source_line": 602,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0602.jpg",
+    "source_split": "train",
+    "source_line": 603,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0603.jpg",
+    "source_split": "train",
+    "source_line": 604,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0604.jpg",
+    "source_split": "train",
+    "source_line": 605,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0605.jpg",
+    "source_split": "train",
+    "source_line": 606,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0606.jpg",
+    "source_split": "train",
+    "source_line": 607,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0607.jpg",
+    "source_split": "train",
+    "source_line": 608,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0608.jpg",
+    "source_split": "train",
+    "source_line": 609,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0610.jpg",
+    "source_split": "train",
+    "source_line": 611,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0611.jpg",
+    "source_split": "train",
+    "source_line": 612,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0612.jpg",
+    "source_split": "train",
+    "source_line": 613,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0613.jpg",
+    "source_split": "train",
+    "source_line": 614,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0614.jpg",
+    "source_split": "train",
+    "source_line": 615,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0615.jpg",
+    "source_split": "train",
+    "source_line": 616,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0617.jpg",
+    "source_split": "train",
+    "source_line": 618,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0618.jpg",
+    "source_split": "train",
+    "source_line": 619,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0619.jpg",
+    "source_split": "train",
+    "source_line": 620,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0620.jpg",
+    "source_split": "train",
+    "source_line": 621,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0621.jpg",
+    "source_split": "train",
+    "source_line": 622,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0622.jpg",
+    "source_split": "train",
+    "source_line": 623,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0623.jpg",
+    "source_split": "train",
+    "source_line": 624,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0624.jpg",
+    "source_split": "train",
+    "source_line": 625,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0626.jpg",
+    "source_split": "train",
+    "source_line": 627,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0627.jpg",
+    "source_split": "train",
+    "source_line": 628,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0628.jpg",
+    "source_split": "train",
+    "source_line": 629,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0629.jpg",
+    "source_split": "train",
+    "source_line": 630,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0630.jpg",
+    "source_split": "train",
+    "source_line": 631,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0631.jpg",
+    "source_split": "train",
+    "source_line": 632,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0632.jpg",
+    "source_split": "train",
+    "source_line": 633,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0633.jpg",
+    "source_split": "train",
+    "source_line": 634,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0634.jpg",
+    "source_split": "train",
+    "source_line": 635,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0635.jpg",
+    "source_split": "train",
+    "source_line": 636,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0636.jpg",
+    "source_split": "train",
+    "source_line": 637,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0637.jpg",
+    "source_split": "train",
+    "source_line": 638,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0638.jpg",
+    "source_split": "train",
+    "source_line": 639,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0639.jpg",
+    "source_split": "train",
+    "source_line": 640,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0640.jpg",
+    "source_split": "train",
+    "source_line": 641,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0641.jpg",
+    "source_split": "train",
+    "source_line": 642,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0645.jpg",
+    "source_split": "train",
+    "source_line": 646,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0646.jpg",
+    "source_split": "train",
+    "source_line": 647,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0647.jpg",
+    "source_split": "train",
+    "source_line": 648,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0648.jpg",
+    "source_split": "train",
+    "source_line": 649,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0649.jpg",
+    "source_split": "train",
+    "source_line": 650,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0650.jpg",
+    "source_split": "train",
+    "source_line": 651,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0651.jpg",
+    "source_split": "train",
+    "source_line": 652,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0652.jpg",
+    "source_split": "train",
+    "source_line": 653,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0653.jpg",
+    "source_split": "train",
+    "source_line": 654,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0656.jpg",
+    "source_split": "train",
+    "source_line": 657,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0658.jpg",
+    "source_split": "train",
+    "source_line": 659,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0659.jpg",
+    "source_split": "train",
+    "source_line": 660,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0661.jpg",
+    "source_split": "train",
+    "source_line": 662,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0662.jpg",
+    "source_split": "train",
+    "source_line": 663,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0664.jpg",
+    "source_split": "train",
+    "source_line": 665,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0666.jpg",
+    "source_split": "train",
+    "source_line": 667,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0667.jpg",
+    "source_split": "train",
+    "source_line": 668,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0668.jpg",
+    "source_split": "train",
+    "source_line": 669,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0669.jpg",
+    "source_split": "train",
+    "source_line": 670,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0670.jpg",
+    "source_split": "train",
+    "source_line": 671,
+    "reason": "missing_field",
+    "field": "price",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0671.jpg",
+    "source_split": "train",
+    "source_line": 672,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0672.jpg",
+    "source_split": "train",
+    "source_line": 673,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0673.jpg",
+    "source_split": "train",
+    "source_line": 674,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0674.jpg",
+    "source_split": "train",
+    "source_line": 675,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0675.jpg",
+    "source_split": "train",
+    "source_line": 676,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0676.jpg",
+    "source_split": "train",
+    "source_line": 677,
+    "reason": "missing_field",
+    "field": "nm",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0677.jpg",
+    "source_split": "train",
+    "source_line": 678,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0679.jpg",
+    "source_split": "train",
+    "source_line": 680,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0680.jpg",
+    "source_split": "train",
+    "source_line": 681,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0681.jpg",
+    "source_split": "train",
+    "source_line": 682,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0682.jpg",
+    "source_split": "train",
+    "source_line": 683,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0684.jpg",
+    "source_split": "train",
+    "source_line": 685,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0685.jpg",
+    "source_split": "train",
+    "source_line": 686,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0687.jpg",
+    "source_split": "train",
+    "source_line": 688,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0688.jpg",
+    "source_split": "train",
+    "source_line": 689,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0690.jpg",
+    "source_split": "train",
+    "source_line": 691,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0692.jpg",
+    "source_split": "train",
+    "source_line": 693,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0693.jpg",
+    "source_split": "train",
+    "source_line": 694,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0694.jpg",
+    "source_split": "train",
+    "source_line": 695,
+    "reason": "missing_field",
+    "field": "price",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0695.jpg",
+    "source_split": "train",
+    "source_line": 696,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0696.jpg",
+    "source_split": "train",
+    "source_line": 697,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0697.jpg",
+    "source_split": "train",
+    "source_line": 698,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0698.jpg",
+    "source_split": "train",
+    "source_line": 699,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0699.jpg",
+    "source_split": "train",
+    "source_line": 700,
+    "reason": "missing_field",
+    "field": "nm",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0701.jpg",
+    "source_split": "train",
+    "source_line": 702,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0703.jpg",
+    "source_split": "train",
+    "source_line": 704,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0704.jpg",
+    "source_split": "train",
+    "source_line": 705,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0706.jpg",
+    "source_split": "train",
+    "source_line": 707,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0707.jpg",
+    "source_split": "train",
+    "source_line": 708,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0708.jpg",
+    "source_split": "train",
+    "source_line": 709,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0709.jpg",
+    "source_split": "train",
+    "source_line": 710,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0710.jpg",
+    "source_split": "train",
+    "source_line": 711,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0711.jpg",
+    "source_split": "train",
+    "source_line": 712,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0713.jpg",
+    "source_split": "train",
+    "source_line": 714,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0714.jpg",
+    "source_split": "train",
+    "source_line": 715,
+    "reason": "missing_field",
+    "field": "nm",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0715.jpg",
+    "source_split": "train",
+    "source_line": 716,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0716.jpg",
+    "source_split": "train",
+    "source_line": 717,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0717.jpg",
+    "source_split": "train",
+    "source_line": 718,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0718.jpg",
+    "source_split": "train",
+    "source_line": 719,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0719.jpg",
+    "source_split": "train",
+    "source_line": 720,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0720.jpg",
+    "source_split": "train",
+    "source_line": 721,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0721.jpg",
+    "source_split": "train",
+    "source_line": 722,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0722.jpg",
+    "source_split": "train",
+    "source_line": 723,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0724.jpg",
+    "source_split": "train",
+    "source_line": 725,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0725.jpg",
+    "source_split": "train",
+    "source_line": 726,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0726.jpg",
+    "source_split": "train",
+    "source_line": 727,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0729.jpg",
+    "source_split": "train",
+    "source_line": 730,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0730.jpg",
+    "source_split": "train",
+    "source_line": 731,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0731.jpg",
+    "source_split": "train",
+    "source_line": 732,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0732.jpg",
+    "source_split": "train",
+    "source_line": 733,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0734.jpg",
+    "source_split": "train",
+    "source_line": 735,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0735.jpg",
+    "source_split": "train",
+    "source_line": 736,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0736.jpg",
+    "source_split": "train",
+    "source_line": 737,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0737.jpg",
+    "source_split": "train",
+    "source_line": 738,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0738.jpg",
+    "source_split": "train",
+    "source_line": 739,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0739.jpg",
+    "source_split": "train",
+    "source_line": 740,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0740.jpg",
+    "source_split": "train",
+    "source_line": 741,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0742.jpg",
+    "source_split": "train",
+    "source_line": 743,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0743.jpg",
+    "source_split": "train",
+    "source_line": 744,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0744.jpg",
+    "source_split": "train",
+    "source_line": 745,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0745.jpg",
+    "source_split": "train",
+    "source_line": 746,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0747.jpg",
+    "source_split": "train",
+    "source_line": 748,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0748.jpg",
+    "source_split": "train",
+    "source_line": 749,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0750.jpg",
+    "source_split": "train",
+    "source_line": 751,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0751.jpg",
+    "source_split": "train",
+    "source_line": 752,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0752.jpg",
+    "source_split": "train",
+    "source_line": 753,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0753.jpg",
+    "source_split": "train",
+    "source_line": 754,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0754.jpg",
+    "source_split": "train",
+    "source_line": 755,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0755.jpg",
+    "source_split": "train",
+    "source_line": 756,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0756.jpg",
+    "source_split": "train",
+    "source_line": 757,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0757.jpg",
+    "source_split": "train",
+    "source_line": 758,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0758.jpg",
+    "source_split": "train",
+    "source_line": 759,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0760.jpg",
+    "source_split": "train",
+    "source_line": 761,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0761.jpg",
+    "source_split": "train",
+    "source_line": 762,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0762.jpg",
+    "source_split": "train",
+    "source_line": 763,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0763.jpg",
+    "source_split": "train",
+    "source_line": 764,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0765.jpg",
+    "source_split": "train",
+    "source_line": 766,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0766.jpg",
+    "source_split": "train",
+    "source_line": 767,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0767.jpg",
+    "source_split": "train",
+    "source_line": 768,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0768.jpg",
+    "source_split": "train",
+    "source_line": 769,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0769.jpg",
+    "source_split": "train",
+    "source_line": 770,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0771.jpg",
+    "source_split": "train",
+    "source_line": 772,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0773.jpg",
+    "source_split": "train",
+    "source_line": 774,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0774.jpg",
+    "source_split": "train",
+    "source_line": 775,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0775.jpg",
+    "source_split": "train",
+    "source_line": 776,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0776.jpg",
+    "source_split": "train",
+    "source_line": 777,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0777.jpg",
+    "source_split": "train",
+    "source_line": 778,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 1,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0778.jpg",
+    "source_split": "train",
+    "source_line": 779,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0779.jpg",
+    "source_split": "train",
+    "source_line": 780,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0780.jpg",
+    "source_split": "train",
+    "source_line": 781,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0781.jpg",
+    "source_split": "train",
+    "source_line": 782,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0782.jpg",
+    "source_split": "train",
+    "source_line": 783,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0783.jpg",
+    "source_split": "train",
+    "source_line": 784,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0785.jpg",
+    "source_split": "train",
+    "source_line": 786,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0786.jpg",
+    "source_split": "train",
+    "source_line": 787,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0787.jpg",
+    "source_split": "train",
+    "source_line": 788,
+    "reason": "invalid_quantity",
+    "field": "cnt",
+    "row_index": 6,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0788.jpg",
+    "source_split": "train",
+    "source_line": 789,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0789.jpg",
+    "source_split": "train",
+    "source_line": 790,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0790.jpg",
+    "source_split": "train",
+    "source_line": 791,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0791.jpg",
+    "source_split": "train",
+    "source_line": 792,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0792.jpg",
+    "source_split": "train",
+    "source_line": 793,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0794.jpg",
+    "source_split": "train",
+    "source_line": 795,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 2,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0797.jpg",
+    "source_split": "train",
+    "source_line": 798,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0798.jpg",
+    "source_split": "train",
+    "source_line": 799,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-train-0799.jpg",
+    "source_split": "train",
+    "source_line": 800,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0000.jpg",
+    "source_split": "validation",
+    "source_line": 1,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0001.jpg",
+    "source_split": "validation",
+    "source_line": 2,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0003.jpg",
+    "source_split": "validation",
+    "source_line": 4,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0004.jpg",
+    "source_split": "validation",
+    "source_line": 5,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0005.jpg",
+    "source_split": "validation",
+    "source_line": 6,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0006.jpg",
+    "source_split": "validation",
+    "source_line": 7,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0007.jpg",
+    "source_split": "validation",
+    "source_line": 8,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0008.jpg",
+    "source_split": "validation",
+    "source_line": 9,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0009.jpg",
+    "source_split": "validation",
+    "source_line": 10,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0010.jpg",
+    "source_split": "validation",
+    "source_line": 11,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0011.jpg",
+    "source_split": "validation",
+    "source_line": 12,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0012.jpg",
+    "source_split": "validation",
+    "source_line": 13,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0013.jpg",
+    "source_split": "validation",
+    "source_line": 14,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0014.jpg",
+    "source_split": "validation",
+    "source_line": 15,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0019.jpg",
+    "source_split": "validation",
+    "source_line": 20,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0020.jpg",
+    "source_split": "validation",
+    "source_line": 21,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0021.jpg",
+    "source_split": "validation",
+    "source_line": 22,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0022.jpg",
+    "source_split": "validation",
+    "source_line": 23,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0023.jpg",
+    "source_split": "validation",
+    "source_line": 24,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0024.jpg",
+    "source_split": "validation",
+    "source_line": 25,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0025.jpg",
+    "source_split": "validation",
+    "source_line": 26,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0030.jpg",
+    "source_split": "validation",
+    "source_line": 31,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0031.jpg",
+    "source_split": "validation",
+    "source_line": 32,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0032.jpg",
+    "source_split": "validation",
+    "source_line": 33,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0033.jpg",
+    "source_split": "validation",
+    "source_line": 34,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0034.jpg",
+    "source_split": "validation",
+    "source_line": 35,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0035.jpg",
+    "source_split": "validation",
+    "source_line": 36,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0036.jpg",
+    "source_split": "validation",
+    "source_line": 37,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0037.jpg",
+    "source_split": "validation",
+    "source_line": 38,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0039.jpg",
+    "source_split": "validation",
+    "source_line": 40,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0040.jpg",
+    "source_split": "validation",
+    "source_line": 41,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0041.jpg",
+    "source_split": "validation",
+    "source_line": 42,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0043.jpg",
+    "source_split": "validation",
+    "source_line": 44,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0045.jpg",
+    "source_split": "validation",
+    "source_line": 46,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0047.jpg",
+    "source_split": "validation",
+    "source_line": 48,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0048.jpg",
+    "source_split": "validation",
+    "source_line": 49,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0050.jpg",
+    "source_split": "validation",
+    "source_line": 51,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0051.jpg",
+    "source_split": "validation",
+    "source_line": 52,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0052.jpg",
+    "source_split": "validation",
+    "source_line": 53,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0053.jpg",
+    "source_split": "validation",
+    "source_line": 54,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0055.jpg",
+    "source_split": "validation",
+    "source_line": 56,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0056.jpg",
+    "source_split": "validation",
+    "source_line": 57,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0057.jpg",
+    "source_split": "validation",
+    "source_line": 58,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0058.jpg",
+    "source_split": "validation",
+    "source_line": 59,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0059.jpg",
+    "source_split": "validation",
+    "source_line": 60,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0060.jpg",
+    "source_split": "validation",
+    "source_line": 61,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0062.jpg",
+    "source_split": "validation",
+    "source_line": 63,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0064.jpg",
+    "source_split": "validation",
+    "source_line": 65,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0066.jpg",
+    "source_split": "validation",
+    "source_line": 67,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0067.jpg",
+    "source_split": "validation",
+    "source_line": 68,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0069.jpg",
+    "source_split": "validation",
+    "source_line": 70,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0070.jpg",
+    "source_split": "validation",
+    "source_line": 71,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0071.jpg",
+    "source_split": "validation",
+    "source_line": 72,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0073.jpg",
+    "source_split": "validation",
+    "source_line": 74,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0074.jpg",
+    "source_split": "validation",
+    "source_line": 75,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0075.jpg",
+    "source_split": "validation",
+    "source_line": 76,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0077.jpg",
+    "source_split": "validation",
+    "source_line": 78,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0078.jpg",
+    "source_split": "validation",
+    "source_line": 79,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0079.jpg",
+    "source_split": "validation",
+    "source_line": 80,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0080.jpg",
+    "source_split": "validation",
+    "source_line": 81,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0081.jpg",
+    "source_split": "validation",
+    "source_line": 82,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0082.jpg",
+    "source_split": "validation",
+    "source_line": 83,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0083.jpg",
+    "source_split": "validation",
+    "source_line": 84,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0084.jpg",
+    "source_split": "validation",
+    "source_line": 85,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0085.jpg",
+    "source_split": "validation",
+    "source_line": 86,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0086.jpg",
+    "source_split": "validation",
+    "source_line": 87,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0087.jpg",
+    "source_split": "validation",
+    "source_line": 88,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0088.jpg",
+    "source_split": "validation",
+    "source_line": 89,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0090.jpg",
+    "source_split": "validation",
+    "source_line": 91,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0091.jpg",
+    "source_split": "validation",
+    "source_line": 92,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0092.jpg",
+    "source_split": "validation",
+    "source_line": 93,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0093.jpg",
+    "source_split": "validation",
+    "source_line": 94,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0094.jpg",
+    "source_split": "validation",
+    "source_line": 95,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0095.jpg",
+    "source_split": "validation",
+    "source_line": 96,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0096.jpg",
+    "source_split": "validation",
+    "source_line": 97,
+    "reason": "missing_field",
+    "field": "price",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0097.jpg",
+    "source_split": "validation",
+    "source_line": 98,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0098.jpg",
+    "source_split": "validation",
+    "source_line": 99,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-validation-0099.jpg",
+    "source_split": "validation",
+    "source_line": 100,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0000.jpg",
+    "source_split": "test",
+    "source_line": 1,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0001.jpg",
+    "source_split": "test",
+    "source_line": 2,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0002.jpg",
+    "source_split": "test",
+    "source_line": 3,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0003.jpg",
+    "source_split": "test",
+    "source_line": 4,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0004.jpg",
+    "source_split": "test",
+    "source_line": 5,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0005.jpg",
+    "source_split": "test",
+    "source_line": 6,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0006.jpg",
+    "source_split": "test",
+    "source_line": 7,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0007.jpg",
+    "source_split": "test",
+    "source_line": 8,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0008.jpg",
+    "source_split": "test",
+    "source_line": 9,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0009.jpg",
+    "source_split": "test",
+    "source_line": 10,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0011.jpg",
+    "source_split": "test",
+    "source_line": 12,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0012.jpg",
+    "source_split": "test",
+    "source_line": 13,
+    "reason": "missing_field",
+    "field": "price",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0014.jpg",
+    "source_split": "test",
+    "source_line": 15,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0015.jpg",
+    "source_split": "test",
+    "source_line": 16,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0016.jpg",
+    "source_split": "test",
+    "source_line": 17,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0017.jpg",
+    "source_split": "test",
+    "source_line": 18,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0019.jpg",
+    "source_split": "test",
+    "source_line": 20,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0020.jpg",
+    "source_split": "test",
+    "source_line": 21,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0022.jpg",
+    "source_split": "test",
+    "source_line": 23,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0023.jpg",
+    "source_split": "test",
+    "source_line": 24,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0024.jpg",
+    "source_split": "test",
+    "source_line": 25,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0025.jpg",
+    "source_split": "test",
+    "source_line": 26,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0026.jpg",
+    "source_split": "test",
+    "source_line": 27,
+    "reason": "missing_field",
+    "field": "price",
+    "row_index": 1,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0027.jpg",
+    "source_split": "test",
+    "source_line": 28,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0028.jpg",
+    "source_split": "test",
+    "source_line": 29,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0029.jpg",
+    "source_split": "test",
+    "source_line": 30,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0030.jpg",
+    "source_split": "test",
+    "source_line": 31,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0031.jpg",
+    "source_split": "test",
+    "source_line": 32,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0032.jpg",
+    "source_split": "test",
+    "source_line": 33,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0033.jpg",
+    "source_split": "test",
+    "source_line": 34,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0034.jpg",
+    "source_split": "test",
+    "source_line": 35,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0035.jpg",
+    "source_split": "test",
+    "source_line": 36,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0036.jpg",
+    "source_split": "test",
+    "source_line": 37,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0037.jpg",
+    "source_split": "test",
+    "source_line": 38,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0038.jpg",
+    "source_split": "test",
+    "source_line": 39,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0041.jpg",
+    "source_split": "test",
+    "source_line": 42,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0042.jpg",
+    "source_split": "test",
+    "source_line": 43,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0043.jpg",
+    "source_split": "test",
+    "source_line": 44,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0044.jpg",
+    "source_split": "test",
+    "source_line": 45,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0045.jpg",
+    "source_split": "test",
+    "source_line": 46,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0046.jpg",
+    "source_split": "test",
+    "source_line": 47,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0047.jpg",
+    "source_split": "test",
+    "source_line": 48,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0048.jpg",
+    "source_split": "test",
+    "source_line": 49,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0049.jpg",
+    "source_split": "test",
+    "source_line": 50,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0050.jpg",
+    "source_split": "test",
+    "source_line": 51,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0051.jpg",
+    "source_split": "test",
+    "source_line": 52,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0052.jpg",
+    "source_split": "test",
+    "source_line": 53,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0053.jpg",
+    "source_split": "test",
+    "source_line": 54,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0054.jpg",
+    "source_split": "test",
+    "source_line": 55,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0055.jpg",
+    "source_split": "test",
+    "source_line": 56,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0056.jpg",
+    "source_split": "test",
+    "source_line": 57,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0057.jpg",
+    "source_split": "test",
+    "source_line": 58,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0058.jpg",
+    "source_split": "test",
+    "source_line": 59,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0059.jpg",
+    "source_split": "test",
+    "source_line": 60,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0062.jpg",
+    "source_split": "test",
+    "source_line": 63,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0063.jpg",
+    "source_split": "test",
+    "source_line": 64,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0064.jpg",
+    "source_split": "test",
+    "source_line": 65,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0066.jpg",
+    "source_split": "test",
+    "source_line": 67,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0067.jpg",
+    "source_split": "test",
+    "source_line": 68,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0068.jpg",
+    "source_split": "test",
+    "source_line": 69,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0069.jpg",
+    "source_split": "test",
+    "source_line": 70,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0070.jpg",
+    "source_split": "test",
+    "source_line": 71,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 1,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0072.jpg",
+    "source_split": "test",
+    "source_line": 73,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0074.jpg",
+    "source_split": "test",
+    "source_line": 75,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0075.jpg",
+    "source_split": "test",
+    "source_line": 76,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0076.jpg",
+    "source_split": "test",
+    "source_line": 77,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0078.jpg",
+    "source_split": "test",
+    "source_line": 79,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0080.jpg",
+    "source_split": "test",
+    "source_line": 81,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0083.jpg",
+    "source_split": "test",
+    "source_line": 84,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0084.jpg",
+    "source_split": "test",
+    "source_line": 85,
+    "reason": "ambiguous_or_invalid_money",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0085.jpg",
+    "source_split": "test",
+    "source_line": 86,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0086.jpg",
+    "source_split": "test",
+    "source_line": 87,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0087.jpg",
+    "source_split": "test",
+    "source_line": 88,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0089.jpg",
+    "source_split": "test",
+    "source_line": 90,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0090.jpg",
+    "source_split": "test",
+    "source_line": 91,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0091.jpg",
+    "source_split": "test",
+    "source_line": 92,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0094.jpg",
+    "source_split": "test",
+    "source_line": 95,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0096.jpg",
+    "source_split": "test",
+    "source_line": 97,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0097.jpg",
+    "source_split": "test",
+    "source_line": 98,
+    "reason": "missing_field",
+    "field": "cnt",
+    "row_index": 1,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0098.jpg",
+    "source_split": "test",
+    "source_line": 99,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  },
+  {
+    "source_filename": "cord-test-0099.jpg",
+    "source_split": "test",
+    "source_line": 100,
+    "reason": "missing_field",
+    "field": "unitprice",
+    "row_index": 0,
+    "error_type": "LabelError"
+  }
+]

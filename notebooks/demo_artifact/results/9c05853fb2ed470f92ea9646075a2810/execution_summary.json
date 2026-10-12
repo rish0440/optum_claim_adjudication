@@ -1,0 +1,17 @@
+{
+  "Executed at UTC": "2026-10-12T11:59:11.473240+00:00",
+  "Request ID": "9c05853fb2ed470f92ea9646075a2810",
+  "All eight stages executed": true,
+  "Workflow executed successfully": true,
+  "Final workflow status": "REVIEW_REQUIRED",
+  "Claim finalized": false,
+  "Graph duration (seconds)": 15.788,
+  "Measured graph wall time (seconds)": 15.799,
+  "Date extraction (seconds)": 2.264,
+  "Notebook demo including date and PDF (seconds)": 25.707,
+  "Retries": {},
+  "Errors": [],
+  "Warnings": [
+    "Agent 1 advisory disagreement on row 2; independently verified policy retained"
+  ]
+}

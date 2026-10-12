@@ -1,0 +1,128 @@
+{
+  "source": {
+    "repo_id": "Heliosoph/CORD",
+    "requested_revision": "51b7e93",
+    "revision": "51b7e932f2a07a883d77487b34aa5a33f76fa713",
+    "files": {
+      "cord-train-images.zip": {
+        "size": 167944014,
+        "sha256": "626173e36d20082fa004d000c0ac71365890598c6dfc94b0a2f321d66a28c270",
+        "url": "https://huggingface.co/datasets/Heliosoph/CORD/resolve/51b7e932f2a07a883d77487b34aa5a33f76fa713/cord-train-images.zip"
+      },
+      "cord-train.jsonl.gz": {
+        "size": 653988,
+        "sha256": "73abcf5e389e6687976384b6f0d5958c003f70369ef796bf789ad5cde1a7b6f3",
+        "url": "https://huggingface.co/datasets/Heliosoph/CORD/resolve/51b7e932f2a07a883d77487b34aa5a33f76fa713/cord-train.jsonl.gz"
+      },
+      "cord-validation-images.zip": {
+        "size": 22071652,
+        "sha256": "bb75acf7c497395329059f67c256572deee727753593f96ddc2479705ac39763",
+        "url": "https://huggingface.co/datasets/Heliosoph/CORD/resolve/51b7e932f2a07a883d77487b34aa5a33f76fa713/cord-validation-images.zip"
+      },
+      "cord-validation.jsonl.gz": {
+        "size": 75828,
+        "sha256": "1b6c8ea65df70ea4ec2d3fbe7599395a96827e87d51179d2d0a362fbc4b3f48e",
+        "url": "https://huggingface.co/datasets/Heliosoph/CORD/resolve/51b7e932f2a07a883d77487b34aa5a33f76fa713/cord-validation.jsonl.gz"
+      },
+      "cord-test-images.zip": {
+        "size": 20962139,
+        "sha256": "f08e97ddab89ba02422948c41289ac4a32221d76cbdd131828e6bc37cdc822d6",
+        "url": "https://huggingface.co/datasets/Heliosoph/CORD/resolve/51b7e932f2a07a883d77487b34aa5a33f76fa713/cord-test-images.zip"
+      },
+      "cord-test.jsonl.gz": {
+        "size": 80827,
+        "sha256": "a2aed84c8b507d68f554def4a60e4749e2c74b64cd40d30cbb50b7c32619f1e2",
+        "url": "https://huggingface.co/datasets/Heliosoph/CORD/resolve/51b7e932f2a07a883d77487b34aa5a33f76fa713/cord-test.jsonl.gz"
+      }
+    }
+  },
+  "seed": 42,
+  "required_counts": {
+    "train": 161,
+    "validation": 20,
+    "test": 19
+  },
+  "source_counts": {
+    "train": 800,
+    "validation": 100,
+    "test": 100
+  },
+  "eligible_counts": {
+    "train": 185,
+    "validation": 22,
+    "test": 19
+  },
+  "selected_counts": {
+    "train": 161,
+    "validation": 20,
+    "test": 19
+  },
+  "total_line_items": 409,
+  "mean_rows": 2.045,
+  "median_rows": 2.0,
+  "multi_row_receipts": 116,
+  "quantity_distribution": {
+    "1": 338,
+    "2": 42,
+    "3": 12,
+    "10": 6,
+    "5": 3,
+    "15": 1,
+    "6": 1,
+    "4": 4,
+    "60": 1,
+    "8": 1
+  },
+  "rejected_receipts": 774,
+  "rejection_reasons": {
+    "missing_field": 691,
+    "ambiguous_or_invalid_money": 69,
+    "invalid_quantity": 12,
+    "arithmetic_mismatch": 2
+  },
+  "examples": [
+    {
+      "source_id": "cord-train-0759.jpg",
+      "split": "train",
+      "csv": "Item,Quantity,Rate,Amount\nTWIST DONUT,1,9000.00,9000.00\nMILK PASTRY ROLL,1,9000.00,9000.00\n[MD] SOFT STEAMED CHOCOCAKE,1,10000.00,10000.00\nREDBEAN BREAD,1,9000.00,9000.00\nKAYA BUN,1,9500.00,9500.00\nPREMIUM MILK PAN BREAD,1,17500.00,17500.00\n"
+    },
+    {
+      "source_id": "cord-train-0569.jpg",
+      "split": "train",
+      "csv": "Item,Quantity,Rate,Amount\nSate Babi Manis,2,3000.00,6000.00\nSate Babi Bumbu Bali,2,4000.00,8000.00\nLapolong,1,4000.00,4000.00\nSate Babi Cabe Ijo,1,4000.00,4000.00\nParu Babi,1,3000.00,3000.00\nNgohiong,1,4000.00,4000.00\nEs Teh Manis,1,5000.00,5000.00\n"
+    },
+    {
+      "source_id": "cord-validation-0061.jpg",
+      "split": "validation",
+      "csv": "Item,Quantity,Rate,Amount\nPopulaire Chocolate,1,4500.00,4500.00\nPaddle Pop Choco Magma,1,3000.00,3000.00\n"
+    },
+    {
+      "source_id": "cord-validation-0076.jpg",
+      "split": "validation",
+      "csv": "Item,Quantity,Rate,Amount\nEnting2 Dua Bandeng Ori,1,31000.00,31000.00\nTAHU BAKSO Grg Ayam VC [biji,10,6800.00,68000.00\n"
+    },
+    {
+      "source_id": "cord-test-0061.jpg",
+      "split": "test",
+      "csv": "Item,Quantity,Rate,Amount\nTALAM UNGU,1,6500.00,6500.00\nAREM - AREM,1,8000.00,8000.00\nLEMPER,2,9000.00,18000.00\nMIKA SEDANG,1,0.00,0.00\nPLASTIK KECIL,1,0.00,0.00\nTEH KOTAK,1,5000.00,5000.00\n"
+    },
+    {
+      "source_id": "cord-test-0039.jpg",
+      "split": "test",
+      "csv": "Item,Quantity,Rate,Amount\nLUNCH BOX 3P SET W/RED BAG & SP00 N.,8,243000.00,1944000.00\nRICE CASE 7L W/CUP,5,195000.00,975000.00\nLUNCH BOX 3P SET W/BLACK BAG & SP OON,4,243000.00,972000.00\n"
+    }
+  ],
+  "selection_method": "seeded multi-row-first stratified round-robin; size/aspect/name-length proxies",
+  "arithmetic": "exact Decimal; explicit whole-rupiah rates only; zero price retained",
+  "human_verified": false,
+  "currency_conversion": false,
+  "derived_rates": false,
+  "limitations": [
+    "Indonesian retail/restaurant domain, not healthcare policy reasoning",
+    "Strict complete-row filtering biases towards receipts with explicit rates",
+    "Annotation/decode eligibility does not establish visual readability; inspect selected images",
+    "Original hospital-worded production extraction prompt is preserved",
+    "Current SFT CLI has synthetic-only path/metadata guards; Phase 10B must adapt its preflight"
+  ],
+  "status": "ELIGIBLE"
+}
